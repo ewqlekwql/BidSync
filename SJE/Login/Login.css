@@ -1,0 +1,99 @@
+input{
+    box-sizing: border-box;
+}
+a{
+    margin-left: 5px;
+    text-decoration: dashed;
+    color: gray;
+}
+.wapper{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputtype{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.inputtype input{
+    width:250px;
+    height: 40px;
+    background: lightgray;
+    border: none;
+    padding: 0 10px;
+}
+#inputpassword{
+    margin-top: -5px;
+}
+
+.inputtype input[type="button"]{
+    border: 1px solid black;
+    background: black;
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    width: 255px;
+    height: 40px;
+}
+.remember{
+    margin-left: -75px;
+    border: none;
+    height: 20px;
+    font-size: 10px;
+    line-height: 18px;
+    display: flex;
+    color: gray;
+}
+.remember input[type="checkbox"]{
+    width: 12px;
+    height: 12px;
+}
+
+.site> h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+}
+.icon{
+    border: none;
+    width: 160px;
+    height: 30px;
+    display: flex;
+}
+.icon div{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.icon button{
+    width: 35px;
+    height: 30px;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    margin: 0px 11px;
+    cursor: pointer;
+}
+#google{
+    width: 40px;
+    height: 28px;
+    padding-left: 0.1px;
+}
+#naver{
+    width: 40px;
+    height: 28px;
+    padding-left: 0.1px;
+}
+#kakao{
+    width: 40px;
+    height: 28px;
+    padding-left: 0.1px;
+}

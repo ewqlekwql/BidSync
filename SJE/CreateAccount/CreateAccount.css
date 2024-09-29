@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.new-member-all {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wapper {
+    border: 1px solid black;
+    width: 800px;
+}
+
+.new-member-all #logo {
+    font-size: 50px;
+
+}
+
+#logo p {
+    width: 800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    border: none;
+    margin: 0px 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content .index {
+    margin-bottom: 20px;
+}
+
+#id input,
+#password input,
+#passwordCheck input,
+#name input,
+#email input,
+#phone input {
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 381px;
+    height: 40px;
+    margin-top: 3px;
+    padding-left: 13px;
+    background: rgb(240, 240, 240);
+}
+
+#birth {
+    display: flex;
+    justify-content: space-between;
+}
+
+#birth-month select{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 110px;
+    height: 39px;
+    margin-top: 3px;
+    padding-left: 13px;
+    background: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+#birth input{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 110px;
+    height: 35px;
+    margin-top: 3px;
+    padding-left: 13px;
+    background: rgb(240, 240, 240);
+}
+
+#emailAddress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#emailAddress input{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 170px;
+    height: 35px;
+    margin-top: 3px;
+    background: rgb(240, 240, 240);
+}
+
+#emailAddress select{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 170px;
+    height: 39px;
+    margin-top: 3px;
+    padding-left: 13px;
+    background: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+.submit button{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 398px;
+    height: 50px;
+    margin: 50px 0px;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
