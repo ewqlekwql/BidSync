@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,macos,windows,visualstudiocode,maven,intellij,eclipse
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,macos,windows,visualstudiocode,maven,intellij,eclipse
 
-### Eclipse #########
+### Eclipse ###
 .metadata
 bin/
 tmp/
@@ -265,7 +265,6 @@ buildNumber.properties
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
-.hintrc
 
 # Local History for Visual Studio Code
 .history/
@@ -277,7 +276,6 @@ buildNumber.properties
 # Ignore all local history of files
 .history
 .ionide
-.hintrc
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -322,4 +320,3 @@ bower_components
 psd
 thumb
 sketch
-6_servlet/Servers/
