@@ -118,3 +118,14 @@ body {
     background: black;
     cursor: pointer;
 }
+
+.hidden{
+    display: none;
+}
+
+.check_text{
+    color: red;
+    font-size: 10px;
+    left: 0px;
+    bottom: -17px;
+}
