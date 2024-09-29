@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,64 @@
 <body>
 	<jsp:include page="/views/common/header.jsp" />
 	
-	<!--
-		[안내]
-		- 파일 충돌을 막기위한 임시 인덱스 페이지입니다. (수정 예정)
-		- 헤더는 상단의 코드줄을 복사해서 사용하면 됩니다. (파일 위치에 따라 경로 수정해야함)
-		- css 및 js, 기타 리소스 파일은 views/resources 경로 내의 폴더 분류에 따라 넣어주세요. (* 경로 설정에 주의)
-		- 폰트 파일은 css를 통해 연결되어있으므로 따로 세팅하지 않아도 됩니다.
-	-->
-	
-	
+	<main id="index-main">
+		<!-- 배너 -->
+		<section id="index-banner">
+		<%-- 임시 이미지 --%>
+			<img src="views/resources/images/banner_index.png">
+		</section>
+
+		<!-- 서브 메뉴 -->
+		<section id="index-menu">
+			<ul>
+				<li>
+					<a href="">
+						<img src="views/resources/images/btn_indexMenu01.png">
+						<h3>패션</h3>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="views/resources/images/btn_indexMenu02.png">
+						<h3>디지털 · 가전</h3>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="views/resources/images/btn_indexMenu03.png">
+						<h3>스포츠</h3>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="views/resources/images/btn_indexMenu04.png">
+						<h3>홈 · 데코션</h3>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="views/resources/images/btn_indexMenu05.png">
+						<h3>완구</h3>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="views/resources/images/btn_indexMenu06.png">
+						<h3>쥬얼리</h3>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<!-- 상품 -->
+		<section>
+			<%--
+				코드 수정 중
+				- 최근 등록된 상품 우선 노출
+				- 무한 페이지 로딩x 최대 100개 노출
+				- 경매/중고 분할
+			--%>
+		</section>
+	</main>
 </body>
 </html>
