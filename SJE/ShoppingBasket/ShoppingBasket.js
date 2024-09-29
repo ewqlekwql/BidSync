@@ -54,3 +54,22 @@ function allCheckCancel() {
 
 // allCheckCancel 함수를 호출하여 이벤트 리스너를 등록
 allCheckCancel();
+
+function deleteProduct() {
+    // 모든 삭제 버튼을 선택합니다. ID 대신 class를 사용합니다.
+    let deleteButtons = document.querySelectorAll(".subject button");
+
+    // 각 삭제 버튼에 이벤트 리스너를 추가합니다.
+    deleteButtons.forEach(function(deleteButton) {
+        deleteButton.addEventListener('click', function() {
+            // 해당 버튼에 연결된 상품의 체크박스를 찾습니다.
+            let productElement = deleteButton.closest(".subject"); // 버튼의 부모 .subject 요소 찾기
+
+            productElement.remove(); // 상품 삭제
+
+        });
+    });
+}
+
+// deleteProduct 함수를 호출하여 삭제 버튼에 이벤트 리스너를 등록합니다.
+deleteProduct();
