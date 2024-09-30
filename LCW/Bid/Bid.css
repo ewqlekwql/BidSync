@@ -1,0 +1,370 @@
+/* 전체 페이지 스타일 */
+@font-face {
+    font-family: 'Freesentation';
+    src: url('../fonts/FreesentationVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Freesentation', sans-serif; /* 페이지에서 사용할 기본 폰트 */
+    margin: 0; /* 페이지 외부 여백을 제거 */
+    padding: 0; /* 페이지 내부 여백을 제거 */
+    background-color: #f4f4f4; /* 페이지 배경색을 연한 회색으로 설정 */
+    height: 100vh; /* 화면의 전체 높이를 사용 */
+    overflow: auto; /* 페이지에서 스크롤을 허용 */
+}
+
+/* 메인 컨테이너 스타일 */
+.container {
+    width: 800px; /* 페이지의 너비를 800px로 설정 */
+    margin: 0 auto; /* 페이지 중앙에 배치 */
+    background-color: white; /* 배경을 흰색으로 설정 */
+    padding: 20px; /* 내부 여백을 20px 설정 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 박스 그림자 효과 추가 */
+    flex-direction: column; /* 세로 정렬 */
+}
+
+/* 헤더 스타일 */
+.header {
+    display: flex; /* 요소들을 가로로 나열 */
+    justify-content: space-between; /* 좌우로 요소를 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 10px 20px; /* 상하 10px, 좌우 20px 여백 설정 */
+    border-bottom: 1px solid black; /* 아래쪽 테두리를 검은색 1px로 설정 */
+}
+
+/* 로고 스타일 */
+.logo {
+    font-size: 24px; /* 로고 텍스트 크기를 24px로 설정 */
+    font-weight: bold; /* 굵은 글씨체로 설정 */
+}
+
+/* 검색 바 스타일 */
+.search-bar {
+    display: flex; /* 검색 바를 가로로 나열 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.search-bar input {
+    padding: 5px; /* 입력 창 내부 여백 설정 */
+    margin-right: 5px; /* 오른쪽 여백을 5px로 설정 */
+    border: 1px solid #ccc; /* 테두리를 연한 회색으로 설정 */
+}
+
+.search-bar button {
+    padding: 5px 10px; /* 버튼 내부 여백 설정 */
+    background-color: black; /* 배경색을 검정으로 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    border: none; /* 테두리 제거 */
+    cursor: pointer; /* 커서를 포인터 모양으로 설정 */
+}
+
+/* 사용자 옵션 아이콘 스타일 */
+.user-options span {
+    margin-left: 20px; /* 왼쪽 여백을 20px 설정 */
+    font-size: 20px; /* 아이콘 크기를 20px로 설정 */
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+}
+
+/* 네비게이션 바 스타일 */
+.nav {
+    padding: 10px 0; /* 상하 10px 패딩 설정 */
+    border-bottom: 1px solid black; /* 하단 테두리를 검은색 1px로 설정 */
+}
+
+.nav ul {
+    display: flex; /* 메뉴 항목을 가로로 나열 */
+    list-style: none; /* 목록 아이템 기본 스타일을 제거 */
+    justify-content: space-around; /* 메뉴 항목을 균등하게 배치 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+/* 네비게이션 항목 스타일 */
+.nav ul li {
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+}
+
+/* 주문 상품 섹션 스타일 */
+.order-product {
+    border: 1px solid #ccc; /* 연한 회색 테두리 설정 */
+    border-radius: 10px; /* 테두리를 둥글게 설정 */
+    padding: 10px; /* 내부 여백 설정 */
+    display: flex; /* 가로 정렬 */
+    gap: 20px; /* 항목 간격을 20px로 설정 */
+    margin-bottom: 20px; /* 아래쪽 여백 설정 */
+}
+
+.order-product {
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    padding: 10px; /* 내부 여백 */
+    display: flex; /* 상품 이미지와 텍스트를 가로로 배치 */
+    gap: 20px; /* 이미지와 텍스트 사이 간격 */
+    margin-bottom: 20px; /* 섹션 아래쪽 여백 */
+}
+
+/* 상품 이미지 스타일 */
+.product-image img {
+    width: 100px; /* 이미지 너비 */
+    height: 100px; /* 이미지 높이 */
+    border-radius: 5px; /* 이미지의 모서리를 둥글게 */
+}
+
+/* 상품 상세 정보 텍스트 스타일 */
+.product-details {
+    display: flex; /* 상품명과 가격 텍스트를 세로로 배치 */
+    flex-direction: column;
+    justify-content: center; /* 텍스트를 수직으로 가운데 정렬 */
+}
+
+/* 상품명 스타일 */
+.product-details h2 {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 18px; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 설정 */
+}
+
+/* 가격과 배송비 스타일 */
+.product-details p {
+    margin: 5px 0; /* 위아래 마진 설정 */
+    color: #666; /* 텍스트 색상 설정 */
+}
+
+/* 가격을 굵게 설정 */
+.product-details p strong {
+    font-weight: bold; /* 가격 텍스트 굵게 */
+    color: black; /* 가격 텍스트 색상 검정 */
+}
+
+/* 배송 정보 섹션 */
+.shipping-info {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 상단 헤더 섹션 */
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 주소 변경 버튼 */
+.address-change-btn {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 주소 정보 섹션 */
+.address-details .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* 빨간선과 같은 간격 */
+}
+
+.label {
+    flex-basis: 100px; /* 고정된 너비로 왼쪽 라벨 정렬 */
+    color: black; /* 연한 글씨 색상 */
+}
+
+.value {
+    flex-grow: 1;
+    text-align: left; /* 오른쪽 값 정렬 */
+}
+
+/* 요청사항 버튼 */
+.custom-button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-button::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: black;
+}
+
+
+
+/* 결제 방법 섹션 */
+.payment-method {
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 10px; /* 테두리 둥글게 */
+    padding: 20px; /* 내부 여백 */
+    margin-bottom: 20px; /* 아래쪽 간격 추가 */
+}
+
+/* 결제 방법 제목 */
+.payment-method h2 {
+    font-size: 18px; /* 제목 폰트 크기 */
+    margin-bottom: 15px; /* 제목 아래쪽 간격 */
+}
+
+/* 결제 옵션 라디오 버튼을 감싸는 영역 */
+.payment-options {
+    display: flex; /* 가로로 나열 */
+    justify-content: space-between; /* 버튼 간 간격 균등하게 분배 */
+    margin-bottom: 15px; /* 아래쪽 간격 추가 */
+}
+
+/* 라디오 버튼과 텍스트가 함께 보이도록 설정 */
+.payment-options label {
+    display: flex; /* 버튼과 텍스트를 가로로 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+    font-size: 16px; /* 폰트 크기 설정 */
+    cursor: pointer; /* 마우스를 올리면 클릭 가능한 커서로 변경 */
+}
+
+/* 라디오 버튼 설정 */
+.payment-options input {
+    margin-right: 8px; /* 라디오 버튼과 텍스트 사이 간격 */
+}
+
+/* 카드 정보 섹션 */
+.card-info {
+    padding: 15px; /* 내부 여백 */
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 10px; /* 테두리 둥글게 */
+    display: flex; /* 가로로 배치 */
+    justify-content: space-between; /* 카드 정보와 화살표 간격 균등 분배 */
+    align-items: center; /* 세로 가운데 정렬 */
+    background-color: #f9f9f9; /* 배경색 설정 */
+}
+
+/* 카드 번호 텍스트 스타일 */
+.card-info span {
+    font-size: 16px; /* 카드 번호 폰트 크기 */
+    color: #333; /* 텍스트 색상 설정 */
+}
+
+/* 카드 정보 섹션에서 오른쪽 화살표 스타일 */
+.card-info .arrow {
+    font-size: 18px; /* 화살표 크기 */
+    color: black; /* 화살표 색상 */
+}
+
+/* 안내 텍스트 스타일 */
+.notice {
+    font-size: 12px; /* 안내 텍스트 크기 */
+    color: gray; /* 텍스트 색상 설정 */
+    margin-top: 10px; /* 안내 텍스트 위쪽 간격 */
+}
+
+/* 최종 주문 정보 섹션 */
+.final-order-info {
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    padding: 20px; /* 내부 여백 */
+    margin-bottom: 20px; /* 아래쪽 간격 추가 */
+}
+
+.final-order-info h3 {
+    font-size: 18px; /* 제목 폰트 크기 */
+    margin-bottom: 15px; /* 제목 아래쪽 간격 */
+    font-weight: bold; /* 굵은 폰트 */
+}
+
+/* 가격 요약 (입찰 희망가, 배송비, 수수료) */
+.price-summary {
+    display: flex; /* 가로 배치 */
+    justify-content: space-between; /* 좌우로 간격을 분배 */
+    margin-bottom: 10px; /* 각 항목 간격 */
+    font-size: 16px; /* 텍스트 크기 설정 */
+}
+
+/* 가격 텍스트 스타일 */
+.price {
+    font-weight: normal; /* 기본 폰트 굵기 */
+    color: #333; /* 기본 가격 색상 */
+}
+
+/* 점선 구분선 */
+.dotted-line {
+    border: none; /* 기본 테두리 제거 */
+    border-top: 1px dotted #ccc; /* 점선 테두리 */
+    margin: 10px 0; /* 위아래 간격 */
+}
+
+/* 총 결제 금액 섹션 */
+.total-amount {
+    display: flex; /* 가로 배치 */
+    justify-content: space-between; /* 좌우로 간격을 분배 */
+    font-size: 18px; /* 폰트 크기 설정 */
+    font-weight: bold; /* 굵은 텍스트 */
+    border-top: 1px solid #ccc; /* 상단에 선 추가 */
+    padding-top: 10px; /* 상단 패딩 */
+}
+
+/* 총 결제 금액 텍스트 스타일 */
+.total-price {
+    color: #000; /* 검정색 텍스트 */
+    font-size: 20px; /* 총 결제 금액 텍스트 크기 */
+    font-weight: bold; /* 총 결제 금액 굵게 */
+}
+
+/* 구매하기 버튼 스타일 */
+.purchase-btn {
+    width: 100%; /* 버튼을 가로 100%로 설정 */
+    padding: 15px; /* 내부 여백 설정 */
+    background-color: black; /* 배경색을 검정으로 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    font-size: 18px; /* 텍스트 크기를 18px로 설정 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
+    cursor: pointer; /* 클릭 가능한 커서 모양 설정 */
+}
+
+/* Footer 스타일 */
+.footer {
+    background-color: #e3feff; /* 푸터 배경색 */
+    color: rgb(0, 0, 0); /* 텍스트 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    margin-top: 20px; /* 푸터 상단 간격 */
+}
+
+.footer p {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 14px; /* 폰트 크기 */
+}
+
+.footer-links {
+    list-style: none; /* 기본 목록 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 10px 0 0; /* 위쪽 간격 추가 */
+    display: flex;
+    justify-content: center; /* 링크를 가운데 정렬 */
+    gap: 20px; /* 링크 사이 간격 */
+}
+
+.footer-links li {
+    display: inline; /* 가로로 나열 */
+}
+
+.footer-links a {
+    color: white; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 14px; /* 링크 폰트 크기 */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* 마우스를 올릴 때 밑줄 */
+}
