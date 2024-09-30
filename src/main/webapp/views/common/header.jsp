@@ -16,7 +16,9 @@
       <nav id="header-top">
          <ul>
             <li id="header-top-logo">
-               <a href="index.html" target="_self"><img src="views/resources/images/logo.png" alt="비드싱크 로고"></a>
+
+            <img src="<%= request.getContextPath() %>/views/resources/images/logo.png" alt="비드싱크 로고">
+
             </li>
             <li id="header-top-searchBar">
                   <input type="text" name="keyword" placeholder="검색어를 입력하세요">
@@ -24,9 +26,10 @@
             </li>
             <%-- 로그인/로그아웃 분리 추가 예정 --%>
             <li id="header-top-user">
-               <button type="button"><img src="views/resources/images/btn_cart.png"></button>
-               <button type="button"><img src="views/resources/images/btn_mypage.png"></button>
-               <button type="button"><img src="views/resources/images/btn_logout.png"></button>
+               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_cart.png"></button>
+               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_mypage.png"></button>
+               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_logout.png"></button>
+               
             </li>
          </ul>
       </nav>
@@ -35,7 +38,7 @@
       <nav id="header-bottom">
          <ul>
             <li>
-               <a href="#"><img src="views/resources/images/btn_hambuger.png"></a>
+               <a href="#"><img src="<%= request.getContextPath() %>/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
                <a href="#">패션</a>
