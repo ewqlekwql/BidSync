@@ -19,3 +19,17 @@ function passwordCheck(password) {
         hiddenArea.classList.add("hidden");
     }
 }
+
+function passwordReCheck(){
+    const passwordInput = document.querySelector("#user_password").value;
+    const hiddenArea = document.getElementById("pwd_check_required");
+    const passwordReCheck = document.querySelector("#passwordRecheck").value;
+
+    if (passwordInput === passwordReCheck) {
+        hiddenArea.classList.add("hidden");
+
+    } else {
+        hiddenArea.classList.remove("hidden");
+       
+    }
+}

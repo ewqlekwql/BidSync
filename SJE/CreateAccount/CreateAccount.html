@@ -20,7 +20,9 @@
                     <b>아이디</b>
                     <br>
                     <input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onblur="checkInput(this.id);">
+                    <button id="id_overlap_check">중복 체크</button>
                     <span id="user_id_required" class="check_text hidden"><b>사용할 수 없는 아이디입니다.</b></span>
+                    
                 </div>
                 <div class="index" id="password">
                     <b>비밀번호</b>
@@ -31,7 +33,7 @@
                 <div class="index" id="passwordCheck">
                     <b>비밀번호 재확인</b>
                     <br>
-                    <input type="password" placeholder="비밀번호 재입력" required onblur="checkInput(this.id);">
+                    <input type="password" placeholder="비밀번호 재입력" id="passwordRecheck" required onblur="passwordReCheck()">
                     <span id="pwd_check_required" class="check_text hidden"><b>비밀번호가 일치하지 않습니다.</b></span>
                 </div>
                 <div class="index" id="name">
