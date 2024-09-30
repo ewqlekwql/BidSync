@@ -1,0 +1,267 @@
+/* 폰트 */
+@font-face {
+    font-family: 'Freesentation';
+    src: url('../file/FreesentationVF.ttf') format('truetype');
+    font-weight: 600;
+ }
+ 
+ /* 공통 적용 */
+ body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Freesentation';
+    font-size: 11pt;
+ }
+
+.container {
+    width: 800px; /* 고정된 콘텐츠 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    background-color: white; /* 콘텐츠 배경색 */
+    padding: 20px; /* 콘텐츠 패딩 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    flex-direction: column; /* 세로로 정렬 */
+    
+}
+
+
+/* Navigation Bar */
+.nav {
+    padding: 10px 0; /* 위아래 패딩 추가 */
+    border-bottom: 1px solid black; /* 아래쪽 테두리 */
+}
+
+.nav ul {
+    display: flex; /* 메뉴 항목을 가로로 나열 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    justify-content: space-around; /* 각 메뉴를 일정한 간격으로 배치 */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0; /* 리스트 마진 제거 */
+}
+
+.nav ul li {
+    cursor: pointer; /* 클릭 가능한 상태로 커서 변경 */
+}
+
+/* 구매 입찰 중 섹션 */
+.bid-section {
+    width: 90%; /* 섹션 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 20px 0; /* 상하 패딩 */
+}
+
+/* 섹션 제목 스타일 */
+.bid-section h2 {
+    font-size: 28px; /* 제목 폰트 크기 */
+    font-weight: bold; /* 굵은 글씨 */
+    margin-bottom: 20px; /* 제목 하단 여백 */
+    border-bottom: 3px solid #000; /* 제목 아래 굵은 검정 구분선 */
+
+}
+
+/* 상품 정보 섹션 */
+.product-info {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: space-between; /* 양쪽에 간격 */
+    padding-bottom: 20px; /* 하단 여백 */
+    border-bottom: 3px solid #000; /* 제목 아래 굵은 검정 구분선 */
+}
+
+/* 상품 이미지 스타일 */
+.product-image {
+    width: 100px; /* 이미지 너비 */
+    height: 100px; /* 이미지 높이 */
+    border-radius: 10px; /* 이미지 모서리를 둥글게 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 상품 정보 상세 영역 */
+.product-details {
+    flex-grow: 1; /* 남은 공간을 채우도록 설정 */
+    margin-left: 20px; /* 이미지와의 간격 */
+}
+
+/* 상품명 스타일 */
+.product-name {
+    font-size: 20px; /* 상품명 폰트 크기 */
+    font-weight: bold; /* 상품명 굵게 */
+    margin: 0 0 10px 0; /* 하단 여백 */
+}
+
+/* 가격 정보 */
+.product-price {
+    font-size: 18px; /* 가격 폰트 크기 */
+    margin: 0 0 5px 0; /* 하단 여백 */
+    color: #000; /* 검정 텍스트 */
+    font-weight: bold; /* 굵은 텍스트 */
+}
+
+/* 배송비 스타일 */
+.product-shipping {
+    font-size: 18px; /* 배송비 폰트 크기 */
+    margin: 0 0 5px 0; /* 하단 여백 */
+    color: #333; /* 진한 회색 */
+    font-weight: bold; /* 굵은 텍스트 */
+}
+
+/* 도착 예정일 스타일 */
+.product-delivery {
+    font-size: 18px; /* 도착 예정일 폰트 크기 */
+    color: #666; /* 밝은 회색 */
+    margin: 0; /* 기본 여백 제거 */
+    font-weight: bold; /* 굵은 텍스트 */
+}
+
+/* 도착 예정일 하단 얇은 구분선 */
+.product-info:last-of-type {
+    border-bottom: 3px solid #000; /* 제목 아래 굵은 검정 구분선 */
+}
+
+/* 구매 입찰 내역 섹션 스타일 */
+.bid-detail-section {
+    width: 90%; /* 섹션 너비를 화면의 80%로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 패딩 20px */
+   
+}
+
+/* 섹션 제목 스타일 */
+.bid-detail-section h3 {
+    font-size: 24px; /* 제목 폰트 크기 */
+    font-weight: bold; /* 제목 폰트 굵게 설정 */
+    margin-bottom: 20px; /* 제목 하단 여백 */
+    border-bottom: 3px solid #000; /* 아래쪽에 굵은 검정색 구분선 */
+}
+
+/* 입찰 내역 리스트 설정 */
+.bid-detail-list {
+    list-style: none; /* 기본 리스트 스타일 제거 (불릿 제거) */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0 0 20px 0; /* 하단 여백 20px */
+}
+
+/* 입찰 내역 항목 스타일 */
+.bid-detail-list li {
+    display: flex; /* 각 항목을 플렉스박스로 설정해 좌우 정렬 */
+    justify-content: space-between; /* 항목을 좌우로 배치 */
+    padding: 15px 0; /* 상하 패딩 15px */
+    
+}
+
+/* 입찰 내역 항목 라벨 (항목명) 스타일 */
+.bid-detail-list .label {
+    font-size: 16px; /* 값 폰트 크기 */
+    color: #666; /* 값 색상 */
+    font-weight: bold; /* 값 폰트 굵게 설정 */
+}
+
+/* 입찰 내역 항목 값 스타일 */
+.bid-detail-list .value {
+    font-size: 16px; /* 값의 폰트 크기 */
+    color: #000; /* 값의 색상 */
+    font-weight: bold; /* 값의 폰트를 굵게 설정 */
+}
+
+/* 회색으로 표시된 항목 값 (예: 마감기한) */
+.bid-detail-list .value-gray {
+    color: #000000; /* 회색 폰트 색상 */
+    font-weight: bold; /* 일반 폰트 굵기 */
+}
+
+/* 총 결제 금액 섹션 스타일 */
+.total-amount {
+    display: flex; /* 플렉스박스로 설정해 좌우 정렬 */
+    justify-content: space-between; /* 좌우로 항목을 배치 */
+    padding: 20px 0; /* 상하 패딩 20px */
+    border-top: 1px solid #000; /* 위쪽에 얇은 검정색 구분선 */
+    border-bottom: 3px solid #000; /* 아래쪽에 굵은 검정색 구분선 */
+    font-weight: bold; /* 폰트를 굵게 설정 */
+    font-size: 20px; /* 폰트 크기 설정 */
+}
+
+/* 배송 섹션 스타일 */
+.shipping-section {
+    width: 90%; /* 섹션 너비를 화면의 80%로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 패딩 20px */
+    border-bottom: 3px solid #000; /* 하단에  구분선 */
+}
+
+/* 섹션 제목 스타일 */
+.shipping-section h3 {
+    font-size: 24px; /* 제목 폰트 크기 */
+    font-weight: bold; /* 제목 폰트 굵게 설정 */
+    margin-bottom: 20px; /* 제목 하단 여백 */
+    border-bottom: 3px solid #000; /* 제목 하단에 굵은 구분선 */
+    padding-bottom: 10px; /* 하단 패딩 */
+}
+
+/* 배송 상세 리스트 스타일 */
+.shipping-detail-list {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0;
+}
+
+/* 배송 상세 항목 스타일 */
+.shipping-detail-list li {
+    display: flex; /* 좌우 정렬을 위한 플렉스박스 설정 */
+    justify-content: space-between; /* 좌우로 항목을 배치 */
+    padding: 15px 0; /* 상하 패딩 15px */
+}
+
+/* 배송 상세 항목 라벨 (항목명) 스타일 */
+.shipping-detail-list .label {
+    font-size: 16px; /* 라벨 폰트 크기 */
+    color: #666; /* 라벨 색상 */
+    font-weight: bold; /* 라벨 폰트 굵게 설정 */
+}
+
+/* 배송 상세 항목 값 스타일 */
+.shipping-detail-list .value {
+    font-size: 16px; /* 값 폰트 크기 */
+    color: #000; /* 값 색상 */
+    font-weight: bold; /* 값 폰트 굵게 설정 */
+}
+
+/* Footer 스타일 */
+.footer {
+    background-color: #e3feff; /* 푸터 배경색 */
+    color: rgb(0, 0, 0); /* 텍스트 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    margin-top: 20px; /* 푸터 상단 간격 */
+}
+
+.footer p {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 14px; /* 폰트 크기 */
+}
+
+.footer-links {
+    list-style: none; /* 기본 목록 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 10px 0 0; /* 위쪽 간격 추가 */
+    display: flex;
+    justify-content: center; /* 링크를 가운데 정렬 */
+    gap: 20px; /* 링크 사이 간격 */
+}
+
+.footer-links li {
+    display: inline; /* 가로로 나열 */
+}
+
+.footer-links a {
+    color: white; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 14px; /* 링크 폰트 크기 */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* 마우스를 올릴 때 밑줄 */
+}
