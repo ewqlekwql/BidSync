@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -19,7 +20,6 @@
    <!-- 외부 css/js 연결 -->
    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
 </head>
-
 <body>
    <!-- 헤더 -->
    <header>
@@ -35,10 +35,6 @@
             </li>
             <%-- 로그인/로그아웃 분리 추가 예정 --%>
             <li id="header-top-user">
-
-
-               
-
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
@@ -50,7 +46,6 @@
       <nav id="header-bottom">
          <ul>
             <li>
-
                <a href="#"><img src="<%= request.getContextPath() %>/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
