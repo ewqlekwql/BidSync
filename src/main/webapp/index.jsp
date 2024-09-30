@@ -26,31 +26,31 @@
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="">
 						<img src="views/resources/images/btn_indexMenu02.png">
 						<h3>디지털 · 가전</h3>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="">
 						<img src="views/resources/images/btn_indexMenu03.png">
 						<h3>스포츠</h3>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="">
 						<img src="views/resources/images/btn_indexMenu04.png">
 						<h3>홈 · 데코션</h3>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="">
 						<img src="views/resources/images/btn_indexMenu05.png">
 						<h3>완구</h3>
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="">
 						<img src="views/resources/images/btn_indexMenu06.png">
 						<h3>쥬얼리</h3>
 					</a>
