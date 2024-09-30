@@ -5,9 +5,19 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>BidSync - header</title>
+   
+   <!-- jQuery -->
+    <script 
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
+        integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM="
+        crossorigin="anonymous"></script>
 
    <!-- 외부 css/js 연결 -->
-   <link rel="stylesheet" href="views/resources/css/index.css">
+   <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
 </head>
 <body>
    <!-- 헤더 -->
@@ -16,7 +26,7 @@
       <nav id="header-top">
          <ul>
             <li id="header-top-logo">
-               <a href="index.html" target="_self"><img src="views/resources/images/logo.png" alt="비드싱크 로고"></a>
+               <a href="${pageContext.request.contextPath}/index.jsp" target="_self"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png" alt="비드싱크 로고"></a>
             </li>
             <li id="header-top-searchBar">
                   <input type="text" name="keyword" placeholder="검색어를 입력하세요">
@@ -24,9 +34,9 @@
             </li>
             <%-- 로그인/로그아웃 분리 추가 예정 --%>
             <li id="header-top-user">
-               <button type="button"><img src="views/resources/images/btn_cart.png"></button>
-               <button type="button"><img src="views/resources/images/btn_mypage.png"></button>
-               <button type="button"><img src="views/resources/images/btn_logout.png"></button>
+               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
             </li>
          </ul>
       </nav>
@@ -35,7 +45,7 @@
       <nav id="header-bottom">
          <ul>
             <li>
-               <a href="#"><img src="views/resources/images/btn_hambuger.png"></a>
+               <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
                <a href="#">패션</a>
