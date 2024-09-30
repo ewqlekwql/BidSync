@@ -1,0 +1,482 @@
+@font-face {
+    font-family: 'Freesentation';
+    src: url('../fonts/FreesentationVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Freesentation', sans-serif; /* 폰트 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    background-color: #f4f4f4; /* 페이지 배경색 */
+    height: 100vh; /* 브라우저 화면 전체 높이를 사용 */
+    overflow: auto; /* 스크롤 제거 */
+}
+
+.container {
+    width: 800px; /* 고정된 콘텐츠 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    background-color: white; /* 콘텐츠 배경색 */
+    padding: 20px; /* 콘텐츠 패딩 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    flex-direction: column; /* 세로로 정렬 */
+    
+}
+
+/* Header */
+.header {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 양쪽 끝에 요소 배치 */
+    align-items: center; /* 요소들을 세로 중앙에 정렬 */
+    padding: 10px 20px; /* 헤더의 패딩 */
+    border-bottom: 1px solid black; /* 아래쪽 테두리 */
+}
+
+.logo {
+    font-size: 24px; /* 로고의 폰트 크기 */
+    font-weight: bold; /* 굵은 폰트 */
+}
+
+.search-bar {
+    display: flex; /* 가로로 나란히 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.search-bar input {
+    padding: 5px; /* 입력창 내부 여백 */
+    margin-right: 5px; /* 오른쪽 간격 추가 */
+    border: 1px solid #ccc; /* 입력창 테두리 색상 */
+}
+
+.search-bar button {
+    padding: 5px 10px; /* 버튼 내부 여백 */
+    background-color: black; /* 버튼 배경색 */
+    color: white; /* 버튼 글자 색상 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 클릭할 때 손 모양 커서 */
+}
+
+.user-options span {
+    margin-left: 20px; /* 왼쪽에 간격 추가 */
+    font-size: 20px; /* 아이콘 크기 */
+    cursor: pointer; /* 클릭 가능한 상태로 커서 변경 */
+}
+
+/* Navigation Bar */
+.nav {
+    padding: 10px 0; /* 위아래 패딩 추가 */
+    border-bottom: 1px solid black; /* 아래쪽 테두리 */
+}
+
+.nav ul {
+    display: flex; /* 메뉴 항목을 가로로 나열 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    justify-content: space-around; /* 각 메뉴를 일정한 간격으로 배치 */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0; /* 리스트 마진 제거 */
+}
+
+.nav ul li {
+    cursor: pointer; /* 클릭 가능한 상태로 커서 변경 */
+}
+
+/* Product Information */
+.product-info {
+    padding: 20px; /* 내부 여백 */
+}
+
+.product-name {
+    text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+    border-bottom: 1px solid black; /* 아래쪽 테두리 */
+    margin-bottom: 20px; /* 아래쪽 간격 추가 */
+}
+
+.product-name h1 {
+    margin: 0; /* 제목의 기본 마진 제거 */
+    font-size: 20px; /* 제목 폰트 크기 */
+    font-weight: bold; /* 굵은 폰트 */
+}
+
+/* 상품 이미지 레이아웃 */
+.product-image-layout {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 10px; /* 이미지와 썸네일 사이의 간격 */
+}
+
+.main-image {
+    width: 450px; /* 이미지 영역 너비 */
+    height: 480px; /* 이미지 영역 높이 */
+    background-color: #eee; /* 배경색 (이미지 없을 때 표시) */
+    display: flex;
+    justify-content: center; /* 이미지 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.main-image img {
+    width: 100%; /* 이미지가 부모 요소의 너비에 맞게 설정 */
+    height: 100%; /* 이미지가 부모 요소의 높이에 맞게 설정 */
+    object-fit: cover; /* 이미지가 영역에 맞춰 잘림 */
+}
+
+.thumbnail-images {
+    display: flex; /* 썸네일을 가로로 정렬 */
+    gap: 10px; /* 썸네일 간의 간격 */
+}
+
+.thumbnail {
+    width: 80px; /* 썸네일 너비 */
+    height: 80px; /* 썸네일 높이 */
+    border: 1px solid #ccc; /* 썸네일 테두리 */
+    object-fit: cover; /* 썸네일 이미지 잘림 */
+    border-radius: 5px; /* 썸네일에 둥근 테두리 적용 */
+}
+
+.product-main {
+    display: flex;
+    gap: 20px; /* 이미지와 상세 정보 간의 간격 */
+}
+
+/* 카테고리 정보 */
+.category-info {
+    font-size: 14px; /* 카테고리 텍스트 크기 */
+    color: #888; /* 텍스트 색상 */
+    margin-bottom: 10px; /* 아래쪽 간격 추가 */
+}
+
+/* 상품 상세 정보 */
+.product-details {
+    padding: 20px; /* 내부 여백 */
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    gap: 0px; /* 내부 요소 간의 간격 */
+}
+
+/* 판매자 정보 */
+.seller-info {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 좌우로 간격 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+.seller-profile {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.seller-profile img {
+    width: 40px; /* 이미지 너비 */
+    height: 40px; /* 이미지 높이 */
+    border-radius: 50%; /* 원형 이미지 */
+    object-fit: cover; /* 이미지가 부모 영역에 맞게 잘림 */
+    margin-right: 10px; /* 오른쪽 여백 */
+}
+
+/* 별점 및 판매자명 스타일 */
+.seller-rating {
+    color: orange; /* 별점 색상 설정 */
+    font-size: 14px; /* 폰트 크기 설정 */
+}
+
+.seller-rating span {
+    font-size: 14px; /* 별점 텍스트 크기 */
+    color: orange; /* 별점 색상 */
+}
+
+/* 입찰 정보 및 가격 */
+.auction-info {
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+.auction-info h3 {
+    font-size: 16px; /* 소제목 폰트 크기 */
+    color: #666; /* 소제목 텍스트 색상 */
+}
+
+.auction-info h1 {
+    font-size: 36px; /* 큰 제목 폰트 크기 */
+    margin: 10px 0; /* 상하 여백 */
+}
+
+.auction-info ul {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0; /* 리스트 마진 제거 */
+    font-size: 14px; /* 리스트 텍스트 크기 */
+}
+
+.auction-info ul li {
+    margin: 5px 0; /* 각 리스트 항목의 상하 여백 */
+    color: #333; /* 텍스트 색상 */
+}
+
+.auction-info ul li span {
+    font-weight: bold; /* 굵은 텍스트 */
+}
+
+.auction-details p {
+    font-size: 14px; /* 설명 텍스트 크기 */
+    color: #555; /* 설명 텍스트 색상 */
+    margin: 10px 0; /* 상하 여백 */
+}
+
+/* 버튼 섹션 */
+.action-buttons {
+    display: flex; /* 가로 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    gap: 10px; /* 버튼 간의 간격 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.action-buttons button {
+    padding: 15px 0; /* 버튼 상하 여백 */
+    font-size: 18px; /* 버튼 텍스트 크기 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 모양 변경 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 즉시 구매 버튼 스타일 */
+.buy-now {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 텍스트 색상 */
+}
+
+/* 입찰하기 버튼 스타일 */
+.place-bid {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 텍스트 색상 */
+}
+
+/* 관심 목록에 추가 버튼 스타일 */
+.add-to-list {
+    background-color: white; /* 흰색 배경 */
+    color: black; /* 검은색 텍스트 */
+    border: 1px solid black !important; /* 검은색 테두리 */
+}
+
+/* 상품 설명 섹션 스타일 */
+.product-description {
+    padding: 20px; /* 내부 여백 설정 */
+    background-color: #f9f9f9; /* 배경색 설정 */
+    border: 1px solid #ddd; /* 회색 테두리 추가 */
+    margin: 20px 0; /* 위아래 외부 여백 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.product-description h2 {
+    font-size: 20px; /* 제목 폰트 크기 */
+    margin-bottom: 10px; /* 제목 아래쪽 여백 */
+}
+
+.product-description p {
+    font-size: 16px; /* 본문 폰트 크기 */
+    color: #333; /* 본문 텍스트 색상 */
+}
+
+/* 판매자 정보 섹션 */
+.seller-info-section {
+    display: flex; /* 내부 요소들을 가로로 배치 */
+    justify-content: space-between; /* 좌우로 공간을 나누어 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    border-bottom: 1px solid #ddd; /* 아래쪽 테두리 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 판매자 프로필 정보 */
+.seller-profile-info {
+    display: flex; /* 프로필 이미지와 텍스트를 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 판매자 프로필 이미지 */
+.seller-profile-image {
+    width: 80px; /* 이미지 크기 설정 */
+    height: 80px;
+    border-radius: 50%; /* 원형 이미지 */
+    margin-right: 20px; /* 텍스트와 이미지 사이 여백 */
+}
+
+/* 판매자 이름 */
+.seller-details h3 {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 18px; /* 폰트 크기 설정 */
+}
+
+/* 팔로우 정보 */
+.seller-details p {
+    margin: 5px 0; /* 상하 여백 */
+    color: #888; /* 텍스트 색상 설정 */
+}
+
+/* 팔로우 하트 이모티콘 */
+.seller-details span {
+    font-size: 16px; /* 하트 이모티콘 크기 설정 */
+    color: red; /* 하트 이모티콘 색상 */
+}
+
+/* 판매자 액션 버튼들 */
+.seller-actions {
+    display: flex; /* 버튼들을 가로로 배치 */
+    flex-direction: column; /* 버튼을 세로로 정렬 */
+    gap: 10px; /* 버튼 간의 간격 */
+}
+
+/* "스토어 방문" 버튼 스타일 */
+.visit-store {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 흰색 텍스트 */
+    padding: 10px 80px; /* 버튼 내부 여백 */
+    border-radius: 20px; /* 버튼 모서리를 둥글게 */
+    border: none; /* 테두리 없음 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    cursor: pointer; /* 손 모양 커서 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* "1:1 채팅" 버튼 스타일 */
+.chat-seller {
+    background-color: white; /* 흰색 배경 */
+    color: black; /* 검은색 텍스트 */
+    padding: 10px 80px; /* 버튼 내부 여백 */
+    border-radius: 20px; /* 둥근 모서리 */
+    border: 1px solid black; /* 검은색 테두리 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    cursor: pointer; /* 손 모양 커서 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+
+/* 리뷰 요약 섹션 스타일 */
+.review-summary {
+    padding: 20px 0; /* 상하 내부 여백 설정 */
+    justify-content: space-between; /* 별점과 평점 설명을 양 끝에 배치 */
+    display: flex; /* 별점과 평점 설명을 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 100px; /* 별점과 평점 설명 사이의 간격 */
+}
+
+/* 별점 및 점수 정렬 */
+.rating-summary {
+    text-align: left; /* 왼쪽 정렬 */
+    margin-left: 20px; /* 왼쪽으로 20px 여백 추가 */
+}
+
+/* 평점 숫자 스타일 */
+.rating-summary h3 {
+    font-size: 36px; /* 폰트 크기 설정 */
+    color: black; /* 평점 텍스트 색상 설정 (검정) */
+    margin: 0; /* 기본 마진 제거 */
+    
+}
+
+/* 별점 스타일 */
+.rating-stars {
+    font-size: 24px; /* 별점 크기 설정 */
+    color: orange; /* 별점 색상 설정 */
+    
+}
+
+/* 리뷰 카테고리별 막대 스타일 */
+.rating-categories {
+    flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 카테고리 사이 간격 */
+    margin-right: 70px; /* 오른쪽으로 70px 여백 추가 */
+}
+
+/* 각 카테고리(신뢰도, 품질 등)의 라벨과 막대 스타일 */
+.rating-categories .category {
+    display: flex; /* 라벨과 막대를 가로로 배치 */
+    justify-content: space-between; /* 라벨과 막대를 좌우로 나누어 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-top: 10px; /* 각 카테고리 간의 간격 */
+}
+
+/* 리뷰 카테고리 막대 배경 스타일 */
+.rating-bar {
+    width: 70%; /* 막대 너비 설정 */
+    background-color: #ddd; /* 막대 배경색 설정 */
+    height: 10px; /* 막대 높이 설정 */
+    border-radius: 5px; /* 막대의 모서리를 둥글게 설정 */
+    overflow: hidden; /* 막대 내부 내용이 넘치지 않도록 설정 */
+}
+
+/* 카테고리 막대 채우기 부분 스타일 */
+.rating-bar .fill {
+    height: 100%; /* 채워진 막대의 높이 설정 */
+    background-color: orange; /* 채워진 부분의 색상 설정 */
+}
+
+/* 리뷰 섹션 스타일 */
+.reviews h4 {
+    font-size: 20px; /* 제목의 폰트 크기 */
+    margin-bottom: 10px; /* 제목 아래쪽 여백 */
+}
+
+/* 리뷰 항목 스타일 */
+.review-item {
+    padding: 10px 0; /* 상하 패딩 설정 */
+}
+
+/* 리뷰 항목을 구분하는 점선 */
+.dotted-line {
+    border: none; /* 테두리 제거 */
+    border-top: 1px dashed #ddd; /* 점선 테두리 추가 */
+    margin: 10px 0; /* 상하 여백 설정 */
+}
+
+/* "모든 리뷰 보기" 버튼 스타일 */
+.view-more-reviews {
+    background-color: #ffffff; /* 하얀색 배경 */
+    color: rgb(33, 207, 255); /* 버튼 텍스트 색상 설정 */
+    border: 2px solid rgb(33, 207, 255);
+    padding: 10px 80px; /* 버튼 내부 여백 설정 */
+    cursor: pointer; /* 마우스 커서를 손 모양으로 변경 */
+    display: block; /* 버튼을 블록 요소로 설정 */
+    margin: 20px auto; /* 상하 여백 및 중앙 정렬 */
+    border-radius: 10px; /* 버튼 모서리를 둥글게 설정 */
+} 
+
+/* Footer 스타일 */
+.footer {
+    background-color: #e3feff; /* 푸터 배경색 */
+    color: rgb(0, 0, 0); /* 텍스트 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    margin-top: 20px; /* 푸터 상단 간격 */
+}
+
+.footer p {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 14px; /* 폰트 크기 */
+}
+
+.footer-links {
+    list-style: none; /* 기본 목록 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 10px 0 0; /* 위쪽 간격 추가 */
+    display: flex;
+    justify-content: center; /* 링크를 가운데 정렬 */
+    gap: 20px; /* 링크 사이 간격 */
+}
+
+.footer-links li {
+    display: inline; /* 가로로 나열 */
+}
+
+.footer-links a {
+    color: white; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 14px; /* 링크 폰트 크기 */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* 마우스를 올릴 때 밑줄 */
+}
+
