@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>BidSync - 회원가입</title>
 </head>
 <body>
 	<!-- 임시 파일입니다. -->
