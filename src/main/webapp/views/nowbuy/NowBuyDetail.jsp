@@ -13,7 +13,6 @@
     <div class="container">
         <!-- Header (header.jsp 포함) -->
         <jsp:include page="/views/common/header.jsp" />
-
     
 
         <!-- 구매 완료 섹션 -->

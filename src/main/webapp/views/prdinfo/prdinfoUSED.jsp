@@ -44,9 +44,14 @@
                         <p>카테고리: 패션 > 악세서리</p>
                     </div>
                     <div class="seller-info">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile">
+                        <div class="seller-profile">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" 
+                        class="seller-profile">
+                        <span>판매자명</span>
+                    </div>
                         <div class="seller-rating">
-                            판매자명 | ★★★☆☆ <span>(20)</span>
+                           ★★★☆☆ 
+                           <span>(20)</span>
                         </div>
                     </div>
                     <div class="used-price">
