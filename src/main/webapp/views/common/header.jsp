@@ -19,6 +19,7 @@
    <!-- 외부 css/js 연결 -->
    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
 </head>
+
 <body>
    <!-- 헤더 -->
    <header>
@@ -26,13 +27,7 @@
       <nav id="header-top">
          <ul>
             <li id="header-top-logo">
-<<<<<<< HEAD
-
-            <img src="<%= request.getContextPath() %>/views/resources/images/logo.png" alt="비드싱크 로고">
-
-=======
-               <a href="${pageContext.request.contextPath}/index.jsp" target="_self"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png" alt="비드싱크 로고"></a>
->>>>>>> 1f45dd896146760ab7f75e17566fca212a515864
+            <a href="${pageContext.request.contextPath}/index.jsp" target="_self"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png" alt="비드싱크 로고"></a>
             </li>
             <li id="header-top-searchBar">
                   <input type="text" name="keyword" placeholder="검색어를 입력하세요">
@@ -40,16 +35,13 @@
             </li>
             <%-- 로그인/로그아웃 분리 추가 예정 --%>
             <li id="header-top-user">
-<<<<<<< HEAD
-               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_cart.png"></button>
-               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_mypage.png"></button>
-               <button type="button"><img src="<%= request.getContextPath() %>/views/resources/images/btn_logout.png"></button>
+
+
                
-=======
+
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
                <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
->>>>>>> 1f45dd896146760ab7f75e17566fca212a515864
             </li>
          </ul>
       </nav>
@@ -58,11 +50,8 @@
       <nav id="header-bottom">
          <ul>
             <li>
-<<<<<<< HEAD
+
                <a href="#"><img src="<%= request.getContextPath() %>/views/resources/images/btn_hambuger.png"></a>
-=======
-               <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
->>>>>>> 1f45dd896146760ab7f75e17566fca212a515864
             </li>
             <li>
                <a href="#">패션</a>

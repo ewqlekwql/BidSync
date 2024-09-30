@@ -20,7 +20,7 @@
 
 /* 메인 컨테이너 스타일 */
 .container {
-    width: 800px; /* 페이지의 너비를 800px로 설정 */
+    width: 100%; 
     margin: 0 auto; /* 페이지 중앙에 배치 */
     background-color: white; /* 배경을 흰색으로 설정 */
     padding: 20px; /* 내부 여백을 20px 설정 */
