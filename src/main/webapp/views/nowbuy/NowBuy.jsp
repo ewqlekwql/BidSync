@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/AddressPopUp.css"> <!-- 주소 팝업 스타일 -->
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/AddressAddPopUp.css"> <!-- 주소 추가 팝업 스타일 -->
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/RequestPopUp.css"> <!-- 요청 사항 팝업 스타일 -->
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
+    
 
 </head>
 <body>
+	<jsp:include page="/views/common/header.jsp" />
+	
     <div class="container">
         <!-- Header (header.jsp 포함) -->
-        <jsp:include page="/views/common/header.jsp" />
+       
 
         
 

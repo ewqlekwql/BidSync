@@ -1,16 +1,4 @@
 /* 팝업 전체 컨테이너 스타일 */
-
-@font-face {
-    font-family: 'Freesentation';
-    src: url('../fonts/FreesentationVF.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Freesentation', sans-serif;
-}
-
 .popup-container {
     position: fixed; /* 화면 전체 고정 */
     top: 0;

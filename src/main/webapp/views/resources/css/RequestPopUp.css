@@ -1,15 +1,3 @@
-@font-face {
-    font-family: 'Freesentation';
-    src: url('../fonts/FreesentationVF.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Freesentation', sans-serif;
-}
-
-
 .popup-container {
     position: fixed; /* 화면에 고정되어 스크롤에 영향을 받지 않도록 함 */
     top: 0; /* 팝업이 화면 최상단에 위치 */
