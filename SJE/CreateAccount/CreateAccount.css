@@ -57,6 +57,7 @@ body {
 
 #user_id {
     margin-bottom: 5px;
+    text-transform: lowercase;
 }
 
 #id_overlap_check {

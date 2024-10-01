@@ -19,7 +19,7 @@
                 <div class="index" id="id">
                     <b>아이디</b>
                     <br>
-                    <input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onblur="checkInput(this.id);">
+                    <input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
                     <button id="id_overlap_check">중복 체크</button>
                     <span id="user_id_required" class="check_text hidden"><b>사용할 수 없는 아이디입니다.</b></span>
                     
@@ -48,6 +48,7 @@
                     </div>
                     <div class="index" id="birth-month">
                         <select aria-placeholder="월">
+                            <option value="">선택</option>
                             <option value="1">1월</option>
                             <option value="2">2월</option>
                             <option value="3">3월</option>
@@ -72,16 +73,18 @@
                 <div class="index" id="emailAddress">
                     <input type="email">
                     <b>@</b>
-                    <select>
-                        <option>naver.com</option>
-                        <option>google.com</option>
-                        <option>직접입력</option>
+                    <select id="selbox" name="selbox">
+                        <option value="">선택</option>
+                        <option value="네이버">naver.com</option>
+                        <option value="구글">google.com</option>
+                        <option value="direct">직접입력</option>
                     </select>
                 </div>
+                
                 <div class="index" id="phone">
                     <b>휴대전화</b>
                     <br>
-                    <input type="tel" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)">
+                    <input type="tel" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)" onkeyup="checkNumber(event)"/>
                 </div>
                 
                 <div class="submit">
