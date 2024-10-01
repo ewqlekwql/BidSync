@@ -97,3 +97,17 @@ a{
     height: 28px;
     padding-left: 0.1px;
 }
+
+.hidden{
+    display: none;
+}
+
+.join_text{
+    border: none;
+    margin-top: 5px;
+    width: 250px;
+    color: red;
+    font-size: 10px;
+    left: 0px;
+    bottom: -17px;
+}

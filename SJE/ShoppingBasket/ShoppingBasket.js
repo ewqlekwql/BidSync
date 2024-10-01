@@ -1,6 +1,6 @@
 let btn1 = document.querySelector(".all > button");
 
-
+// 전체선택을 눌렀을때 상품 전체선택
 function allCheck(_allCheckBox) {
     // 전체선택 체크박스의 값
     let checked = _allCheckBox.checked;
@@ -12,6 +12,7 @@ function allCheck(_allCheckBox) {
     }
 }
 
+// 체크 하나라도 빠지면 상품전체 checkbox 해제
 function isAllproductChecked() {
     // 모든 체크박스가 체크되어 있는지 검사 후
     // 모두 체크 -> return true;
@@ -25,6 +26,7 @@ function isAllproductChecked() {
     return true;
 }
 
+
 const productCheckBoxList = document.getElementsByClassName("one-product");
 for (let box of productCheckBoxList) {
     box.onchange = function () {
@@ -33,6 +35,7 @@ for (let box of productCheckBoxList) {
     }
 }
 
+// 선택삭제를 눌렀을 때 체크되어있는 checkbox를 해제
 function allCheckCancel() {
     let checkCancel = document.getElementById("checkreset");
     checkCancel.addEventListener('click', function () {
@@ -55,6 +58,15 @@ function allCheckCancel() {
 // allCheckCancel 함수를 호출하여 이벤트 리스너를 등록
 allCheckCancel();
 
+// 품절/판매종료상품 전체삭제 버튼을 눌렀을 때 데이터 베이스에서 status가 'no'인것을 찾아서 상품을 삭제
+function soldoutproductAllDelete() {
+    const soldoutAllDelete = document.querySelector("#soldoutcheck");
+
+
+}
+
+
+// 삭제 버튼을 눌렀을 때 장바구니에서 상품을 삭제
 function deleteProduct() {
     // 모든 삭제 버튼을 선택합니다. ID 대신 class를 사용합니다.
     let deleteButtons = document.querySelectorAll(".subject button");
@@ -73,3 +85,10 @@ function deleteProduct() {
 
 // deleteProduct 함수를 호출하여 삭제 버튼에 이벤트 리스너를 등록합니다.
 deleteProduct();
+
+// 구매하기 버튼을 눌렀을 때
+function buy() {
+    const buybutton = document.querySelector("#buy-button");
+
+
+}
