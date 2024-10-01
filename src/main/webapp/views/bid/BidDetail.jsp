@@ -94,6 +94,7 @@
     </div>
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
-    <script src="<%= request.getContextPath() %>/resources/js/BidDetail.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/BidDetail.js"></script>
+
 </body>
 </html>
