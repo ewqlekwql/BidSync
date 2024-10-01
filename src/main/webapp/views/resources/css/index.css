@@ -9,7 +9,20 @@
 }
 
 /* 공통 적용 */
-/* 페이지 내 header가 존재하면 자동으로 적용되므로, 중복 기입x */
+/*
+	<적용 사항>
+	- body의 margin 및 padding 0으로 설정, display를 flex로 지정
+	- 모든 요소에 box-sizing: border-box와 폰트 설정을 일괄 적용
+	- 대다수 요소의 margin 및 padding 0으로 설정
+	- input 일괄 outline 제거
+	- button 태그에 cursor: pointer 설정
+	- ul, a 등에 decoration, style 제거
+	
+	※ 필요하다 생각되면 더 추가될 수도 있습니다.
+	※ 페이지 내 header가 존재하면 자동으로 적용되므로, 중복 기입x
+	※ header 부분을 다른 태그로 감싸지 마세요
+	-> ex) <div><jsp:inclue page="header.jsp"><div>	(css 오류납니다!!!)
+*/
 body {
    width: 100%;
    height: 100%;
@@ -23,10 +36,10 @@ body {
 body * {
 	box-sizing: border-box;
 	font-family: 'Freesentation';
-	font-size: 1vw;
+	font-size: 1vw;	/* 약 11pt */
 }
 
-div, button, input, main, header, nav, section, article, aside, footer, ul, ol, li {
+div, button, input, img, main, header, nav, section, article, aside, footer, ul, ol, li {
    margin: 0;
    padding: 0;
 }
