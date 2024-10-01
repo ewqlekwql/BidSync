@@ -9,4 +9,24 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>login.me</display-name>
+    <servlet-name>login.me</servlet-name>
+    <servlet-class>com.ct.bidsync.member.controller.MemberLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login.me</servlet-name>
+    <url-pattern>/login.me</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>enroll.me</display-name>
+    <servlet-name>enroll.me</servlet-name>
+    <servlet-class>com.ct.bidsync.member.controller.MemberEnrollController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>enroll.me</servlet-name>
+    <url-pattern>/enroll.me</url-pattern>
+  </servlet-mapping>
 </web-app>
