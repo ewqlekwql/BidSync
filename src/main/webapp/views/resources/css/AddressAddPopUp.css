@@ -17,6 +17,8 @@
     border-radius: 15px; /* 모서리 둥글게 */
     width: 400px; /* 팝업 너비 */
     padding: 20px; /* 내부 여백 */
+    max-height: 80vh; /* 팝업의 최대 높이를 화면 높이의 80%로 제한 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
     position: relative; /* 닫기 버튼과 뒤로가기 버튼의 위치를 설정하기 위해 사용 */

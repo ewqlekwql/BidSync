@@ -26,8 +26,14 @@
 
 .product-name h1 {
     margin: 0; /* 기본 마진 제거 */
-    font-size: 20px; /* 제목 글자 크기 */
+    font-size: 40px; /* 제목 글자 크기 */
     font-weight: bold; /* 굵은 글씨체 */
+}
+
+/* 상품 메인 섹션 */
+.product-main {
+    display: flex; /* 가로 정렬 */
+    gap: 20px; /* 내부 간격 */
 }
 
 /* 상품 이미지 레이아웃 */
@@ -36,6 +42,8 @@
     flex-direction: column; /* 세로로 정렬 */
     align-items: center; /* 가운데 정렬 */
     gap: 10px; /* 이미지와 썸네일 사이의 간격 */
+    margin-left: 10px;
+    margin-right: 100px;
 }
 
 

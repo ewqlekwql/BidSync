@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // BidDetail 페이지로 이동 (경로 확인 필요)
             window.location.href = '../bid/BidDetail.jsp';
+            
         });
     }
 });
