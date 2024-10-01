@@ -1,0 +1,135 @@
+/* 팝업 전체 화면을 덮는 컨테이너 */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 투명한 검은색 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
+}
+
+/* 팝업 본체 */
+.popup {
+    background-color: white;
+    border-radius: 15px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* 팝업 헤더 */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popup-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 타이머 스타일 */
+.popup-timer {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* 현재 입찰가 스타일 */
+.popup-current-bid h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.popup-current-bid h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.popup-current-bid p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* 구매 희망가 입력 섹션 */
+.popup-bid-input {
+    margin: 20px 0;
+}
+
+.popup-bid-input label {
+    display: block; /* 라벨을 블록 요소로 설정 */
+    font-size: 14px; /* 라벨 글자 크기 */
+    color: #333; /* 라벨 색상 */
+    margin-bottom: 2px; /* 라벨과 금액 사이 간격 */
+    font-weight: bold; /* 라벨 굵게 설정 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin-left: 10px; /* 왼쪽 여백 */
+}
+
+/* 금액 표시 섹션 */
+.bid-amount-container {
+    display: flex; /* 가로 정렬 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    align-items: baseline; /* 텍스트 기준선 맞춤 */
+    font-size: 24px; /* 기본 금액 크기 */
+    color: #ccc; /* 기본 금액 색상 (연한 회색) */
+}
+
+.bid-amount {
+    font-weight: bold; /* 금액을 굵게 */
+    color: rgba(0, 0, 0, 0.8); /* 기본 금액보다 조금 더 진한 색상 */
+}
+
+.currency {
+    font-weight: bold; /* '원'을 굵게 */
+    color: black; /* '원' 텍스트는 진한 검정 */
+    margin-left: 5px; /* 금액과 '원' 사이 간격 */
+}
+
+/* 추가 정보 섹션 */
+.bid-info {
+    font-size: 12px; /* 안내 텍스트 크기 */
+    color: gray; /* 안내 텍스트 색상 */
+    margin-top: 10px; /* 안내 텍스트 위쪽 여백 */
+    text-align: center; /* 중앙 정렬 */
+    border-top: 1px solid #ccc; /* 위쪽에 구분선 추가 */
+    padding-top: 10px; /* 구분선과 텍스트 사이 여백 */
+}
+
+/* 입찰 버튼 스타일 */
+.bid-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bid-btn:hover {
+    background-color: #333;
+}
+
+/* 경고 텍스트 스타일 */
+.popup-warning {
+    font-size: 11px;
+    color: gray;
+    margin-top: 15px;
+}
