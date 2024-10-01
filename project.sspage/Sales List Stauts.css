@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.search-bar {
+    width: 200px;
+    padding: 5px;
+}
+
+.search-btn {
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    font-size: 14px;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    text-align: left;
+}
+
+table.product-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.product-list th, table.product-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table.product-list th {
+    background-color: #f5f5f5;
+}
+
+.product-image {
+    max-width: 50px;
+    height: auto;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #444;
+}
