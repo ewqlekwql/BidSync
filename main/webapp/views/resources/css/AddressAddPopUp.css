@@ -1,0 +1,71 @@
+/* 팝업 전체 컨테이너 스타일 */
+.popup-container {
+    position: fixed; /* 화면 전체 고정 */
+    top: 0;
+    left: 0;
+    width: 100%; /* 전체 화면 너비 */
+    height: 100%; /* 전체 화면 높이 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명한 검은 배경 */
+    display: flex; /* 내부 요소들을 중앙에 배치 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 팝업 본체 스타일 */
+.popup {
+    background-color: white; /* 팝업 배경 흰색 */
+    border-radius: 15px; /* 모서리 둥글게 */
+    width: 400px; /* 팝업 너비 */
+    padding: 20px; /* 내부 여백 */
+    max-height: 80vh; /* 팝업의 최대 높이를 화면 높이의 80%로 제한 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    position: relative; /* 닫기 버튼과 뒤로가기 버튼의 위치를 설정하기 위해 사용 */
+}
+
+/* 팝업 헤더 스타일 */
+.popup-header {
+    display: flex; /* 뒤로가기 버튼, 제목, 닫기 버튼을 가로로 나란히 배치 */
+    justify-content: space-between; /* 양 끝에 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-btn, .close-btn {
+    font-size: 24px; /* 버튼 크기 */
+    cursor: pointer; /* 클릭 가능한 손 모양 커서 */
+}
+
+/* 주소 입력 폼 스타일 */
+.address-form {
+    display: flex; /* 입력 필드들을 세로로 배치 */
+    flex-direction: column;
+    margin-top: 20px; /* 상단 여백 */
+}
+
+/* 폼의 라벨 스타일 */
+.address-form label {
+    font-size: 14px; /* 라벨 텍스트 크기 */
+    margin-bottom: 5px; /* 라벨과 입력 필드 사이 간격 */
+}
+
+/* 입력 필드 스타일 */
+.address-form input {
+    padding: 10px; /* 입력 필드 내부 여백 */
+    margin-bottom: 15px; /* 입력 필드 간의 간격 */
+    border: 1px solid #ccc; /* 연한 회색 테두리 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    font-size: 16px; /* 입력 필드 텍스트 크기 */
+}
+
+/* 저장하기 버튼 스타일 */
+.a-save-btn {
+    padding: 10px; /* 버튼 내부 여백 */
+    background-color: black; /* 버튼 배경색 검정 */
+    color: white; /* 텍스트 색상 흰색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 클릭 가능한 손 모양 커서 */
+    font-size: 18px; /* 버튼 텍스트 크기 */
+}
