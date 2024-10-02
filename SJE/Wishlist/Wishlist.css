@@ -1,0 +1,213 @@
+.all button {
+    border: none;
+    background-color: white;
+    margin-right: 900px;
+    cursor: pointer;
+
+}
+
+.back {
+    width: 1000px;
+    font-size: 18px;
+    display: flex;
+}
+
+.back img {
+    margin-top: 8px;
+    width: 45px;
+    height: 45px;
+}
+
+.back b {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+.back p {
+    display: flex;
+    align-items: end;
+}
+
+#hr1,
+#hr2 {
+    width: 1000px;
+    margin: 0;
+}
+
+.allCheckBox {
+    width: 1000px;
+    height: 30px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.productAll-Chack {
+    width: 40px;
+}
+
+#checkreset {
+    margin-left: 15px;
+    background: black;
+    color: white;
+    font-weight: 550;
+    cursor: pointer;
+    margin-left: 635px;
+    border-radius: 3px;
+}
+
+#soldoutcheck {
+    margin-left: 15px;
+    background: black;
+    color: white;
+    font-weight: 550;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 1000px;
+}
+
+.product-left {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subject {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px 0 0px 20px;
+    width: 95%;
+    height: 250px;
+
+}
+
+#basket1 {
+    border: none;
+    padding-top: 5px;
+    padding-left: 15px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+#basket1 button {
+    background: white;
+    border: none;
+    text-decoration: underline;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.infomation {
+    height: 145px;
+    display: flex;
+}
+
+.img {
+    border-radius: 15px;
+    margin-left: 25px;
+    margin-top: 16px;
+    width: 90px;
+    height: 110px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.productName {
+    width: 200px;
+    margin: 20px;
+    margin-top: 9px;
+}
+
+.productName ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.soldoutproduct li{
+    color: lightgray;
+}
+
+.soldoutsine{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-left: -5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.productName img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.count {
+    padding-top: 20px;
+    padding-left: 3px;
+    font-size: 13px;
+    display: flex;
+}
+
+.countAuto {
+    border-radius: 5px;
+    background: lightgray;
+    margin-left: 15px;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.countAuto button {
+    cursor: pointer;
+    border: none;
+    background: lightgray;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.countAuto img {
+    width: 15px;
+    height: 16px;
+}
+
+.countAuto #btn1 {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.countAuto #btn2 {
+    padding-left: 7px;
+    border-radius: 0px 5px 5px 0px;
+}
+
