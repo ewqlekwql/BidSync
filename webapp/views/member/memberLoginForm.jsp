@@ -3,10 +3,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>BidSync - 회원가입</title>
+<title>BidSync - 로그인</title>
 </head>
 <body>
-	<!-- 임시 파일입니다. -->
+	<!-- 헤더 -->
 	<jsp:include page="/views/common/header.jsp" />
+	
+	test : <a href="${pageContext.request.contextPath}/login.me">login.me</a>
 </body>
 </html>
