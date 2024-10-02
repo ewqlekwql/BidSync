@@ -34,13 +34,17 @@ public class LoginController extends HttpServlet {
 		
 		// 전달값 기록
 		String userId = request.getParameter("userId");
-		String userPwd = request.getParameter("usrPwd");
+		String userPwd = request.getParameter("userPwd");
 		
 		Member loginUser = new MemberService().loginMember(userId, userPwd);
 		
 		// 회원정보 조회
 		if(loginUser == null) {
-			// errorpage 미완성
+			// 로그인 실패 -> errorPage 이동
+			request.setAttribute("errorMsg", "아이디 혹은 비밀번호가 틀렸습니다.");
+			request.setAttribute("responseURL", request.getContextPath() + "/views/member/memberLoginForm.jsp");
+			
+			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		else {
 			HttpSession session = request.getSession();

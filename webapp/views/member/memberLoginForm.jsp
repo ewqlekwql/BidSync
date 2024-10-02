@@ -9,6 +9,11 @@
 	<!-- 헤더 -->
 	<jsp:include page="/views/common/header.jsp" />
 	
-	test : <a href="${pageContext.request.contextPath}/login.me">login.me</a>
+	<h4>테스트폼</h4>
+	<form action="${pageContext.request.contextPath}/login.me" method="get">
+		<input type="text" name="userId">
+		<input type="text" name="userPwd">
+		<input type="submit" value="로그인">
+	</form>
 </body>
 </html>

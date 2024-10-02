@@ -31,6 +31,8 @@ public class MemberDao {
 		ResultSet rset = null;
 		String sql = prop.getProperty("loginMember");
 		
+		System.out.println(conn + "/" + userId + "." + userPwd);
+		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userId);
