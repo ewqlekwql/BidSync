@@ -137,6 +137,28 @@
     font-size: 15px;
 }
 
+.soldoutproduct li{
+    color: lightgray;
+}
+
+.soldoutsine{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-left: -5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.productName img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 3px;
+}
+
 .count {
     padding-top: 20px;
     padding-left: 3px;
@@ -167,6 +189,7 @@
 
 .countAuto img {
     width: 15px;
+    height: 16px;
 }
 
 .countAuto #btn1 {
