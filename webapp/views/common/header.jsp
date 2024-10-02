@@ -33,12 +33,25 @@
                   <input type="text" name="keyword" placeholder="검색어를 입력하세요">
                   <button type="button">검색</button>
             </li>
-            <%-- 로그인/로그아웃 분리 추가 예정 --%>
-            <li id="header-top-user">
-               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
-               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
-               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
-            </li>
+            <%-- 로그인/로그아웃 분리 --%>
+            <c:choose>
+            	<c:when test="${empty loginUser}">
+            		<%-- 로그인 전 --%>
+            		<li id="header-top-user">
+		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
+		            </li>
+            	</c:when>
+            	<c:otherwise>
+            		<%-- 로그인 후 --%>
+            		<li id="header-top-user">
+		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
+		            </li>
+            	</c:otherwise>
+            </c:choose>
          </ul>
       </nav>
 

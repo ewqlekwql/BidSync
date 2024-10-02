@@ -19,7 +19,6 @@ public class MemberLoginController extends HttpServlet {
      */
     public MemberLoginController() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -28,13 +27,13 @@ public class MemberLoginController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("서블렛 테스트중");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
