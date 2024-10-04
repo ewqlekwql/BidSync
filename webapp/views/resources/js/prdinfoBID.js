@@ -20,7 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const bidButton = document.querySelector('.bid-btn');
     if (bidButton) {
         bidButton.addEventListener('click', function() {
-            window.location.href = '../bid/Bid.jsp'; // 결제 페이지로 이동
+            const bidAmount = document.getElementById('bidAmount').value; // 사용자가 입력한 금액
+            if (bidAmount) {
+                // 입력한 금액으로 결제 페이지로 이동 또는 다른 처리
+                console.log(`입력한 입찰 금액: ${bidAmount}원`);
+                window.location.href = `../bid/Bid.jsp?bidAmount=${bidAmount}`; // 결제 페이지로 이동
+            } else {
+                alert('입찰 금액을 입력하세요.');
+            }
         });
     }
 
