@@ -117,6 +117,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 팔로우 버튼 클릭 시 하트 변경 및 팔로우 수 변경 처리
+    const followButton = document.querySelector('.seller-details p span');
+    let isFollowed = false;
+    let followCount = 0;
+
+    if (followButton) {
+        // 초기 팔로우 상태 표시
+        followButton.textContent = '🤍 follow ' + followCount;
+        followButton.style.color = 'black';
+
+        followButton.addEventListener('click', function() {
+            if (!isFollowed) {
+                // 🤍에서 빨간 하트로 변경, 팔로우 수 증가
+                followButton.textContent = '❤️ follow ' + (followCount + 1);
+                followCount += 1;
+                isFollowed = true;
+            } else {
+                // 빨간 하트에서 🤍로 변경, 팔로우 수 감소
+                followButton.textContent = '🤍 follow ' + (followCount - 1);
+                followCount -= 1;
+                isFollowed = false;
+            }
+        });
+    }
+
     // 무한 스크롤 처리
     /*
     window.addEventListener('scroll', function() {

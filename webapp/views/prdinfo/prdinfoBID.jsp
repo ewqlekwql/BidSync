@@ -96,7 +96,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
                 <div class="seller-details">
                     <h3>판매자명</h3>
-                    <p><span>🤍</span> 팔로우 189</p>
+                    <p><span>🤍</span> 
                 </div>
             </div>
             <div class="seller-actions">
