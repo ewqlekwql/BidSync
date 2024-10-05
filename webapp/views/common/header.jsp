@@ -59,7 +59,7 @@
       <nav id="header-bottom">
          <ul>
             <li>
-               <a href="#"><img src="<%= request.getContextPath() %>/views/resources/images/btn_hambuger.png"></a>
+               <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
                <a href="#">패션</a>

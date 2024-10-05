@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>BidSync - 로그인</title>
+	<head>
+	<meta charset="UTF-8">
+	<title>BidSync - 로그인</title>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -14,6 +14,8 @@
 		<input type="text" name="userId">
 		<input type="text" name="userPwd">
 		<input type="submit" value="로그인">
+		<br>
+		<a href="${pageContext.request.contextPath}//enroll.me">회원가입</a>
 	</form>
 </body>
 </html>
