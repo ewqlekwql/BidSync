@@ -19,4 +19,21 @@ public class MemberService {
 		close(conn);
 		return m;
 	}
+	
+	// MemberInsertController
+	public int insertMember(Member m) {
+		Connection conn = getConnection();
+		
+		int result = new MemberDao().insertMember(conn, m);
+		if(result > 0) {
+			commit(conn);
+			System.out.println("회원가입 커밋 완료");
+		}
+		else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		return result;
+	}
 }

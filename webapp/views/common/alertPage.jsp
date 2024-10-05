@@ -1,21 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
-	String errorMsg = (String)request.getAttribute("errorMsg");
+	String alertMsg = (String)request.getAttribute("alertMsg");
 	String responseURL = (String)request.getAttribute("responseURL");
 %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>error</title>
+	<title>BidSync</title>
 </head>
-<body onload="alertError()">
+<body onload="alertMsg()">
 	<%@ include file="header.jsp" %>
 	
 	<script>
-		function alertError() {
-			const errorMsg = "<%=errorMsg%>";
-			alert(errorMsg);
+		function alertMsg() {
+			const alertMsg = "<%=alertMsg%>";
+			alert(alertMsg);
 			location.href="<%=responseURL%>";
 		}
 	</script>

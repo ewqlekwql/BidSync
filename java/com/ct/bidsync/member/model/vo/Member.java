@@ -36,6 +36,18 @@ public class Member {
 		this.modifyDate = modifyDate;
 		this.status = status;
 	}
+	
+	// MemberInsertController
+	public Member(String userId, String userPwd, String userName, String gender, Date birthday, String email, String phone) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.gender = gender;
+		this.birthday = birthday;
+		this.email = email;
+		this.phone = phone;
+	}
 
 	// toString
 	@Override

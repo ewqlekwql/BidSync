@@ -10,12 +10,12 @@
 	<jsp:include page="/views/common/header.jsp" />
 	
 	<h4>테스트폼</h4>
-	<form action="${pageContext.request.contextPath}/login.me" method="get">
+	<form action="${pageContext.request.contextPath}/login.me" method="post">
 		<input type="text" name="userId">
 		<input type="text" name="userPwd">
 		<input type="submit" value="로그인">
 		<br>
-		<a href="${pageContext.request.contextPath}//enroll.me">회원가입</a>
+		<a href="${pageContext.request.contextPath}/enroll.me">회원가입</a>
 	</form>
 </body>
 </html>
