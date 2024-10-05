@@ -11,3 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.shipping-detail-list li:nth-child(3) .value').innerText = address;
     document.querySelector('.shipping-detail-list li:nth-child(4) .value').innerText = request;
 });
+
+
+
+
