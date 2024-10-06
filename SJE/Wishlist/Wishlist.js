@@ -1,5 +1,3 @@
-let btn1 = document.querySelector(".all > button");
-
 // 전체선택을 눌렀을때 상품 전체선택
 function allCheck(_allCheckBox) {
     // 전체선택 체크박스의 값
