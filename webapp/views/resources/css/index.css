@@ -229,3 +229,14 @@ header > nav > ul {
    text-align: center;
    font-size: 1.4vw;
 }
+
+
+/* footer css */
+footer {
+   width: 100%;
+   min-width: 900px;
+   height: 6vw;
+   min-height: 70px;
+   max-height: 100px;
+   background-color: #FFFFFF;
+}

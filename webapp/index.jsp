@@ -68,5 +68,8 @@
 			--%>
 		</section>
 	</main>
+	
+	<!-- 푸터 -->
+	<jsp:include page="/views/common/footer.jsp" />
 </body>
 </html>

@@ -88,9 +88,10 @@
 /* 구매 입찰 내역 섹션 스타일 */
 .bid-detail-section {
     width: 90%; /* 섹션 너비를 화면의 80%로 설정 */
+    padding-top: 20px;
     margin: 0 auto; /* 가운데 정렬 */
-    padding: 20px 0; /* 상하 패딩 20px */
-   
+    padding-bottom: 0; /* 하단 패딩 제거 */
+    border-bottom: 3px solid #000; /* 아래쪽에 3px 굵은 검정색 구분선 */
 }
 
 /* 섹션 제목 스타일 */
@@ -98,7 +99,7 @@
     font-size: 24px; /* 제목 폰트 크기 */
     font-weight: bold; /* 제목 폰트 굵게 설정 */
     margin-bottom: 20px; /* 제목 하단 여백 */
-    border-bottom: 3px solid #000; /* 아래쪽에 굵은 검정색 구분선 */
+    border-bottom: 3px solid #000; /* 아래쪽에 3px 굵은 검정색 구분선 */
 }
 
 /* 입찰 내역 리스트 설정 */
@@ -136,16 +137,6 @@
     font-weight: bold; /* 일반 폰트 굵기 */
 }
 
-/* 총 결제 금액 섹션 스타일 */
-.total-amount {
-    display: flex; /* 플렉스박스로 설정해 좌우 정렬 */
-    justify-content: space-between; /* 좌우로 항목을 배치 */
-    padding: 20px 0; /* 상하 패딩 20px */
-    border-top: 1px solid #000; /* 위쪽에 얇은 검정색 구분선 */
-    border-bottom: 3px solid #000; /* 아래쪽에 굵은 검정색 구분선 */
-    font-weight: bold; /* 폰트를 굵게 설정 */
-    font-size: 20px; /* 폰트 크기 설정 */
-}
 
 /* 배송 섹션 스타일 */
 .shipping-section {
@@ -192,39 +183,5 @@
     font-weight: bold; /* 값 폰트 굵게 설정 */
 }
 
-/* Footer 스타일 */
-.footer {
-    background-color: #e3feff; /* 푸터 배경색 */
-    color: rgb(0, 0, 0); /* 텍스트 색상 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    padding: 20px; /* 내부 여백 */
-    margin-top: 20px; /* 푸터 상단 간격 */
-}
 
-.footer p {
-    margin: 0; /* 기본 마진 제거 */
-    font-size: 14px; /* 폰트 크기 */
-}
 
-.footer-links {
-    list-style: none; /* 기본 목록 스타일 제거 */
-    padding: 0; /* 패딩 제거 */
-    margin: 10px 0 0; /* 위쪽 간격 추가 */
-    display: flex;
-    justify-content: center; /* 링크를 가운데 정렬 */
-    gap: 20px; /* 링크 사이 간격 */
-}
-
-.footer-links li {
-    display: inline; /* 가로로 나열 */
-}
-
-.footer-links a {
-    color: white; /* 링크 색상 */
-    text-decoration: none; /* 밑줄 제거 */
-    font-size: 14px; /* 링크 폰트 크기 */
-}
-
-.footer-links a:hover {
-    text-decoration: underline; /* 마우스를 올릴 때 밑줄 */
-}

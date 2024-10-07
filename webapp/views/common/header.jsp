@@ -38,9 +38,9 @@
             	<c:when test="${empty loginUser}">
             		<%-- 로그인 전 --%>
             		<li id="header-top-user">
-		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
-		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
-		               <button type="button" onclick="location.href='login.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
 		            </li>
             	</c:when>
             	<c:otherwise>
@@ -48,7 +48,7 @@
             		<li id="header-top-user">
 		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
 		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
-		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/logout.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
 		            </li>
             	</c:otherwise>
             </c:choose>
@@ -59,7 +59,7 @@
       <nav id="header-bottom">
          <ul>
             <li>
-               <a href="#"><img src="<%= request.getContextPath() %>/views/resources/images/btn_hambuger.png"></a>
+               <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
                <a href="#">패션</a>

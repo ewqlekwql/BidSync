@@ -20,7 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const bidButton = document.querySelector('.bid-btn');
     if (bidButton) {
         bidButton.addEventListener('click', function() {
-            window.location.href = '../bid/Bid.jsp'; // 결제 페이지로 이동
+            const bidAmount = document.getElementById('bidAmount').value; // 사용자가 입력한 금액
+            if (bidAmount) {
+                // 입력한 금액으로 결제 페이지로 이동 또는 다른 처리
+                console.log(`입력한 입찰 금액: ${bidAmount}원`);
+                window.location.href = `../bid/Bid.jsp?bidAmount=${bidAmount}`; // 결제 페이지로 이동
+            } else {
+                alert('입찰 금액을 입력하세요.');
+            }
         });
     }
 
@@ -107,6 +114,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chatSellerButton) {
         chatSellerButton.addEventListener('click', function() {
             window.location.href = '../Chat/Chat.html'; // 1:1 채팅 페이지로 이동
+        });
+    }
+
+    // 팔로우 버튼 클릭 시 하트 변경 및 팔로우 수 변경 처리
+    const followButton = document.querySelector('.seller-details p span');
+    let isFollowed = false;
+    let followCount = 0;
+
+    if (followButton) {
+        // 초기 팔로우 상태 표시
+        followButton.textContent = '🤍 follow ' + followCount;
+        followButton.style.color = 'black';
+
+        followButton.addEventListener('click', function() {
+            if (!isFollowed) {
+                // 🤍에서 빨간 하트로 변경, 팔로우 수 증가
+                followButton.textContent = '❤️ follow ' + (followCount + 1);
+                followCount += 1;
+                isFollowed = true;
+            } else {
+                // 빨간 하트에서 🤍로 변경, 팔로우 수 감소
+                followButton.textContent = '🤍 follow ' + (followCount - 1);
+                followCount -= 1;
+                isFollowed = false;
+            }
         });
     }
 

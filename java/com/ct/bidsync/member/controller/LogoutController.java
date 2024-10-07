@@ -1,23 +1,25 @@
 package com.ct.bidsync.member.controller;
 
+import java.io.IOException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import jakarta.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class MemberLoginController
+ * Servlet implementation class MemberLogoutController
  */
-@WebServlet(name = "login.me", urlPatterns = { "/login.me" })
-public class MemberLoginController extends HttpServlet {
+@WebServlet(name = "logout.me", urlPatterns = { "/logout.me" })
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MemberLoginController() {
+    public LogoutController() {
         super();
     }
 
@@ -25,9 +27,10 @@ public class MemberLoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("서블렛 테스트중");
+		HttpSession session = request.getSession();
+		session.invalidate();
+		
+		response.sendRedirect(request.getContextPath());
 	}
 
 	/**

@@ -8,6 +8,7 @@
     <!-- CSS 파일 경로를 JSP 방식으로 동적으로 처리 -->
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/NowBuyDetail.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/ratingPopup.css">
 </head>
 <body>
     <div class="container">
@@ -49,13 +50,12 @@
                     <span class="label">구매일</span>
                     <span class="value">XX/XX/XX</span>
                 </li>
+                <hr>
+                <li>
+                    <span class="label">총 결제 금액</span>
+                    <span class="value" >100,000,100 원</span>
+                </li>
             </ul>
-
-            <!-- 총 결제 금액 섹션 -->
-            <div class="total-amount">
-                <span>총 결제 금액</span>
-                <span>100,000,100 원</span>
-            </div>
         </section>
 
         <!-- 배송 정보 섹션 -->
@@ -79,15 +79,80 @@
                     <span class="value">요청사항 없음</span>
                 </li>
             </ul>
+
+         <!-- 평점 매기기 버튼 -->
+        <button id="openPopupBtn">판매자 평점 매기기</button>
+
+        <!-- 평점 팝업 -->
+        <div class="rating-popup" id="ratingPopup" style="display: none;">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h2>평점 매기기</h2>
+                    <span class="close-btn">&times;</span>
+                </div>
+
+                <!-- 신뢰도 평점 -->
+                <div class="rating-section">
+                    <h2>신뢰도</h2>
+                    <div class="star-rating" id="trustRating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                </div>
+
+                <!-- 품질 평점 -->
+                <div class="rating-section">
+                    <h2>품질</h2>
+                    <div class="star-rating" id="qualityRating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                </div>
+
+                <!-- 소통 평점 -->
+                <div class="rating-section">
+                    <h2>소통</h2>
+                    <div class="star-rating" id="communicationRating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                </div>
+
+                <!-- 배송 평점 -->
+                <div class="rating-section">
+                    <h2>배송</h2>
+                    <div class="star-rating" id="shippingRating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                </div>
+
+                <!-- 평균 평점 출력 -->
+                <p class="average-rating">평균 평점: <span id="averageRating">0</span> 점</p>
+
+                <!-- 평점 제출 버튼 -->
+                <button class="submit-rating">제출</button>
+            </div>
+        </div>
+            
         </section>
 
-        <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 BidSync. All rights reserved.</p>
-    </footer>
-    </div>
+
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/NowBuyDetail.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/ratingPopup.js"></script>
 </body>
 </html>

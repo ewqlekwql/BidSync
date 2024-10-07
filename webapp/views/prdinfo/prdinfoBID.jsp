@@ -96,7 +96,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
                 <div class="seller-details">
                     <h3>판매자명</h3>
-                    <p><span>🤍</span> 팔로우 189</p>
+                    <p><span>🤍</span> 
                 </div>
             </div>
             <div class="seller-actions">
@@ -174,7 +174,8 @@
             <div class="popup-bid-input">
                 <label for="bidAmount">구매 희망가</label>
                 <div class="bid-amount-container">
-                    <span class="bid-amount">100,000,100</span><span class="currency">원</span>
+                    <input type="number" id="bidAmount" name="bidAmount" class="bid-amount-input" min="100000000" step="1000" value="100000000" />
+                    <span class="currency">원</span>
                 </div>
                 <p class="bid-info">최종 결제금액은 다음 화면에서 계산됩니다.</p>
             </div>
