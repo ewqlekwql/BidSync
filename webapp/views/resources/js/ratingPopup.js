@@ -23,6 +23,7 @@ function selectStar(ratingId, stars, ratingValue) {
         stars[i].classList.add('selected');
     }
     calculateAverageRating();
+    updateRatingBars();  // 레이팅 바 업데이트 호출
 }
 
 // 각 평점 섹션에 이벤트 리스너 추가
@@ -41,6 +42,14 @@ function calculateAverageRating() {
     const total = Object.values(starRatings).reduce((sum, rating) => sum + parseInt(rating), 0);
     const average = total / 4;
     document.getElementById('averageRating').textContent = average.toFixed(1);
+}
+
+// 레이팅 바 업데이트 함수
+function updateRatingBars() {
+    document.querySelector('.rating-categories .category:nth-child(1) .fill').style.width = (starRatings.trustRating / 5) * 100 + '%';
+    document.querySelector('.rating-categories .category:nth-child(2) .fill').style.width = (starRatings.qualityRating / 5) * 100 + '%';
+    document.querySelector('.rating-categories .category:nth-child(3) .fill').style.width = (starRatings.communicationRating / 5) * 100 + '%';
+    document.querySelector('.rating-categories .category:nth-child(4) .fill').style.width = (starRatings.shippingRating / 5) * 100 + '%';
 }
 
 // 평점 제출
