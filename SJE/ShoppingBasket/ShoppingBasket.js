@@ -1,5 +1,3 @@
-let btn1 = document.querySelector(".all > button");
-
 // 전체선택을 눌렀을때 상품 전체선택
 function allCheck(_allCheckBox) {
     // 전체선택 체크박스의 값
@@ -69,7 +67,7 @@ function soldoutproductAllDelete() {
 // 삭제 버튼을 눌렀을 때 장바구니에서 상품을 삭제
 function deleteProduct() {
     // 모든 삭제 버튼을 선택합니다. ID 대신 class를 사용합니다.
-    let deleteButtons = document.querySelectorAll(".subject button");
+    let deleteButtons = document.querySelectorAll("#basket1 button");
 
     // 각 삭제 버튼에 이벤트 리스너를 추가합니다.
     deleteButtons.forEach(function(deleteButton) {
@@ -81,6 +79,14 @@ function deleteProduct() {
 
         });
     });
+}
+
+//수량 +/- 버튼을 눌렀을때 수 증가/감소
+function countIncrease() {
+    const IncreaseButton = document.querySelector("#btn1");
+    const ReductionButton = document.querySelector("#btn2");
+
+    let number = document.querySelector(".countAuto");
 }
 
 // deleteProduct 함수를 호출하여 삭제 버튼에 이벤트 리스너를 등록합니다.
