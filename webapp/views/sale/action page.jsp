@@ -36,7 +36,7 @@
             <form class="product-form" onsubmit="submitForm(event)">
                 <div class="image-upload">
                     <p>등록할 상품의 이미지를 넣어주세요.</p>
-                    <img src="image/자전거.png" alt="상품 이미지" id="product-image">
+                    <img src="images/자전거.png" alt="상품 이미지" id="product-image">
                 </div>
 
                 <div class="product-details">
