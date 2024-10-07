@@ -1,4 +1,4 @@
-.all button {
+.wishlist-Top button {
     border: none;
     background-color: white;
     margin-right: 900px;
@@ -6,19 +6,19 @@
 
 }
 
-.back {
+.wishlist-logo {
     width: 1000px;
     font-size: 18px;
     display: flex;
 }
 
-.back img {
+.wishlist-logo img {
     margin-top: 8px;
     width: 45px;
     height: 45px;
 }
 
-.back b {
+.wishlist-logo b {
     margin-left: 10px;
     font-size: 30px;
     font-weight: 900;
@@ -31,24 +31,24 @@
     display: flex;
 }
 
-.back p {
+.wishlist-logo p {
     display: flex;
     align-items: end;
     font-size: small;
 }
 
-#hr1,
-#hr2 {
+#hr4,
+#hr5 {
     width: 1000px;
     margin: 0;
 }
 
-#hr3{
+#hr6{
     width:980px;
     margin-top: 30px;
 }
 
-.allCheckBox {
+.wishlist-AllCheckBox {
     width: 1000px;
     height: 30px;
     background-color: lightgray;
@@ -61,7 +61,7 @@
     margin-left: 10px;
 }
 
-#checkreset {
+#wishlist-Checkreset {
     margin-left: 15px;
     background: black;
     color: white;
@@ -71,7 +71,7 @@
     border-radius: 3px;
 }
 
-#soldoutcheck {
+#wishlist-Soldoutcheck {
     margin-left: 15px;
     background: black;
     color: white;
@@ -80,14 +80,13 @@
     border-radius: 3px;
 }
 
-.product {
+.wishlist-Product {
     display: flex;
     justify-content: space-between;
     width: 1000px;
-    height: 1000px;
 }
 
-.product-left {
+.product-Increase {
     box-sizing: border-box;
     border: none;
     width: 100%;
@@ -96,16 +95,16 @@
     flex-direction: column;
 }
 
-.subject {
+.product-Subject {
     border: 1px solid black;
     border-radius: 20px;
     margin: 20px 0 0px 20px;
     width: 95%;
-    height: 200px;
+    height: 185px;
 
 }
 
-#basket1 {
+#select-Product {
     border: none;
     padding-top: 5px;
     padding-left: 15px;
@@ -116,7 +115,7 @@
     width: 95%;
 }
 
-#basket1 button {
+#select-Product button {
     background: white;
     border: none;
     text-decoration: underline;
@@ -124,13 +123,13 @@
     cursor: pointer;
 }
 
-.infomation {
+.wishlist-Product-Infomation {
     height: 145px;
     display: flex;
 }
 
 
-.img {
+.product-Img {
     border-radius: 15px;
     margin-left: 25px;
     margin-top: 16px;
@@ -138,13 +137,13 @@
     height: 110px;
 }
 
-.img img {
+.product-Img img {
     width: 100%;
     height: 100%;
     border-radius: 15px;
 }
 
-.productName {
+.wishlist-Product-Name {
     width: 200px;
     margin: 20px;
     margin-top: 9px;
@@ -152,7 +151,7 @@
     
 }
 
-.productName ul {
+.wishlist-Product-Name ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -163,17 +162,25 @@
     justify-content: space-evenly;
 }
 
+.wishlist-Product-Name li{
+    width: 610px;
+}
+
+.wishlist-Product-Name img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 3px;
+}
+
 .soldout-product{
     display: flex;
 }
 
-
 .soldout-product li{
     color: lightgray;
-    width: 610px;
-}
-
-.productName li{
     width: 610px;
 }
 
@@ -194,16 +201,7 @@
     font-weight: 600;
 }
 
-#btn1{
-    color: #0066FF;
-    border: 2px solid #0066FF;
-}
-
-#btn2{
-    color: #0066FF;
-}
-
-.soldoutsine{
+.wishlist-Soldoutsine{
     display: flex;
     align-items: center;
     height: 20px;
@@ -212,14 +210,15 @@
     margin-top: 10px;
 }
 
-.productName img {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    margin-right: 3px;
+#washlist-button1{
+    color: #0066FF;
+    border: 2px solid #0066FF;
 }
+
+#washlist-button2{
+    color: #0066FF;
+}
+
 
 .page{
     display: flex;
