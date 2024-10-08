@@ -61,14 +61,14 @@
                     </div>
                     <div class="used-price">
                         <h3>중고 거래가</h3>
-                        <h1>15,000 원</h1>
+                        <h1><a href="#used-price" class="used-price-link">15,000 원</a></h1>
                     </div>
                     <div class="trade-options">
                         <button class="btn-exchange">에누리</button>
                         <button class="btn-direct">직거래</button>
                     </div>
                     <p>배송방법: 직거래, 편의점 택배</p>
-                    <p>배송비: 3,000원</p>
+					<p>배송비: <a href="#shipping-cost" class="shipping-cost-link">3,000원</a></p>
 
                     <!-- 수량 선택 -->
                     <div class="quantity-selector">
@@ -153,10 +153,6 @@
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 BidSync. All rights reserved.</p>
-    </footer>
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoUsed.js"></script>

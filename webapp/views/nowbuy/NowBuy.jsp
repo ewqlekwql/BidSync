@@ -62,35 +62,24 @@
         <!-- 결제 방법 Section -->
         <div class="payment-method">
             <h2>결제 방법</h2>
-            <div class="payment-options">
-                <label>
-                    <input type="radio" name="payment" checked>
-                    카드 간편결제
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    카드 일반결제
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    카카오페이
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    무통장입금
-                </label>
-<<<<<<< HEAD
-=======
-            </div>
+           <div class="payment-options">
+			    <label>
+			        <input type="radio" name="payment" value="card" checked>
+			        카드 간편결제
+			    </label>
+			    <label>
+			        <input type="radio" name="payment" value="kakao">
+			        카카오페이
+			    </label>
+			    <label>
+			        <input type="radio" name="payment" value="bank">
+			        무통장입금
+			    </label>
+			</div>
             <div class="card-info">
                 <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
                 <span class="arrow">▶</span>
->>>>>>> parent of 31e7dcd (결제 정보 수정)
             </div>
-            <button class="card-info">
-                <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
-                <span class="arrow">▼<span>
-            </button>
             <p class="notice">
                 구매 입찰은 일시불만 지원합니다. 체결 후 결제 정보 변경은 불가하며 분할 납부 변경은 카드사 문의 바랍니다. <br>
                 단, 카드사별 정책에 따라 분할 납부 변경 시 수수료가 발생할 수 있습니다.

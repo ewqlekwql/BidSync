@@ -24,6 +24,7 @@
     margin-bottom: 20px; /* 아래쪽 간격 */
 }
 
+
 .product-name h1 {
     margin: 0; /* 기본 마진 제거 */
     font-size: 40px; /* 제목 글자 크기 */
@@ -34,6 +35,14 @@
 .product-main {
     display: flex; /* 가로 정렬 */
     gap: 20px; /* 내부 간격 */
+}
+
+.current-bid-link {
+    font-size: inherit;       /* 부모 요소의 폰트 크기를 상속받음 */
+    font-weight: inherit;     /* 부모 요소의 폰트 두께를 상속받음 */
+    text-decoration: none;    /* 기본 밑줄 제거 */
+    color: inherit;           /* 부모 요소의 색상을 상속받음 */
+    line-height: inherit;     /* 부모 요소의 라인 높이도 상속받도록 설정 */
 }
 
 /* 상품 이미지 레이아웃 */
