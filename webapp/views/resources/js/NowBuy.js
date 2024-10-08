@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const address = document.querySelector('.address-details .row:nth-child(3) .value').innerText;
             const request = document.getElementById('request-button').textContent;
 
+	
+			
             // LocalStorage에 배송 정보 저장
             console.log('Saving data to LocalStorage:', receiver, phone, address, request); // 디버깅용
 			localStorage.setItem('nowbuy_receiver', receiver);
@@ -157,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			localStorage.setItem('nowbuy_address', address);
 			localStorage.setItem('nowbuy_request', request);
 
+			
             // 페이지 이동
             window.location.href = '../nowbuy/NowBuyDetail.jsp';
         });

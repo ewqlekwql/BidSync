@@ -179,6 +179,7 @@
                 </div>
                 <textarea id="customTextArea" class="custom-input" placeholder="요청사항을 입력하세요..." disabled></textarea>
 
+					
                 <!-- 저장하기 버튼에 명확하게 type="button" 추가 -->
                 <button class="r-save-btn" type="button">저장 하기</button>
             </div>

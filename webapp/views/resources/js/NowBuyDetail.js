@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // LocalStorage에서 저장된 배송 정보 불러오기
-    const receiver = localStorage.getItem('receiver');
-    const phone = localStorage.getItem('phone');
-    const address = localStorage.getItem('address');
-    const request = localStorage.getItem('request');
+	const receiver = localStorage.getItem('nowbuy_receiver');
+	const phone = localStorage.getItem('nowbuy_phone');
+	const address = localStorage.getItem('nowbuy_address');
+	const request = localStorage.getItem('nowbuy_request');
 
     // 배송 정보 반영
     if (receiver && phone && address && request) {
