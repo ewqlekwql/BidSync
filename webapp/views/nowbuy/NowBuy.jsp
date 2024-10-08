@@ -79,6 +79,13 @@
                     <input type="radio" name="payment">
                     무통장입금
                 </label>
+<<<<<<< HEAD
+=======
+            </div>
+            <div class="card-info">
+                <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
+                <span class="arrow">▶</span>
+>>>>>>> parent of 31e7dcd (결제 정보 수정)
             </div>
             <button class="card-info">
                 <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>

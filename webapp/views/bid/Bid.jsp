@@ -57,6 +57,7 @@
             <h2>결제 방법</h2>
             <div class="payment-options">
                 <label>
+<<<<<<< HEAD
                     <input type="radio" name="payment" value="card" checked onclick="updatePaymentInfo('card')">
                     카드 결제
                 </label>
@@ -68,6 +69,27 @@
                     <input type="radio" name="payment" value="bankTransfer" onclick="updatePaymentInfo('bankTransfer')">
                     무통장입금
                 </label>
+=======
+                    <input type="radio" name="payment" checked>
+                    카드 간편결제
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    카드 일반결제
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    카카오페이
+                </label>
+                <label>
+                    <input type="radio" name="payment">
+                    무통장입금
+                </label>
+            </div>
+            <div class="card-info">
+                <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
+                <span class="arrow">▶</span>
+>>>>>>> parent of 31e7dcd (결제 정보 수정)
             </div>
             <button class="card-info" id="payment-info">
                 <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
