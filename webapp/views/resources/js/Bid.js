@@ -162,29 +162,71 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '../bid/BidDetail.jsp';
         });
     }
-			const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
-		    const cardInfoButton = document.querySelector('.card-info');
+	 	const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
+	    const accountChangePopup = document.getElementById('account-change-popup-container'); // 계좌 정보 팝업
+	    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
 
-		    if (paymentOptions.length > 0) {
-		        paymentOptions.forEach(function (option) {
-		            option.addEventListener('change', function () {
-		                // 결제 옵션에 따른 카드 정보 버튼 내용 변경
-		                if (this.checked) {
-		                    switch (this.value) {
-		                        case 'card':
-		                            cardInfoButton.innerHTML = '<span>KB 국민 XXXX-XXXX-XXXX-XXXX</span><span class="arrow">▼</span>';
-		                            break;
-		                        case 'kakao':
-		                            cardInfoButton.innerHTML = '<span>카카오페이 결제하기</span>';
-		                            break;
-		                        case 'bank':
-		                            cardInfoButton.innerHTML = '<span>예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX</span>';
-		                            break;
-		                        default:
-		                            break;
-		                    }
-		                }
-		            });
-		        });
-		    }
-		});
+	    // 카드 정보 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
+	    if (cardInfoButton) {
+	        cardInfoButton.addEventListener('click', function () {
+	            const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
+	            if (selectedPaymentOption && selectedPaymentOption.value === 'card') {
+	                accountChangePopup.style.display = 'flex'; // 팝업 표시
+	            }
+	        });
+	    }
+
+	    // 닫기 버튼 클릭 시 팝업 닫기 및 초기화
+	    closeButtons.forEach(function (closeBtn) {
+	        closeBtn.addEventListener('click', function () {
+	            accountChangePopup.style.display = 'none'; // 팝업 닫기
+	            // 폼 초기화
+	            document.getElementById('bank').value = 'KB 국민은행'; // 기본값으로 초기화
+	            document.getElementById('accountNumber').value = '';  // 계좌번호 초기화
+	        });
+	    });
+
+	    // 계좌 정보 저장 버튼 클릭 시 처리
+	    const saveBtn = document.querySelector('.account-save-btn');
+	    if (saveBtn) {
+	        saveBtn.addEventListener('click', function () {
+	            const bank = document.getElementById('bank').value; // 선택된 은행
+	            const accountNumber = document.getElementById('accountNumber').value; // 입력된 계좌번호
+
+	            // 계좌 정보 저장 및 유효성 검사
+	            if (bank && accountNumber) {
+	                // 메인 화면의 카드 정보 텍스트를 변경
+	                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 1234-1234-1234-1234"
+
+	                // 팝업 닫기
+	                accountChangePopup.style.display = 'none';
+	            } else {
+	                alert("모든 필드를 입력해주세요.");
+	            }
+	        });
+	    }
+
+	    // 결제 옵션에 따른 카드 정보 업데이트 (선택에 따라 변경)
+	    const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
+	    if (paymentOptions.length > 0) {
+	        paymentOptions.forEach(function (option) {
+	            option.addEventListener('change', function () {
+	                if (this.checked) {
+	                    switch (this.value) {
+	                        case 'card':
+	                            accountDisplay.textContent = 'KB 국민 XXXX-XXXX-XXXX-XXXX';
+	                            break;
+	                        case 'kakao':
+	                            accountDisplay.textContent = '카카오페이 결제하기';
+	                            break;
+	                        case 'bank':
+	                            accountDisplay.textContent = '예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX';
+	                            break;
+	                        default:
+	                            break;
+	                    }
+	                }
+	            });
+	        });
+	    }
+	});

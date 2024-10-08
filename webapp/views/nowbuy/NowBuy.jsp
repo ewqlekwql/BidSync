@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/AddressPopUp.css"> <!-- 주소 팝업 스타일 -->
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/AddressAddPopUp.css"> <!-- 주소 추가 팝업 스타일 -->
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/RequestPopUp.css"> <!-- 요청 사항 팝업 스타일 -->
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/AccountChangePopUp.css"> <!-- 카드 변경 팝업 스타일 -->
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
     
 
 </head>
@@ -77,9 +79,9 @@
 			    </label>
 			</div>
             <div class="card-info">
-                <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
-                <span class="arrow">▶</span>
-            </div>
+			    <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span> <!-- 이 부분이 업데이트됨 -->
+			    <span class="arrow">▼</span>
+			</div>
             <p class="notice">
                 구매 입찰은 일시불만 지원합니다. 체결 후 결제 정보 변경은 불가하며 분할 납부 변경은 카드사 문의 바랍니다. <br>
                 단, 카드사별 정책에 따라 분할 납부 변경 시 수수료가 발생할 수 있습니다.
@@ -181,6 +183,31 @@
             </div>
         </div>
     </div>
+    <!-- 계좌 정보 변경 팝업 -->
+        <div id="account-change-popup-container" class="popup-container" style="display: none;">
+	            <div class="popup">
+	                <div class="popup-header">
+	                    <h2>계좌 정보 변경</h2>
+	                    <span class="close-btn">&times;</span>
+	                </div>
+	                <form class="account-change-form">
+	                    <label for="bank">은행 선택</label>
+	                    <select id="bank" name="bank">
+	                        <option value="kb">KB 국민은행</option>
+	                        <option value="shinhan">신한은행</option>
+	                        <option value="woori">우리은행</option>
+	                        <option value="kakao">카카오뱅크</option>
+	                    </select>
+	
+	                    <label for="accountNumber">계좌 번호</label>
+	                    <input type="text" id="accountNumber" name="accountNumber" placeholder="XXXX-XXXX-XXXX-XXXX">
+	
+	                    <button type="button" class="account-save-btn">저장 하기</button>
+	                </form>
+	            </div>
+	        </div>
+	
+	    </div>
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/NowBuy.js"></script>
