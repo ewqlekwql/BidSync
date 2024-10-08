@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // 구매하기 버튼 클릭 시 구매 상세 페이지 이동 및 정보 저장
     const purchaseBtn = document.querySelector('.purchase-btn');
 
-    // 구매하기 버튼 클릭 시 저장된 배송 정보를 LocalStorage에 저장
     if (purchaseBtn) {
         purchaseBtn.addEventListener('click', function () {
             // 배송 정보 가져오기
@@ -152,12 +151,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const request = document.getElementById('request-button').textContent;
 
             // LocalStorage에 배송 정보 저장
-            localStorage.setItem('receiver', receiver);
-            localStorage.setItem('phone', phone);
-            localStorage.setItem('address', address);
-            localStorage.setItem('request', request);
+            console.log('Saving data to LocalStorage:', receiver, phone, address, request); // 디버깅용
+			localStorage.setItem('nowbuy_receiver', receiver);
+			localStorage.setItem('nowbuy_phone', phone);
+			localStorage.setItem('nowbuy_address', address);
+			localStorage.setItem('nowbuy_request', request);
 
-            // 
+            // 페이지 이동
             window.location.href = '../nowbuy/NowBuyDetail.jsp';
         });
     }
