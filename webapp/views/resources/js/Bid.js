@@ -152,14 +152,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const request = document.getElementById('request-button').textContent;
 
             // LocalStorage에 배송 정보 저장
-            localStorage.setItem('receiver', receiver);
-            localStorage.setItem('phone', phone);
-            localStorage.setItem('address', address);
-            localStorage.setItem('request', request);
+            console.log('Saving to LocalStorage:', { receiver, phone, address, request }); // 디버깅용
+			localStorage.setItem('bid_receiver', receiver);
+			localStorage.setItem('bid_phone', phone);
+			localStorage.setItem('bid_address', address);
+			localStorage.setItem('bid_request', request);
 
             // BidDetail 페이지로 이동 (경로 확인 필요)
             window.location.href = '../bid/BidDetail.jsp';
-            
         });
     }
 });
