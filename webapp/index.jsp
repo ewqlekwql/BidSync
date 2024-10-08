@@ -7,6 +7,7 @@
 	<title>BidSync - HOME</title>
 </head>
 <body>
+	<!-- 헤더 -->
 	<jsp:include page="/views/common/header.jsp" />
 	
 	<main id="index-main">

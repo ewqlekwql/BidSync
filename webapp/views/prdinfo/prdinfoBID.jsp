@@ -45,18 +45,21 @@
                 <div class="product-details">
                     <!-- 카테고리 -->
                     <div class="category-info">
-                        <p>카테고리: 패션 > 악세서리</p>
-                    </div>
+					    <p>					         
+					        <a href="카테고리의_링크_URL">카테고리:</a> 
+					        <a href="패션의_링크_URL">패션</a> > 
+					        <a href="악세서리의_링크_URL">악세서리</a>
+					    </p>
+					</div>
 
                     <!-- 판매자 정보 -->
                     <div class="seller-info">
                         <div class="seller-profile">
                             <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필">
-                            <span>판매자명</span>
+                            <span><a href="판매자_페이지_URL">판매자명</a></span>
                         </div>
                         <div class="seller-rating">
                             ★★★☆☆
-                            <span>(20)</span>
                         </div>
                     </div>
 
@@ -95,7 +98,7 @@
             <div class="seller-profile-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
                 <div class="seller-details">
-                    <h3>판매자명</h3>
+                    <h3><a href="판매자_페이지_URL">판매자명</a></h3>
                     <p><span>🤍</span> 
                 </div>
             </div>
