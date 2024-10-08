@@ -19,8 +19,10 @@
 				<!-- 계정 -->
 				<div class="enroll-form-div">
 					<h3>아이디 <font color="red">*</font></h3>
-					<input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
-                    <button type="button" id="id_overlap_check">중복 체크</button>
+					<div class="sub">
+						<input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
+                    	<button type="button" id="id_overlap_check">중복 체크</button>
+					</div>
                     <span id="user_id_required" class="check_text hidden">사용할 수 없는 아이디입니다.</span>
 				</div>
 				
@@ -42,12 +44,20 @@
                     <input type="text" placeholder="이름을 입력해주세요">
                 </div>
                 
+                <div class="enroll-form-div">
+                	<h3>성별</h3>
+                	<select name="gender">
+                		<option value="">비공개</option>
+                		<option value="남">남성</option>
+                		<option value="여">여성</option>
+                	</select>
+                </div>
+                
                 <div class="enroll-form-div" id="birth">
                 	<h3>생년월일 <font color="red">*</font></h3>
                 	<div class="sub">
                 		<input type="text" name="year" placeholder="년(4자)">
                 		<select aria-placeholder="월" name="month">
-
                             <option value="01">1월</option>
                             <option value="02">2월</option>
                             <option value="03">3월</option>
@@ -82,7 +92,7 @@
                 
                 <div class="enroll-form-div" id="phone">
                 	<h3>휴대전화</h3>
-                    <input type="tel" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)" onkeyup="checkNumber(event)"/>
+                    <input type="tel" name="phone" placeholder="휴대폰 번호 입력 (하이픈 '-'제외)" onkeyup="checkNumber(event)"/>
                 </div>
 				
 				<button id="createButton" onclick="">가입하기</button>

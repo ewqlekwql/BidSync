@@ -62,7 +62,7 @@
 
 .enroll-form-div input, .enroll-form-div select {
 	width: 100%;
-	min-height: 2.5vw;
+	min-height: 2vw;
 	display: block;
 	padding: 0 1%;
 	margin: 1% 0;
@@ -70,16 +70,6 @@
 	border: 0.1vw solid gray;
 	border-radius: 0.3vw;
 	font-size: 1vw;
-}
-
-.enroll-form-div > button {
-	width: 20%;
-	min-height: 1.2vw;
-	border: 0.1vw solid #000000;
-	border-radius: 0.3vw;
-	background-color: #000000;
-	font-size: 0.9vw;
-	color: #FFFFFF;
 }
 
 .enroll-form-div .check_text{
@@ -101,6 +91,15 @@
 
 .enroll-form-div .sub > * {
 	margin-right: 1%;
+}
+
+.enroll-form-div .sub button {
+	width: 20%;
+	min-height: 2vw;
+	border: 0.1vw solid #000000;
+	border-radius: 0.3vw;
+	background-color: #000000;
+	color: #FFFFFF;
 }
 
 .enroll-form-div .sub > p {
