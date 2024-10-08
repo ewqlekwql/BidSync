@@ -162,4 +162,29 @@ document.addEventListener('DOMContentLoaded', function () {
             
         });
     }
-});
+		const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
+	    const cardInfoButton = document.querySelector('.card-info');
+
+	    if (paymentOptions.length > 0) {
+	        paymentOptions.forEach(function (option) {
+	            option.addEventListener('change', function () {
+	                // 결제 옵션에 따른 카드 정보 버튼 내용 변경
+	                if (this.checked) {
+	                    switch (this.value) {
+	                        case 'card':
+	                            cardInfoButton.innerHTML = '<span>KB 국민 XXXX-XXXX-XXXX-XXXX</span><span class="arrow">▼</span>';
+	                            break;
+	                        case 'kakao':
+	                            cardInfoButton.innerHTML = '<span>카카오페이 결제하기</span>';
+	                            break;
+	                        case 'bank':
+	                            cardInfoButton.innerHTML = '<span>예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX</span>';
+	                            break;
+	                        default:
+	                            break;
+	                    }
+	                }
+	            });
+	        });
+	    }
+	});

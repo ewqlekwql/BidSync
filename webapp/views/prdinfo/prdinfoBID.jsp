@@ -62,17 +62,18 @@
 
                     <!-- 입찰 정보 및 가격 -->
                     <div class="auction-info">
-                        <h3>현재 입찰가</h3>
-                        <h1>3,000,000 원</h1>
-                        <div class="auction-details">
-                            <p><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</p>
-                        </div>
-                        <ul>
-                            <li>시작가: <span>10,000 원</span></li>
-                            <li>즉시 구매가: <span>100,000,000 원</span></li>
-                            <li>배송비: <span>50,000 원</span></li>
-                        </ul>
-                    </div>
+					    <h3>현재 입찰가</h3>
+    					<h1><a href="#current-bid" class="current-bid-link">3,000,000 원</a></h1>
+					    <div class="auction-details">
+					        <p><a href="#bid-details"><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</a></p>
+					    </div>
+					    <ul>
+					        <li>시작가: <a href="#start-price"><span>10,000 원</span></a></li>
+					        <li>즉시 구매가: <a href="#buy-now-price"><span>100,000,000 원</span></a></li>
+					        <li>배송비: <a href="#shipping-cost"><span>50,000 원</span></a></li>
+					    </ul>
+					</div>
+
 
                     <!-- 버튼 섹션 -->
                     <div class="action-buttons">

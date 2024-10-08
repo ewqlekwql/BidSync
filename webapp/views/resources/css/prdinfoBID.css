@@ -105,6 +105,13 @@
     margin-bottom: 20px; /* 아래쪽 여백 */
 }
 
+.current-bid-link {
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none; /* 필요에 따라 밑줄을 제거합니다 */
+    color: inherit; /* 부모 태그의 색상을 상속받도록 합니다 */
+}
+
 .seller-profile {
     display: flex; /* 가로 정렬 */
     align-items: center; /* 세로 중앙 정렬 */

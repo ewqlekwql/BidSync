@@ -55,24 +55,20 @@
         <!-- 결제 방법 Section -->
         <div class="payment-method">
             <h2>결제 방법</h2>
-            <div class="payment-options">
-                <label>
-                    <input type="radio" name="payment" checked>
-                    카드 간편결제
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    카드 일반결제
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    카카오페이
-                </label>
-                <label>
-                    <input type="radio" name="payment">
-                    무통장입금
-                </label>
-            </div>
+           <div class="payment-options">
+			    <label>
+			        <input type="radio" name="payment" value="card" checked>
+			        카드 간편결제
+			    </label>
+			    <label>
+			        <input type="radio" name="payment" value="kakao">
+			        카카오페이
+			    </label>
+			    <label>
+			        <input type="radio" name="payment" value="bank">
+			        무통장입금
+			    </label>
+			</div>
             <div class="card-info">
                 <span>KB 국민 XXXX-XXXX-XXXX-XXXX</span>
                 <span class="arrow">▶</span>
