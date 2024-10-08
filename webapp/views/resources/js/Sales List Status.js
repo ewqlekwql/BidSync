@@ -54,3 +54,11 @@ function deleteSelected(tableId, checkboxClass) {
 function closePopup() {
     document.getElementById('popup-overlay').style.display = 'none'; // 팝업 닫기
 }
+
+// 첫 번째 체크박스와 동일하게 설정
+function toggleCheckboxes(source) {
+    const checkboxes = document.querySelectorAll('.sales-checkbox');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.checked = source.checked;
+    });
+}

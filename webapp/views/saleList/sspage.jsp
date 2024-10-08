@@ -68,9 +68,8 @@
                         <li><a href="#" class="tab">BEST</a></li>
                     </ul>
                 </nav>
-    
+                
                 <div class="product-list">
-    
                     <article class="product-card">
                         <img src="image/자전거.PNG" alt="상품 이미지" class="product-image">
                         <h3 class="product-title">삼춘리 자전거</h3>

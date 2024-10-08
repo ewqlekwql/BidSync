@@ -30,7 +30,7 @@
             <table class="product-list" id="sales-list">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" id="select-all-sales"></th>
+                        <th><input type="checkbox" id="select-all-sales" onclick="toggleCheckboxes(this)"></th>
                         <th>구분</th>
                         <th>이미지</th>
                         <th>물품명</th>

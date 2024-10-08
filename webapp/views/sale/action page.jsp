@@ -51,15 +51,15 @@
                     <label for="start-time">경매 시작 시간</label>
                     <div class="time-select">
                         <select id="hour">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
                             <option>10</option>
                             <option>11</option>
                             <option>12</option>
@@ -163,22 +163,22 @@
         </main>
         
         <!-- 팝업 창 -->
-        <div class="popup-container" id="popup" style="display: none;">
-            <h1>BID SYNC</h1>
-            <h2>상품이 성공적으로 등록되었습니다!</h2>
-        
-            <div class="product-info">
-                <h3>등록된 상품 정보</h3>
-                <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지" id="product-image" alt="등록된 상품 이미지" id="popup-product-image" style="max-width: 200px;">
-                <p id="product-title"></p>
-                <p id="product-price"></p>
-                <p id="product-duration"></p>
-                <p id="product-category"></p>
-                <p id="product-description"></p>
-            </div>
-            <br>
-            <button class="popup-btn" onclick="closePopup()">확인</button>
-        </div>
+<div class="popup-container" id="popup" style="display: none;">
+    <h1>BID SYNC</h1>
+    <h2>상품이 성공적으로 등록되었습니다!</h2>
+
+    <div class="product-info">
+        <h3>등록된 상품 정보</h3>
+        <img src="" alt="등록된 상품 이미지" id="popup-product-image" style="max-width: 200px;">
+        <p id="product-title"></p>
+        <p id="product-price"></p>
+        <p id="product-duration"></p> <!-- 경매 기간 표시 -->
+        <p id="product-category"></p>
+        <p id="product-description"></p>
+    </div>
+    <br>
+    <button class="popup-btn" onclick="closePopup()">확인</button>
+</div>
         
     </div>
 
