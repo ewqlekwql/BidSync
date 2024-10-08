@@ -37,12 +37,23 @@ public class MemberInsertController extends HttpServlet {
 		String userId = request.getParameter("userId");
 		String userPwd = request.getParameter("userPwd");
 		String userName = request.getParameter("userName");
+		
 		String gender = request.getParameter("gender");
 		if(gender == "") {
 			gender = null;
 		}
-		Date birthday = Date.valueOf(request.getParameter("birthday"));
-		String email = request.getParameter("email");
+		
+		String year = request.getParameter("year");
+		String month = request.getParameter("month");
+		String day = request.getParameter("day");
+		if(day.length() == 1) {
+			day = "0" + day;
+		}
+		
+		Date birthday = Date.valueOf(year + month + day);
+		
+		String email = (request.getParameter("emailId") + "@" + request.getParameter("emailAddr"));
+		
 		String phone = request.getParameter("phone");
 		if(phone == "") {
 			phone = null;
