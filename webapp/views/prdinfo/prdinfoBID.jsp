@@ -45,34 +45,37 @@
                 <div class="product-details">
                     <!-- 카테고리 -->
                     <div class="category-info">
-                        <p>카테고리: 패션 > 악세서리</p>
-                    </div>
+					    <p>					         
+					        <a href="카테고리의_링크_URL">카테고리:</a> 
+					        <a href="패션의_링크_URL">패션</a> > 
+					        <a href="악세서리의_링크_URL">악세서리</a>
+					    </p>
+					</div>
 
                     <!-- 판매자 정보 -->
                     <div class="seller-info">
                         <div class="seller-profile">
                             <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필">
-                            <span>판매자명</span>
+                            <span><a href="판매자_페이지_URL">판매자명</a></span>
                         </div>
                         <div class="seller-rating">
                             ★★★☆☆
-                            <span>(20)</span>
                         </div>
                     </div>
 
                     <!-- 입찰 정보 및 가격 -->
                     <div class="auction-info">
-                        <h3>현재 입찰가</h3>
-                        <h1>3,000,000 원</h1>
-                        <div class="auction-details">
-                            <p><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</p>
-                        </div>
-                        <ul>
-                            <li>시작가: <span>10,000 원</span></li>
-                            <li>즉시 구매가: <span>100,000,000 원</span></li>
-                            <li>배송비: <span>50,000 원</span></li>
-                        </ul>
-                    </div>
+					    <h3>현재 입찰가</h3>
+    					<h1><a href="#current-bid" class="current-bid-link">3,000,000 원</a></h1>
+					    <div class="auction-details">
+					        <p><a href="#bid-details"><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</a></p>
+					    </div>
+					    <ul>
+					        <li>시작가: <a href="#start-price"><span>10,000 원</span></a></li>
+					        <li>즉시 구매가: <a href="#buy-now-price"><span>100,000,000 원</span></a></li>
+					        <li>배송비: <a href="#shipping-cost"><span>50,000 원</span></a></li>
+					    </ul>
+					</div>
 
                     <!-- 버튼 섹션 -->
                     <div class="action-buttons">
@@ -95,7 +98,7 @@
             <div class="seller-profile-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
                 <div class="seller-details">
-                    <h3>판매자명</h3>
+                    <h3><a href="판매자_페이지_URL">판매자명</a></h3>
                     <p><span>🤍</span> 
                 </div>
             </div>
@@ -189,6 +192,8 @@
                 상품의 이미지를 상세히 확인하여 신중한 입찰 부탁드립니다.</p>
         </div>
     </div>
+    
+    
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoBID.js"></script>

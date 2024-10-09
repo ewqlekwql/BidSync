@@ -1,0 +1,92 @@
+/* 팝업 컨테이너 */
+#account-change-popup-container {
+    display: none; /* 기본적으로 숨김 처리 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 반투명 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* 최상단에 표시 */
+}
+
+/* 팝업 본체 */
+.popup {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* 팝업 헤더 */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 닫기 버튼 스타일 */
+.close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* 입력 폼 스타일 */
+.account-change-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 저장 버튼 스타일 */
+.account-save-btn {
+    padding: 12px 0;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+.account-save-btn:hover {
+    background-color: #000000;
+}

@@ -139,26 +139,94 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 구매하기 버튼 클릭 시 구매 상세 페이지 이동 및 정보 저장
-    const purchaseBtn = document.querySelector('.purchase-btn');
+	// 구매하기 버튼 클릭 시 구매 상세 페이지 이동 및 정보 저장
+	    const purchaseBtn = document.querySelector('.purchase-btn');
 
-    // 구매하기 버튼 클릭 시 저장된 배송 정보를 LocalStorage에 저장
-    if (purchaseBtn) {
-        purchaseBtn.addEventListener('click', function () {
-            // 배송 정보 가져오기
-            const receiver = document.querySelector('.address-details .row:nth-child(1) .value').innerText;
-            const phone = document.querySelector('.address-details .row:nth-child(2) .value').innerText;
-            const address = document.querySelector('.address-details .row:nth-child(3) .value').innerText;
-            const request = document.getElementById('request-button').textContent;
+	    // 구매하기 버튼 클릭 시 저장된 배송 정보를 LocalStorage에 저장
+	    if (purchaseBtn) {
+	        purchaseBtn.addEventListener('click', function () {
+	            // 배송 정보 가져오기
+	            const receiver = document.querySelector('.address-details .row:nth-child(1) .value').innerText;
+	            const phone = document.querySelector('.address-details .row:nth-child(2) .value').innerText;
+	            const address = document.querySelector('.address-details .row:nth-child(3) .value').innerText;
+	            const request = document.getElementById('request-button').textContent;
 
-            // LocalStorage에 배송 정보 저장
-            localStorage.setItem('receiver', receiver);
-            localStorage.setItem('phone', phone);
-            localStorage.setItem('address', address);
-            localStorage.setItem('request', request);
+	            // LocalStorage에 배송 정보 저장
+	            console.log('Saving to LocalStorage:', { receiver, phone, address, request }); // 디버깅용
+				localStorage.setItem('bid_receiver', receiver);
+				localStorage.setItem('bid_phone', phone);
+				localStorage.setItem('bid_address', address);
+				localStorage.setItem('bid_request', request);
 
-            // 
-            window.location.href = '../nowbuy/NowBuyDetail.jsp';
-        });
-    }
-});
+	            // BidDetail 페이지로 이동 (경로 확인 필요)
+	            window.location.href = '../bid/BidDetail.jsp';
+	        });
+	    }
+		 	const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
+		    const accountChangePopup = document.getElementById('account-change-popup-container'); // 계좌 정보 팝업
+		    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
+
+		    // 카드 정보 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
+		    if (cardInfoButton) {
+		        cardInfoButton.addEventListener('click', function () {
+		            const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
+		            if (selectedPaymentOption && selectedPaymentOption.value === 'card') {
+		                accountChangePopup.style.display = 'flex'; // 팝업 표시
+		            }
+		        });
+		    }
+
+		    // 닫기 버튼 클릭 시 팝업 닫기 및 초기화
+		    closeButtons.forEach(function (closeBtn) {
+		        closeBtn.addEventListener('click', function () {
+		            accountChangePopup.style.display = 'none'; // 팝업 닫기
+		            // 폼 초기화
+		            document.getElementById('bank').value = 'KB 국민은행'; // 기본값으로 초기화
+		            document.getElementById('accountNumber').value = '';  // 계좌번호 초기화
+		        });
+		    });
+
+		    // 계좌 정보 저장 버튼 클릭 시 처리
+		    const saveBtn = document.querySelector('.account-save-btn');
+		    if (saveBtn) {
+		        saveBtn.addEventListener('click', function () {
+		            const bank = document.getElementById('bank').value; // 선택된 은행
+		            const accountNumber = document.getElementById('accountNumber').value; // 입력된 계좌번호
+
+		            // 계좌 정보 저장 및 유효성 검사
+		            if (bank && accountNumber) {
+		                // 메인 화면의 카드 정보 텍스트를 변경
+		                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 1234-1234-1234-1234"
+
+		                // 팝업 닫기
+		                accountChangePopup.style.display = 'none';
+		            } else {
+		                alert("모든 필드를 입력해주세요.");
+		            }
+		        });
+		    }
+
+		    // 결제 옵션에 따른 카드 정보 업데이트 (선택에 따라 변경)
+		    const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
+		    if (paymentOptions.length > 0) {
+		        paymentOptions.forEach(function (option) {
+		            option.addEventListener('change', function () {
+		                if (this.checked) {
+		                    switch (this.value) {
+		                        case 'card':
+		                            accountDisplay.textContent = 'KB 국민 XXXX-XXXX-XXXX-XXXX';
+		                            break;
+		                        case 'kakao':
+		                            accountDisplay.textContent = '카카오페이 결제하기';
+		                            break;
+		                        case 'bank':
+		                            accountDisplay.textContent = '예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX';
+		                            break;
+		                        default:
+		                            break;
+		                    }
+		                }
+		            });
+		        });
+		    }
+		});
