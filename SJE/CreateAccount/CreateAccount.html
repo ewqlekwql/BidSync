@@ -27,24 +27,24 @@
                 <div class="index" id="password">
                     <b>비밀번호</b>
                     <br>
-                    <input type="password" id="user_password" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 (8~20자))" onblur="checkInput(this.id);" onclick="passwordCheck(this.value)" required>
+                    <input type="password" id="user_password" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 (8~20자))" onblur="checkInput(this.id);" onclick="passwordCheck(this.value)" onkeydown="noSpaceForm(this);" onchange="noSpaceForm(this);" required>
                     <span id="user_password_required" class="check_text hidden"><b>문자,숫자,특수문자 포함 (8~20자)</b></span>
                 </div>
                 <div class="index" id="passwordCheck">
                     <b>비밀번호 재확인</b>
                     <br>
-                    <input type="password" placeholder="비밀번호 재입력" id="passwordRecheck" required onblur="passwordReCheck()">
+                    <input type="password" placeholder="비밀번호 재입력" id="passwordRecheck" required onblur="passwordReCheck()" onchange="noSpaceForm(this);" onkeydown="noSpaceForm(this);">
                     <span id="pwd_check_required" class="check_text hidden"><b>비밀번호가 일치하지 않습니다.</b></span>
                 </div>
                 <div class="index" id="name">
                     <b>이름</b>
                     <br>
-                    <input type="text" placeholder="이름을 입력해주세요">
+                    <input type="text" placeholder="이름을 입력해주세요" onchange="noSpaceForm(this);" onkeydown="noSpaceForm(this);">
                 </div>
                 <b>생년월일</b>
                 <div class="index" id="birth">
                     <div class="birth-year">
-                        <input type="text" placeholder="년(4자)">
+                        <input type="text" placeholder="년(4자)" onchange="noSpaceForm(this);" onkeydown="noSpaceForm(this);">
                     </div>
                     <div class="index" id="birth-month">
                         <select aria-placeholder="월">
@@ -71,7 +71,7 @@
                 <b>이메일 주소</b>
                 
                 <div class="index" id="emailAddress">
-                    <input type="email">
+                    <input type="email" onchange="noSpaceForm(this);" onkeydown="noSpaceForm(this);">
                     <b>@</b>
                     <select id="selbox" name="selbox">
                         <option value="">선택</option>
