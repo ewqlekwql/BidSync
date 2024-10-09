@@ -1,3 +1,7 @@
+.wishlist-wapper button{
+    cursor: pointer;
+}
+
 .wishlist-Top button {
     border: none;
     background-color: white;
@@ -55,10 +59,16 @@
     display: flex;
     align-items: center;
     font-size: 14px;
+    s
 }
 
 #productAll-Check{
     margin-left: 10px;
+    cursor: pointer;
+}
+
+#productAll-Check-text{
+    cursor: pointer;
 }
 
 #wishlist-Checkreset {
@@ -120,6 +130,22 @@
     border: none;
     text-decoration: underline;
     font-size: 16px;
+    cursor: pointer;
+}
+
+#product-one-check{
+    cursor: pointer;
+}
+
+#product-one-check-text{
+    cursor: pointer;
+}
+
+#product-two-check{
+    cursor: pointer;
+}
+
+#product-two-check-text{
     cursor: pointer;
 }
 
