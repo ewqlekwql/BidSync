@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div align="center">
+    <div align="center" class="wishlist-wapper">
         <div class="wishlist-Top">
             <div class="wishlist-logo">
                 <img src="./img/love_12891321.png">
@@ -26,9 +26,9 @@
         <div class="wishlist-AllCheckBox">
             <div>
                 <input type="checkbox" id="productAll-Check" onchange="allCheck(this)">
-                <label for="productAll-Check"><b>상품 전체</b></label>
+                <label for="productAll-Check" id="productAll-Check-text" onchange="allCheck(this)"><b>상품 전체</b></label>
             </div>
-            <input type="button" id="wishlist-Checkreset" value="선택삭제">
+            <input type="button" id="wishlist-Checkreset" onchange="" value="선택삭제">
             <input type="button" id="wishlist-Soldoutcheck" value="품절/판매종료상품 전체삭제">
         </div>
 
@@ -38,11 +38,10 @@
             <div class="product-Increase" align="start">
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-one-check">
-                            <label for="product-one-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-one-check" class="wishlist-one-product">
+                            <label for="product-one-check" id="product-one-check-text"><b>주문 상품</b></label>
                         </div>
-
                     </div>
 
                     <div class="wishlist-Product-Infomation">
@@ -62,9 +61,9 @@
                                     <li style="padding: 3px;">상품명</li>
                                 </ul>
 
-                                <div class="washlist-button">
-                                    <button id="washlist-button1">장바구니 담기</button>
-                                    <button id="washlist-button2">삭제</button>
+                                <div class="wishlist-button">
+                                    <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                    <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                                 </div>
                             </div>
                         </div>
@@ -73,9 +72,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -91,9 +90,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -101,9 +100,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -119,9 +118,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -129,9 +128,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -147,9 +146,37 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-Subject">
+                    <div id="select-Product">
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-Product-Infomation">
+                        <div class="product-Img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
+                        </div>
+
+                        <div class="wishlist-Product-Name" align="start">
+                            <ul>
+                                <li style="padding: 3px;">상품명</li>
+                                <li style="padding: 3px;">100,000,000원</li>
+                                <li style="padding: 3px;">배송비 100원</li>
+                            </ul>
+
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -157,9 +184,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -175,9 +202,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -185,9 +212,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -203,9 +230,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -213,9 +240,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -231,9 +258,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -241,9 +268,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -259,9 +286,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -269,9 +296,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -287,9 +314,9 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
@@ -297,9 +324,9 @@
 
                 <div class="product-Subject">
                     <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
+                        <div>
+                            <input type="checkbox" id="product-two-check" class="wishlist-one-product">
+                            <label for="product-two-check" id="product-two-check-text"><b>주문 상품</b></label>
                         </div>
                     </div>
 
@@ -315,209 +342,15 @@
                                 <li style="padding: 3px;">배송비 100원</li>
                             </ul>
 
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
+                            <div class="wishlist-button">
+                                <button id="wishlist-button1" class="wishlist-button1">장바구니 담기</button>
+                                <button id="wishlist-button2" class="wishlist-button2">삭제</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
 
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-Subject">
-                    <div id="select-Product">
-                        <div class="left-OrderProduct">
-                            <input type="checkbox" id="product-two-check">
-                            <label for="product-two-check"><b>주문 상품</b></label>
-                        </div>
-                    </div>
-
-                    <div class="wishlist-Product-Infomation">
-                        <div class="product-Img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3xhcoxZKVYzdbCzhUkk1K6hoaekcByK9nA&s">
-                        </div>
-
-                        <div class="wishlist-Product-Name" align="start">
-                            <ul>
-                                <li style="padding: 3px;">상품명</li>
-                                <li style="padding: 3px;">100,000,000원</li>
-                                <li style="padding: 3px;">배송비 100원</li>
-                            </ul>
-
-                            <div class="washlist-button">
-                                <button id="washlist-button1">장바구니 담기</button>
-                                <button id="washlist-button2">삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
 
                 <hr border="1px" id="hr6">

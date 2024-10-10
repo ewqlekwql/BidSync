@@ -1,3 +1,7 @@
+.wishlist-wapper button{
+    cursor: pointer;
+}
+
 .wishlist-Top button {
     border: none;
     background-color: white;
@@ -55,10 +59,16 @@
     display: flex;
     align-items: center;
     font-size: 14px;
+    s
 }
 
 #productAll-Check{
     margin-left: 10px;
+    cursor: pointer;
+}
+
+#productAll-Check-text{
+    cursor: pointer;
 }
 
 #wishlist-Checkreset {
@@ -123,6 +133,22 @@
     cursor: pointer;
 }
 
+#product-one-check{
+    cursor: pointer;
+}
+
+#product-one-check-text{
+    cursor: pointer;
+}
+
+#product-two-check{
+    cursor: pointer;
+}
+
+#product-two-check-text{
+    cursor: pointer;
+}
+
 .wishlist-Product-Infomation {
     height: 145px;
     display: flex;
@@ -184,7 +210,7 @@
     width: 610px;
 }
 
-.washlist-button{
+.wishlist-button{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -192,7 +218,7 @@
     height: 116px;
 }
 
-.washlist-button button{
+.wishlist-button button{
     margin-bottom: 10px;
     background: white;
     border: 1px solid black;
@@ -210,12 +236,12 @@
     margin-top: 10px;
 }
 
-#washlist-button1{
+#wishlist-button1{
     color: #0066FF;
     border: 2px solid #0066FF;
 }
 
-#washlist-button2{
+#wishlist-button2{
     color: #0066FF;
 }
 

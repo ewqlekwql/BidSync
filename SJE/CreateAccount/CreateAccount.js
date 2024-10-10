@@ -1,13 +1,15 @@
 //공백이 있을시 공백제거
 function noSpaceForm(obj) {
-    var str_space = /\s/; //공백체크
+    var str_space = /\s/; // 공백 체크
 
-    if(str_space.exec(obj.value) || regExp.test(del.value)) {
+    // 공백이 있을 때 경고 및 공백 제거
+    if (str_space.test(obj.value)) {
+        obj.value = obj.value.replace(/\s/g, ''); // 모든 공백 제거
         obj.focus();
-        obj.valu = obj.value.replace(' ',''); //공백제거
         return false;
     }
 }
+
 
 //아이디 input값이 ""와 같을때 알림이 뜸
 function checkInput(id) {
