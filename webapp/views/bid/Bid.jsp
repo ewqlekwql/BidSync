@@ -147,9 +147,9 @@
 		            <label for="phone">휴대폰 번호</label>
 		            <input type="tel" id="popup-phone" name="phone" placeholder="휴대폰 번호를 입력하세요">
 		
+					<button type="button" class="zipcode-btn" onclick="execDaumPostcodePopup()">우편번호 찾기</button>
 		            <label for="zipcode">우편번호</label>
 		            <input type="text" id="popup-zipcode" name="zipcode" placeholder="우편번호를 입력하세요" readonly>
-		            <button type="button" class="zipcode-btn" onclick="execDaumPostcodePopup()">우편번호 찾기</button>
 		
 		            <label for="address">주소</label>
 		            <input type="text" id="popup-address" name="address" placeholder="주소를 입력하세요" readonly>
