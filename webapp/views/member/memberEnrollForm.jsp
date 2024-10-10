@@ -3,6 +3,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BidSnyc - 회원가입</title>
 	
 	<!-- 외부 css/js 연결 -->
@@ -20,7 +21,7 @@
 				<div class="enroll-form-div">
 					<h3>아이디 <font color="red">*</font></h3>
 					<div class="sub">
-						<input type="text" id="user_id" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
+						<input type="text" id="user_id" name="userId" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
                     	<button type="button" id="id_overlap_check">중복 체크</button>
 					</div>
                     <span id="user_id_required" class="check_text hidden">사용할 수 없는 아이디입니다.</span>
@@ -28,7 +29,7 @@
 				
 				<div class="enroll-form-div" id="password">
 					<h3>비밀번호 <font color="red">*</font></h3>
-                    <input type="password" id="user_password" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 8~20자)" onblur="checkInput(this.id);" onclick="passwordCheck(this.value)" required>
+                    <input type="password" id="user_password" name="userPwd" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 8~20자)" onblur="checkInput(this.id);" onclick="passwordCheck(this.value)" required>
                     <span id="user_password_required" class="check_text hidden">문자,숫자,특수문자 포함 (8~20자)</span>
                 </div>
                             
@@ -41,7 +42,7 @@
 				<!-- 회원 정보 -->
 				<div class="enroll-form-div" id="name">
 					<h3>이름 <font color="red">*</font></h3>
-                    <input type="text" placeholder="이름을 입력해주세요">
+                    <input type="text" name="userName" placeholder="이름을 입력해주세요">
                 </div>
                 
                 <div class="enroll-form-div">

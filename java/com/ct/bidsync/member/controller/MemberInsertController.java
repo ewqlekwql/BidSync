@@ -2,6 +2,7 @@ package com.ct.bidsync.member.controller;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 import com.ct.bidsync.member.model.vo.Member;
 import com.ct.bidsync.member.service.MemberService;
@@ -50,7 +51,8 @@ public class MemberInsertController extends HttpServlet {
 			day = "0" + day;
 		}
 		
-		Date birthday = Date.valueOf(year + month + day);
+		String date = year + "-" + month + "-" + day;
+		Date birthday = java.sql.Date.valueOf(date);
 		
 		String email = (request.getParameter("emailId") + "@" + request.getParameter("emailAddr"));
 		
@@ -70,7 +72,7 @@ public class MemberInsertController extends HttpServlet {
 			Member loginUser = new MemberService().loginMember(userId, userPwd);
 			
 			HttpSession session = request.getSession();
-			request.setAttribute("loginUser", loginUser);
+			session.setAttribute("loginUser", loginUser);
 			request.setAttribute("alertMsg", "성공적으로 회원가입이 완료되었습니다. BidSync에 오신 걸 환영합니다!");
 			request.setAttribute("responseURL", request.getContextPath() + "/index.jsp");
 			
