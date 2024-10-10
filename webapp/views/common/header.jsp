@@ -61,25 +61,25 @@
                <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
             </li>
             <li>
-               <a href="#">패션</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=fasion&cpage=1">패션</a>
             </li>
             <li>
-               <a href="#">디지털·가전</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">디지털·가전</a>
             </li>
             <li>
-               <a href="#">스포츠</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=sport&cpage=1">스포츠</a>
             </li>
             <li> 
-               <a href="#">홈·데코</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=deco&cpage=1">홈·데코</a>
             </li>
             <li>
-               <a href="#">완구</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=toy&cpage=1">완구</a>
             </li>
             <li>
-               <a href="#">미술</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=art&cpage=1">미술</a>
             </li>
             <li>
-               <a href="#">쥬얼리</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">쥬얼리</a>
             </li>
          </ul>
       </nav>

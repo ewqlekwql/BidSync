@@ -60,7 +60,8 @@ CREATE TABLE PRODUCT (
     STOCK        INT,
     BID_PRICE    INT,
     CATEGORY     VARCHAR2(15),
-    TYPE         VARCHAR(10)
+    TYPE         VARCHAR(10),
+    SELLER       VARCHAR(15)
 );
 
 /* address */

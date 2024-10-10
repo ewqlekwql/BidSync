@@ -9,8 +9,6 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-  <!-- com.ct.bidsync.member -->
   <servlet>
     <description>LoginController</description>
     <display-name>login.me</display-name>
@@ -52,7 +50,7 @@
     <url-pattern>/update.me</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<description>MemberUrlController</description>
+    <description>MemberUrlController</description>
     <display-name>url.me</display-name>
     <servlet-name>url.me</servlet-name>
     <servlet-class>com.ct.bidsync.member.controller.MemberUrlController</servlet-class>
@@ -61,17 +59,23 @@
     <servlet-name>url.me</servlet-name>
     <url-pattern>/url.me</url-pattern>
   </servlet-mapping>
-  
-  <!-- com.ct.bidsync.board -->
-  
-  <!-- com.ct.bidsync.common.filter -->
   <filter>
     <display-name>LoginFilter</display-name>
     <filter-name>LoginFilter</filter-name>
-    <filter-class>com.ct.bidsync.common.filter.LoginFilter</filter-class>
+    <filter-class>com.ct.bidsync.common.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
     <url-pattern>/logout.me</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description>BoardListController</description>
+    <display-name>list.bo</display-name>
+    <servlet-name>list.bo</servlet-name>
+    <servlet-class>com.ct.bidsync.board.controller.BoardListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>list.bo</servlet-name>
+    <url-pattern>/list.bo</url-pattern>
+  </servlet-mapping>
 </web-app>
