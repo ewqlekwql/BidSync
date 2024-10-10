@@ -16,7 +16,8 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter({ "/logout.me", "/myPage.me" })
+@SuppressWarnings("serial")
+@WebFilter({ "/logout.me" })
 public class LoginFilter extends HttpFilter implements Filter {
        
     /**

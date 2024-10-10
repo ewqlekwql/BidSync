@@ -29,6 +29,7 @@ public class MemberUrlController extends HttpServlet {
 		
 		// URL 필터 대용
 		String call = request.getParameter("call");
+		System.out.println("url call : " + call);
 		
 		switch(call) {
 		case "login" :
