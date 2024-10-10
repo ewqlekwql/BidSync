@@ -41,13 +41,18 @@
                 <!-- 상품 상세 정보 -->
                 <div class="used-price-info">
                     <div class="category-info">
-                        <p>카테고리: 패션 > 악세서리</p>
-                    </div>
+					    <p>					         
+					        <a href="카테고리의_링크_URL">카테고리:</a> 
+					        <a href="패션의_링크_URL">패션</a> > 
+					        <a href="악세서리의_링크_URL">악세서리</a>
+					    </p>
+					</div>
+					
                     <div class="seller-info">
                         <div class="seller-profile">
                         <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" 
                         class="seller-profile">
-                        <span>판매자명</span>
+                        <span><a href="판매자_페이지_URL">판매자명</a></span>
                     </div>
                         <div class="seller-rating">
                            ★★★☆☆ 
@@ -56,14 +61,14 @@
                     </div>
                     <div class="used-price">
                         <h3>중고 거래가</h3>
-                        <h1>15,000 원</h1>
+                        <h1><a href="#used-price" class="used-price-link">15,000 원</a></h1>
                     </div>
                     <div class="trade-options">
                         <button class="btn-exchange">에누리</button>
                         <button class="btn-direct">직거래</button>
                     </div>
                     <p>배송방법: 직거래, 편의점 택배</p>
-                    <p>배송비: 3,000원</p>
+					<p>배송비: <a href="#shipping-cost" class="shipping-cost-link">3,000원</a></p>
 
                     <!-- 수량 선택 -->
                     <div class="quantity-selector">
@@ -94,7 +99,7 @@
             <div class="seller-profile-info">
                 <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
                 <div class="seller-details">
-                    <h3>판매자명</h3>
+                    <span><a href="판매자_페이지_URL">판매자명</a></span>
                     <p><span>🤍</span> 
                 </div>
             </div>
@@ -148,10 +153,6 @@
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 BidSync. All rights reserved.</p>
-    </footer>
 
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoUsed.js"></script>

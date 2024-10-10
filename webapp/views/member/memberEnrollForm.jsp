@@ -3,23 +3,102 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BidSnyc - 회원가입</title>
+	
+	<!-- 외부 css/js 연결 -->
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/member.css">
 </head>
 <body>
-	<!-- 헤더 -->
-	<jsp:include page="/views/common/header.jsp" />
-	
-	<!-- 테스트폼 -->
-	<form action="${pageContext.request.contextPath}/insert.me" method="post">
-		아이디 : <input type="text" name="userId"><br>
-		비밀번호 : <input type="text" name="userPwd"><br>
-		이름 : <input type="text" name="userName"><br>
-		성별 : <input type="radio" name="gender" value="남">남 <input type="radio" name="gender" value="여"> 여 <input type="radio" name="gender" value=""> 비공개 <br>
-		생년월일 : <input type="date" name="birthday"><br>
-		전화번호: <input type="text" name="phone"><br>
-		이메일 : <input type="text" name="email"><br>
-		
-		<input type="submit" value="가입">
-	</form>
+	<main id="enroll-main">
+		<section id="enroll-section">
+			<form id="enroll-form" action="${pageContext.request.contextPath}/insert.me" method="post">
+				<!-- 헤더 대용 -->
+				<a class="enroll-logo" href="${pageContext.request.contextPath}/index.jsp"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png"></a>
+			
+				<!-- 계정 -->
+				<div class="enroll-form-div">
+					<h3>아이디 <font color="red">*</font></h3>
+					<div class="sub">
+						<input type="text" id="user_id" name="userId" placeholder="아이디 입력 (6~20자)" required onkeydown="noSpaceForm(this);" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z-_]/g,'');" onchange="noSpaceForm(this);" onblur="checkInput(this.id);">
+                    	<button type="button" id="id_overlap_check">중복 체크</button>
+					</div>
+                    <span id="user_id_required" class="check_text hidden">사용할 수 없는 아이디입니다.</span>
+				</div>
+				
+				<div class="enroll-form-div" id="password">
+					<h3>비밀번호 <font color="red">*</font></h3>
+                    <input type="password" id="user_password" name="userPwd" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 8~20자)" onblur="checkInput(this.id);" onclick="passwordCheck(this.value)" required>
+                    <span id="user_password_required" class="check_text hidden">문자,숫자,특수문자 포함 (8~20자)</span>
+                </div>
+                            
+                <div class="enroll-form-div" id="passwordCheck">
+	                <h3>비밀번호 확인 <font color="red">*</font></h3>
+                    <input type="password" placeholder="비밀번호 재입력" id="passwordRecheck" required onblur="passwordReCheck()">
+                    <span id="pwd_check_required" class="check_text hidden">비밀번호가 일치하지 않습니다.</span>
+                </div>
+				
+				<!-- 회원 정보 -->
+				<div class="enroll-form-div" id="name">
+					<h3>이름 <font color="red">*</font></h3>
+                    <input type="text" name="userName" placeholder="이름을 입력해주세요">
+                </div>
+                
+                <div class="enroll-form-div">
+                	<h3>성별</h3>
+                	<select name="gender">
+                		<option value="">비공개</option>
+                		<option value="남">남성</option>
+                		<option value="여">여성</option>
+                	</select>
+                </div>
+                
+                <div class="enroll-form-div" id="birth">
+                	<h3>생년월일 <font color="red">*</font></h3>
+                	<div class="sub">
+                		<input type="text" name="year" placeholder="년(4자)">
+                		<select aria-placeholder="월" name="month">
+                            <option value="01">1월</option>
+                            <option value="02">2월</option>
+                            <option value="03">3월</option>
+                            <option value="04">4월</option>
+                            <option value="05">5월</option>
+                            <option value="06">6월</option>
+                            <option value="07">7월</option>
+                            <option value="08">8월</option>
+                            <option value="09">9월</option>
+                            <option value="10">10월</option>
+                            <option value="11">11월</option>
+                            <option value="12">12월</option>
+                        </select>
+                        <input type="text" name="day" placeholder="일">
+                	</div>
+                </div>
+				
+				<!-- 연락처 -->
+                <div class="enroll-form-div" id="emailAddress">
+                	<h3>이메일 주소 <font color="red">*</font></h3>
+                	<div class="sub">
+                		<input type="text" name="emailId">
+                		<p>@</p>
+                		<input type="text" name="emailAddr">
+	                    <select id="selbox" name="selbox">
+	                    	<option value="">직접입력</option>
+	                        <option value="naver.com">네이버(naver)</option>
+	                        <option value="gmail.com">구글(gmail)</option>
+	                    </select>
+                	</div>
+                </div>
+                
+                <div class="enroll-form-div" id="phone">
+                	<h3>휴대전화</h3>
+                    <input type="tel" name="phone" placeholder="휴대폰 번호 입력 (하이픈 '-'제외)" onkeyup="checkNumber(event)"/>
+                </div>
+				
+				<button id="createButton" onclick="">가입하기</button>
+			</form>
+		</section>
+	</main>
 </body>
 </html>

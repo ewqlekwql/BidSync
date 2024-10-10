@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
+	<!-- 로그인 유저 정보 검색 -->
 	<entry key="loginMember">
 		SELECT	USER_NO,
 				USER_ID,
@@ -18,6 +19,8 @@
 		   AND	USER_PWD = ?
 		   AND	STATUS = 'Y'
 	</entry>
+	
+	<!-- 새 회원 등록 -->
 	<entry key="insertMember">
 		INSERT INTO MEMBER
 		(

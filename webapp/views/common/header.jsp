@@ -21,7 +21,6 @@
    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
 </head>
 <body>
-   <!-- 헤더 -->
    <header>
       <!-- 상단바 -->
       <nav id="header-top">
@@ -38,16 +37,16 @@
             	<c:when test="${empty loginUser}">
             		<%-- 로그인 전 --%>
             		<li id="header-top-user">
-		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
-		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
-		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/views/member/memberLoginForm.jsp'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
 		            </li>
             	</c:when>
             	<c:otherwise>
             		<%-- 로그인 후 --%>
             		<li id="header-top-user">
 		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
-		               <button type="button"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=myPage'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/logout.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
 		            </li>
             	</c:otherwise>

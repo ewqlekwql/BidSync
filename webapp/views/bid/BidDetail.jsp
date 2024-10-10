@@ -72,23 +72,24 @@
         <section class="shipping-section">
             <h3>배송</h3>
             <ul class="shipping-detail-list">
-                <li>
-                    <span class="label">받는 분</span>
-                    <span class="value">홍길동</span>
-                </li>
-                <li>
-                    <span class="label">연락처</span>
-                    <span class="value">010-XXXX-XXXX</span>
-                </li>
-                <li>
-                    <span class="label">주소</span>
-                    <span class="value">[000000] XX XX시 XX구 XX로 00-0 XXX아파트 X동 X호</span>
-                </li>
-                <li>
-                    <span class="label">요청사항</span>
-                    <span class="value">요청사항 없음</span>
-                </li>
-            </ul>
+                <!-- 배송 상세 항목 값 스타일 -->
+				<li>
+				    <span class="label">받는 분</span>
+				    <span class="value receiver-value">홍길동</span>
+				</li>
+				<li>
+				    <span class="label">연락처</span>
+				    <span class="value phone-value">010-XXXX-XXXX</span>
+				</li>
+				<li>
+				    <span class="label">주소</span>
+				    <span class="value address-value">[000000] XX XX시 XX구 XX로 00-0 XXX아파트 X동 X호</span>
+				</li>
+				<li>
+				    <span class="label">요청사항</span>
+				    <span class="value request-value">요청사항 없음</span>
+				</li>
+			</ul>
 
              <!-- 평점 매기기 버튼 -->
         <button id="openPopupBtn">판매자 평점 매기기</button>

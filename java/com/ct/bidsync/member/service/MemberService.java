@@ -36,4 +36,9 @@ public class MemberService {
 		close(conn);
 		return result;
 	}
+	
+	// MemberUpdateController
+	public Member updateMember(Member m) {
+		return m;
+	}
 }
