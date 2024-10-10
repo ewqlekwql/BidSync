@@ -3,16 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const addressPopup = document.getElementById('address-popup-container');
     const addressAddPopup = document.getElementById('address-add-popup-container');
     const requestPopup = document.getElementById('request-popup-container');
+    const accountChangePopup = document.getElementById('account-change-popup-container');
 
     const addressChangeBtn = document.querySelector('.address-change-btn');
     const addAddressBtn = document.querySelector('.add-address-btn');
     const requestButton = document.getElementById('request-button'); // 요청사항 버튼
-
     const closeButtons = document.querySelectorAll('.close-btn');
     const saveRequestBtn = document.querySelector('.r-save-btn'); // 요청사항 저장 버튼
     const addressSaveBtn = document.querySelector('.address-form .a-save-btn'); // 주소 저장 버튼
     const selectAddressBtn = document.querySelector('.select-address-btn'); // 주소 선택 버튼
     const addressDetails = document.querySelector('.address-details'); // 배송 주소 섹션
+    const purchaseBtn = document.querySelector('.purchase-btn');
+    const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
+    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
 
     let selectedRequest = '요청사항 없음'; // 기본 요청사항
 
@@ -140,54 +143,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 구매하기 버튼 클릭 시 구매 상세 페이지 이동 및 정보 저장
-    const purchaseBtn = document.querySelector('.purchase-btn');
+    // 구매하기 버튼 클릭 시 처리 (카카오페이 또는 기존 구매 처리)
+	if (purchaseBtn) {
+	        purchaseBtn.addEventListener('click', function () {
+	            const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
 
-    // 구매하기 버튼 클릭 시 저장된 배송 정보를 LocalStorage에 저장
-    if (purchaseBtn) {
-        purchaseBtn.addEventListener('click', function () {
-            // 배송 정보 가져오기
-            const receiver = document.querySelector('.address-details .row:nth-child(1) .value').innerText;
-            const phone = document.querySelector('.address-details .row:nth-child(2) .value').innerText;
-            const address = document.querySelector('.address-details .row:nth-child(3) .value').innerText;
-            const request = document.getElementById('request-button').textContent;
+	            if (selectedPaymentOption && selectedPaymentOption.value === 'kakao') {
+	                // 카카오페이 결제 요청
+	                fetch('/BidSync/KakaoPayServlet', {
+	                    method: 'POST',
+	                    headers: {
+	                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+	                    }
+	                })
+	                .then(response => response.json())
+	                .then(data => {
+	                    // 서버 응답을 콘솔에 출력하여 디버깅에 도움
+	                    console.log("KakaoPay Response:", data);
 
-            // LocalStorage에 배송 정보 저장
-            console.log('Saving to LocalStorage:', { receiver, phone, address, request }); // 디버깅용
-            localStorage.setItem('bid_receiver', receiver);
-            localStorage.setItem('bid_phone', phone);
-            localStorage.setItem('bid_address', address);
-            localStorage.setItem('bid_request', request);
+	                    if (data.next_redirect_pc_url) {
+	                        window.location.href = data.next_redirect_pc_url;  // QR 화면으로 이동
+	                    } else {
+	                        alert('카카오페이 결제 오류');
+	                    }
+	                })
+                .catch(error => console.error('Error:', error));
+            } else {
+                // 기존 결제 처리
+                const receiver = document.querySelector('.address-details .row:nth-child(1) .value').innerText;
+                const phone = document.querySelector('.address-details .row:nth-child(2) .value').innerText;
+                const address = document.querySelector('.address-details .row:nth-child(3) .value').innerText;
+                const request = document.getElementById('request-button').textContent;
 
-            // BidDetail 페이지로 이동 (경로 확인 필요)
-            window.location.href = '../bid/BidDetail.jsp';
+                // LocalStorage에 배송 정보 저장
+                localStorage.setItem('bid_receiver', receiver);
+                localStorage.setItem('bid_phone', phone);
+                localStorage.setItem('bid_address', address);
+                localStorage.setItem('bid_request', request);
+
+                // BidDetail 페이지로 이동
+                window.location.href = '../bid/BidDetail.jsp';
+            }
         });
     }
 
-    // 카드 정보 변경 관련 변수들
-    const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
-    const accountChangePopup = document.getElementById('account-change-popup-container'); // 계좌 정보 팝업
-    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
-
-    // 카드 정보 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
+    // 카드 정보 변경 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
     if (cardInfoButton) {
         cardInfoButton.addEventListener('click', function () {
             const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
             if (selectedPaymentOption && selectedPaymentOption.value === 'card') {
                 accountChangePopup.style.display = 'flex'; // 팝업 표시
             }
-        });
-    }
-
-    // 닫기 버튼 클릭 시 팝업 닫기 및 초기화
-    if (closeButtons.length > 0) {
-        closeButtons.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                accountChangePopup.style.display = 'none'; // 팝업 닫기
-                // 폼 초기화
-                document.getElementById('bank').value = 'kb'; // 기본값으로 초기화 (value 값을 'kb'로 설정)
-                document.getElementById('accountNumber').value = '';  // 계좌번호 초기화
-            });
         });
     }
 
@@ -202,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 계좌 정보 저장 및 유효성 검사
             if (bank && accountNumber) {
                 // 메인 화면의 카드 정보 텍스트를 변경
-                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 1234-1234-1234-1234"
+                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 XXXX-XXXX-XXXX-XXXX"
 
                 // 팝업 닫기
                 accountChangePopup.style.display = 'none';
@@ -270,5 +276,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }).open();
     };
-
 });

@@ -78,4 +78,12 @@
     <servlet-name>list.bo</servlet-name>
     <url-pattern>/list.bo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>KakaoPayServlet</servlet-name>
+    <servlet-class>com.ct.bidsync.board.controller.KakaoPayServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>KakaoPayServlet</servlet-name>
+    <url-pattern>/KakaoPayServlet</url-pattern>
+</servlet-mapping>
 </web-app>

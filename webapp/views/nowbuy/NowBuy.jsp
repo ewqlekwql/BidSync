@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.net.URLEncoder" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -212,6 +211,13 @@
 	        
 	
 	    </div>
+	    
+	      <!-- 카카오 페이 서비스 스크립트 -->
+     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    	<script>
+        
+        Kakao.init('de92a18699a74e273b1984252529f222'); // 발급받은 JavaScript 키
+    	</script>
 
 	<!-- 카카오 우편번호 서비스 스크립트 -->
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
