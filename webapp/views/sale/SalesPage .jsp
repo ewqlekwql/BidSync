@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품 등록</title>
     
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Purchase completed.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Sales Page.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/PurchaseCompleted.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/SalesPage.css">
 </head>
 <body>
     <div class="container">
@@ -97,8 +97,8 @@
         
         
 
-    <script src="<%= request.getContextPath() %>/views/resources/js/Sales Page.js"></script>
-    <script src="<%= request.getContextPath() %>/views/resources/js/Purchase completed.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/SalesPage.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/PurchaseCompleted.js"></script>
 
 </body>
 </html>

@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 addressPopup.style.display = 'none';
                 addressAddPopup.style.display = 'none';
                 requestPopup.style.display = 'none';
+                accountChangePopup.style.display = 'none';
             });
         });
     }
@@ -94,11 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // 폼 제출 방지
 
             // 주소 추가 폼에서 입력된 정보 가져오기
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const zipcode = document.getElementById('zipcode').value;
-            const address = document.getElementById('address').value;
-            const detail = document.getElementById('detail').value;
+            const name = document.getElementById('popup-name').value;
+            const phone = document.getElementById('popup-phone').value;
+            const zipcode = document.getElementById('popup-zipcode').value;
+            const address = document.getElementById('popup-address').value;
+            const detail = document.getElementById('popup-detail').value;
 
             // 입력된 정보로 새로운 주소 항목 생성
             const newAddressItem = document.createElement('div');
@@ -153,80 +154,121 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // LocalStorage에 배송 정보 저장
             console.log('Saving to LocalStorage:', { receiver, phone, address, request }); // 디버깅용
-			localStorage.setItem('bid_receiver', receiver);
-			localStorage.setItem('bid_phone', phone);
-			localStorage.setItem('bid_address', address);
-			localStorage.setItem('bid_request', request);
+            localStorage.setItem('bid_receiver', receiver);
+            localStorage.setItem('bid_phone', phone);
+            localStorage.setItem('bid_address', address);
+            localStorage.setItem('bid_request', request);
 
             // BidDetail 페이지로 이동 (경로 확인 필요)
             window.location.href = '../bid/BidDetail.jsp';
         });
     }
-	 	const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
-	    const accountChangePopup = document.getElementById('account-change-popup-container'); // 계좌 정보 팝업
-	    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
 
-	    // 카드 정보 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
-	    if (cardInfoButton) {
-	        cardInfoButton.addEventListener('click', function () {
-	            const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
-	            if (selectedPaymentOption && selectedPaymentOption.value === 'card') {
-	                accountChangePopup.style.display = 'flex'; // 팝업 표시
-	            }
-	        });
-	    }
+    // 카드 정보 변경 관련 변수들
+    const cardInfoButton = document.querySelector('.card-info'); // 카드 정보 버튼
+    const accountChangePopup = document.getElementById('account-change-popup-container'); // 계좌 정보 팝업
+    const accountDisplay = document.querySelector('.card-info span'); // 계좌 정보가 표시되는 영역
 
-	    // 닫기 버튼 클릭 시 팝업 닫기 및 초기화
-	    closeButtons.forEach(function (closeBtn) {
-	        closeBtn.addEventListener('click', function () {
-	            accountChangePopup.style.display = 'none'; // 팝업 닫기
-	            // 폼 초기화
-	            document.getElementById('bank').value = 'KB 국민은행'; // 기본값으로 초기화
-	            document.getElementById('accountNumber').value = '';  // 계좌번호 초기화
-	        });
-	    });
+    // 카드 정보 버튼 클릭 시 팝업 표시 - 카드 간편결제 상태에서만 변경 가능
+    if (cardInfoButton) {
+        cardInfoButton.addEventListener('click', function () {
+            const selectedPaymentOption = document.querySelector('input[name="payment"]:checked');
+            if (selectedPaymentOption && selectedPaymentOption.value === 'card') {
+                accountChangePopup.style.display = 'flex'; // 팝업 표시
+            }
+        });
+    }
 
-	    // 계좌 정보 저장 버튼 클릭 시 처리
-	    const saveBtn = document.querySelector('.account-save-btn');
-	    if (saveBtn) {
-	        saveBtn.addEventListener('click', function () {
-	            const bank = document.getElementById('bank').value; // 선택된 은행
-	            const accountNumber = document.getElementById('accountNumber').value; // 입력된 계좌번호
+    // 닫기 버튼 클릭 시 팝업 닫기 및 초기화
+    if (closeButtons.length > 0) {
+        closeButtons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                accountChangePopup.style.display = 'none'; // 팝업 닫기
+                // 폼 초기화
+                document.getElementById('bank').value = 'kb'; // 기본값으로 초기화 (value 값을 'kb'로 설정)
+                document.getElementById('accountNumber').value = '';  // 계좌번호 초기화
+            });
+        });
+    }
 
-	            // 계좌 정보 저장 및 유효성 검사
-	            if (bank && accountNumber) {
-	                // 메인 화면의 카드 정보 텍스트를 변경
-	                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 1234-1234-1234-1234"
+    // 계좌 정보 저장 버튼 클릭 시 처리
+    const saveBtn = document.querySelector('.account-save-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', function () {
+            const bankSelect = document.getElementById('bank');
+            const bank = bankSelect.options[bankSelect.selectedIndex].text; // 선택된 은행의 텍스트 값
+            const accountNumber = document.getElementById('accountNumber').value; // 입력된 계좌번호
 
-	                // 팝업 닫기
-	                accountChangePopup.style.display = 'none';
-	            } else {
-	                alert("모든 필드를 입력해주세요.");
-	            }
-	        });
-	    }
+            // 계좌 정보 저장 및 유효성 검사
+            if (bank && accountNumber) {
+                // 메인 화면의 카드 정보 텍스트를 변경
+                accountDisplay.textContent = `${bank} ${accountNumber}`; // 예: "KB 국민 1234-1234-1234-1234"
 
-	    // 결제 옵션에 따른 카드 정보 업데이트 (선택에 따라 변경)
-	    const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
-	    if (paymentOptions.length > 0) {
-	        paymentOptions.forEach(function (option) {
-	            option.addEventListener('change', function () {
-	                if (this.checked) {
-	                    switch (this.value) {
-	                        case 'card':
-	                            accountDisplay.textContent = 'KB 국민 XXXX-XXXX-XXXX-XXXX';
-	                            break;
-	                        case 'kakao':
-	                            accountDisplay.textContent = '카카오페이 결제하기';
-	                            break;
-	                        case 'bank':
-	                            accountDisplay.textContent = '예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX';
-	                            break;
-	                        default:
-	                            break;
-	                    }
-	                }
-	            });
-	        });
-	    }
-	});
+                // 팝업 닫기
+                accountChangePopup.style.display = 'none';
+            } else {
+                alert("모든 필드를 입력해주세요.");
+            }
+        });
+    }
+
+    // 결제 옵션에 따른 카드 정보 업데이트 (선택에 따라 변경)
+    const paymentOptions = document.querySelectorAll('.payment-options input[name="payment"]');
+    if (paymentOptions.length > 0) {
+        paymentOptions.forEach(function (option) {
+            option.addEventListener('change', function () {
+                if (this.checked) {
+                    switch (this.value) {
+                        case 'card':
+                            accountDisplay.textContent = 'KB 국민 XXXX-XXXX-XXXX-XXXX';
+                            break;
+                        case 'kakao':
+                            accountDisplay.textContent = '카카오페이 결제하기';
+                            break;
+                        case 'bank':
+                            accountDisplay.textContent = '예금주: BidSync / 계좌번호: 국민 KB 국민 XXXX-XXXX-XXXX-XXXX';
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+        });
+    }
+
+    // 우편번호 검색 함수 정의 및 전역으로 노출
+    window.execDaumPostcodePopup = function () {
+        new daum.Postcode({
+            oncomplete: function (data) {
+                var addr = ''; // 주소
+                var extraAddr = ''; // 참고항목
+
+                if (data.userSelectedType === 'R') {
+                    addr = data.roadAddress;
+                } else {
+                    addr = data.jibunAddress;
+                }
+
+                if (data.userSelectedType === 'R') {
+                    if (data.bname !== '') {
+                        extraAddr += data.bname;
+                    }
+                    if (data.buildingName !== '') {
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    if (extraAddr !== '') {
+                        addr += ' (' + extraAddr + ')';
+                    }
+                }
+
+                // 팝업 내부의 입력 필드에 값 설정
+                document.getElementById('popup-zipcode').value = data.zonecode;
+                document.getElementById('popup-address').value = addr;
+
+                // 상세주소 필드로 포커스 이동
+                document.getElementById('popup-detail').focus();
+            }
+        }).open();
+    };
+
+});
