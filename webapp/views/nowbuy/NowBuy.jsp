@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.net.URLEncoder" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -114,7 +115,7 @@
         </div>
 
         <!-- 구매하기 Button -->
-        <button class="purchase-btn">구매 하기</button>
+        <button id="purchaseBtn" class="purchase-btn">구매 하기</button>
 
         <!-- 팝업 -->
         <div id="address-popup-container" class="popup-container" style="display: none;">
@@ -133,33 +134,34 @@
         </div>
 
         <div id="address-add-popup-container" class="popup-container" style="display: none;">
-            <div class="popup">
-                <div class="popup-header">
-                    <span class="back-btn">←</span>
-                    <h2>주소 추가하기</h2>
-                    <span class="close-btn">&times;</span>
-                </div>
-        
-                <form class="address-form">
-                    <label for="name">이름</label>
-                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
-        
-                    <label for="phone">휴대폰 번호</label>
-                    <input type="tel" id="phone" name="phone" placeholder="휴대폰 번호를 입력하세요">
-        
-                    <label for="zipcode">우편번호</label>
-                    <input type="text" id="zipcode" name="zipcode" placeholder="우편번호를 입력하세요">
-        
-                    <label for="address">주소</label>
-                    <input type="text" id="address" name="address" placeholder="주소를 입력하세요">
-        
-                    <label for="detail">상세주소</label>
-                    <input type="text" id="detail" name="detail" placeholder="상세주소를 입력하세요">
-        
-                    <button type="button" class="a-save-btn">저장 하기</button>
-                </form>
-            </div>
-        </div>
+		    <div class="popup">
+		        <div class="popup-header">
+		            <span class="back-btn">←</span>
+		            <h2>주소 추가하기</h2>
+		            <span class="close-btn">&times;</span>
+		        </div>
+		
+		        <form class="address-form">
+		            <label for="name">이름</label>
+		            <input type="text" id="nowbuy-popup-name" name="name" placeholder="이름을 입력하세요">
+		
+		            <label for="phone">휴대폰 번호</label>
+		            <input type="tel" id="nowbuy-popup-phone" name="phone" placeholder="휴대폰 번호를 입력하세요">
+		
+					<button type="button" class="zipcode-btn" onclick="execDaumPostcodePopup()">우편번호 찾기</button>
+		            <label for="zipcode">우편번호</label>
+		            <input type="text" id="nowbuy-popup-zipcode" name="zipcode" placeholder="우편번호를 입력하세요" readonly>
+		
+		            <label for="address">주소</label>
+		            <input type="text" id="nowbuy-popup-address" name="address" placeholder="주소를 입력하세요" readonly>
+		
+		            <label for="detail">상세주소</label>
+		            <input type="text" id="nowbuy-popup-detail" name="detail" placeholder="상세주소를 입력하세요">
+		
+		            <button type="button" class="a-save-btn">저장 하기</button>
+		        </form>
+		    </div>
+		</div>
 
         <!-- 요청사항 팝업 내용 -->
         <div id="request-popup-container" class="popup-container" style="display: none;">
@@ -206,10 +208,18 @@
 	                </form>
 	            </div>
 	        </div>
+	        
+	        
 	
 	    </div>
 
+	<!-- 카카오 우편번호 서비스 스크립트 -->
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
     <!-- JavaScript 파일 경로 JSP 처리 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/NowBuy.js"></script>
+    
+    
+    
 </body>
 </html>

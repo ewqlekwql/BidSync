@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BidSync Shop</title>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/sspage.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Sspage.css">
     </head>
     <body>
         <!-- Header -->

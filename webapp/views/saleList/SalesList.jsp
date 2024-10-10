@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>판매중 및 입찰중인 물품 목록</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Sales List Stauts.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/SalesList.css">
 </head>
 <body>
      <div class="container">
@@ -138,6 +138,6 @@
         </main>
     </div>
 
-    <script src="<%= request.getContextPath() %>/views/resources/js/Sales List Status.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/SalesList.js"></script>
 </body>
 </html>
