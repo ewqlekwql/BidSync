@@ -61,7 +61,7 @@ public class BoardDao {
 	}
 	
 	// 리스트 목록 반환
-	public ArrayList<Board> selectList(Connection conn, PageInfo pi) {
+	public ArrayList<Board> selectList(Connection conn, PageInfo pi, String ctg) {
 		ArrayList<Board> list = new ArrayList<>();
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
@@ -73,8 +73,9 @@ public class BoardDao {
 			int startRow = (pi.getCurrentPage() - 1) * pi.getBoardLimit() + 1;
 			int endRow = startRow + pi.getBoardLimit() - 1;
 			
-			pstmt.setInt(1, startRow);
-			pstmt.setInt(2, endRow);
+			pstmt.setString(1, ctg);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, endRow);
 			
 			rset = pstmt.executeQuery();
 			while(rset.next()) {

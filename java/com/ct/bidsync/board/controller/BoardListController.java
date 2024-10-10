@@ -57,7 +57,7 @@ public class BoardListController extends HttpServlet {
 		endPage = endPage > maxPage ? maxPage : endPage;
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Board> list = new BoardService().selectList(pi);
+		ArrayList<Board> list = new BoardService().selectList(pi, ctg);
 		
 		request.setAttribute("pi", pi);
 		request.setAttribute("list", list);

@@ -21,10 +21,10 @@ public class BoardService {
 		return listCount;
 	}
 	
-	public ArrayList<Board> selectList(PageInfo pi) {
+	public ArrayList<Board> selectList(PageInfo pi, String ctg) {
 		Connection conn = getConnection();
 		
-		ArrayList<Board> list = new BoardDao().selectList(conn, pi);
+		ArrayList<Board> list = new BoardDao().selectList(conn, pi, ctg);
 		
 		close(conn);
 		return list;
