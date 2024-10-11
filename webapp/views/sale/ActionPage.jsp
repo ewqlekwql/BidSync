@@ -119,7 +119,7 @@
                             <option>오후</option>
                         </select>
                     </div>
-                    <small>오전 12시에서 오전 6시 사이에 물품을 만드는 것을 권장하지 않습니다. 차떼미 시간에 시작하는 경매가 가장 많은 입찰을 받습니다.</small>
+                    <small>오전 12시에서 오전 6시 사이에 물품을 만드는 것을 권장하지 않습니다. 오후 시간에 시작하는 경매가 가장 많은 입찰을 받습니다.</small>
         
                     <label for="duration">경매 기간</label>
                     <select id="duration">
