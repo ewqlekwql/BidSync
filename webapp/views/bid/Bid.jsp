@@ -113,7 +113,7 @@
 
 
         <!-- 구매하기 Button -->
-        <button class="purchase-btn">구매 하기</button>
+        <button id="purchaseBtn" class="purchase-btn">구매 하기</button>
 
         <!-- 팝업 -->
         <div id="address-popup-container" class="popup-container" style="display: none;">
@@ -147,9 +147,9 @@
 		            <label for="phone">휴대폰 번호</label>
 		            <input type="tel" id="popup-phone" name="phone" placeholder="휴대폰 번호를 입력하세요">
 		
+					<button type="button" class="zipcode-btn" onclick="execDaumPostcodePopup()">우편번호 찾기</button>
 		            <label for="zipcode">우편번호</label>
 		            <input type="text" id="popup-zipcode" name="zipcode" placeholder="우편번호를 입력하세요" readonly>
-		            <button type="button" class="zipcode-btn" onclick="execDaumPostcodePopup()">우편번호 찾기</button>
 		
 		            <label for="address">주소</label>
 		            <input type="text" id="popup-address" name="address" placeholder="주소를 입력하세요" readonly>
@@ -210,13 +210,20 @@
 
     </div>
     
+    <!-- 카카오 페이 서비스 스크립트 -->
+     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    	<script>
+        
+        Kakao.init('de92a18699a74e273b1984252529f222'); // 발급받은 JavaScript 키
+    	</script>
+    	
     <!-- 카카오 우편번호 서비스 스크립트 -->
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <!-- JavaScript 파일 연결 -->
     <script src="<%= request.getContextPath() %>/views/resources/js/Bid.js"></script>
     
-
+	
 	
 	
     

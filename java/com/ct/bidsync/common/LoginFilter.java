@@ -1,4 +1,4 @@
-package com.ct.bidsync.common.filter;
+package com.ct.bidsync.common;
 
 import java.io.IOException;
 

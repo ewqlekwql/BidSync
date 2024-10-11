@@ -45,7 +45,7 @@
 			<article id="login-article-sns">
 				<h1>SNS</h1>
 				<div>
-					<button>
+					<button onclick="location.href='https://accounts.google.com/'">
                         <img src="${pageContext.request.contextPath}/views/resources/images/btn_google.png" id="google">
                     </button>
                     <button onclick="location.href='https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/'">

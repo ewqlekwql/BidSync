@@ -38,6 +38,12 @@ public class MemberUrlController extends HttpServlet {
 		case "enroll" :
 			request.getRequestDispatcher("/views/member/memberEnrollForm.jsp").forward(request, response);
 			break;
+		case "cart" :
+			request.getRequestDispatcher("/views/member/cartList.jsp").forward(request, response);
+			break;
+		case "wish" :
+			request.getRequestDispatcher("/views/member/wishList.jsp").forward(request, response);
+			break;
 		case "myPage" :
 			request.getRequestDispatcher("/views/member/myPage.jsp").forward(request, response);
 			break;
