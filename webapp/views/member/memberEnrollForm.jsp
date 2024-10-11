@@ -9,6 +9,7 @@
 	<!-- 외부 css/js 연결 -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/index.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/member.css">
+	<script src="${pageContext.request.contextPath}/views/resources/member.js" defer></script>
 </head>
 <body>
 	<main id="enroll-main">
