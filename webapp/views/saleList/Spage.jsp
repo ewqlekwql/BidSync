@@ -5,42 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BidSync Shop</title>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Sspage.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/Spage.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
     </head>
     <body>
-        <!-- Header -->
-        <header class="header">
-            <div class="header-top">
-                <div class="logo">
-                    <a href="#">BidSync</a>
-                </div>
-                <div class="search-bar">
-                    <form action="#" method="GET">
-                        <input type="text" placeholder="검색어를 입력해주세요" name="search" required>
-                        <button type="submit">검색</button>
-                    </form>
-                </div>
-                <div class="icons">
-                    <a href="#" class="cart-icon" aria-label="Cart">🛒</a>
-                    <a href="#" class="information-icon" aria-label="information">👤</a>
-                    <a href="#" aria-label="Logout">❌</a>
-                </div>
-            </div>
-            <div class="header-bottom">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#" class="menu-icon" aria-label="Menu">☰</a></li>
-                        <li><a href="#">패션</a></li>
-                        <li><a href="#">디지털·가전</a></li>
-                        <li><a href="#">스포츠</a></li>
-                        <li><a href="#">홈·데코</a></li>
-                        <li><a href="#">완구</a></li>
-                        <li><a href="#">미술</a></li>
-                        <li><a href="#">취미</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+
+        <jsp:include page="/views/common/header.jsp" />
     
         <div class="main-layout">
             <aside class="sidebar">

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품 등록</title>
+
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/PurchaseCompleted.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/ActionPage.css">
     
@@ -12,23 +14,8 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <a href=""><h1>BID SYNC</h1></a>
-            <input type="text" placeholder="검색어를 입력해 주세요..." class="search-bar">
-            <button class="search-btn">검색</button>
-        </header>
 
-        <nav class="menu">
-            <a href="#">패션</a>
-            <a href="#">디지털</a>
-            <a href="#">스포츠</a>
-            <a href="#">친구</a>
-            <a href="#">예술</a>
-            <a href="#">홈</a>
-            <a href="#">건강</a>
-            <a href="#">뷰티</a>
-            <a href="#">기타</a>
-        </nav>
+        <jsp:include page="/views/common/header.jsp" />
 
         <main>
             <h2>판매할 상품을 등록해 주세요.</h2>
@@ -182,7 +169,7 @@
         
     </div>
 
-    <script src="<%= request.getContextPath() %>/views/resources/js/SalesPage.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/ActionPage.js"></script>
     <script src="<%= request.getContextPath() %>/views/resources/js/PurchaseCompleted.js"></script>
 </body>
 </html>

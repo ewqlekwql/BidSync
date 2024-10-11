@@ -16,6 +16,12 @@ function previewImage(event) {
     }
 }
 
+// DOM이 로드되면 실행되는 함수
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.product-form');
+    form.addEventListener('submit', submitForm); // 폼의 submit 이벤트에 submitForm 함수 연결
+});
+
 function submitForm(event) {
     event.preventDefault(); // 폼의 기본 제출 동작을 막음
 

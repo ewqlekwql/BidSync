@@ -5,46 +5,9 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f9f9f9;
-}
-
 .container {
     width: 90%;
     margin: 0 auto;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.search-bar {
-    width: 200px;
-    padding: 5px;
-}
-
-.search-btn {
-    padding: 5px 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-nav.menu {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-nav.menu a {
-    text-decoration: none;
-    color: #000;
-    padding: 10px;
-    font-size: 14px;
 }
 
 h2 {

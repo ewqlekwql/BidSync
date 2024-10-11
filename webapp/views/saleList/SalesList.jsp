@@ -6,24 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>판매중 및 입찰중인 물품 목록</title>
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/SalesList.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
 </head>
 <body>
      <div class="container">
-        <header>
-            <h1>BID SYNC</h1>
-            <input type="text" placeholder="검색어를 입력해 주세요..." class="search-bar">
-            <button class="search-btn">검색</button>
-        </header>
-
-        <nav class="menu">
-            <a href="#">패션</a>
-            <a href="#">스포츠</a>
-            <a href="#">디지털·가전</a>
-            <a href="#">홈·데코</a>
-            <a href="#">완구</a>
-            <a href="#">미술</a>
-            <a href="#">취미</a>
-        </nav>
+        
+        <jsp:include page="/views/common/header.jsp" />
 
         <main>
             <h2>판매중인 물품 목록</h2>
