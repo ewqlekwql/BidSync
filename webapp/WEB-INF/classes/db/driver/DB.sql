@@ -51,20 +51,22 @@ VALUES (SEQ_UNO.NEXTVAL, 'user1', '1234', '홍길동', '남', '1999-10-31', '010
 INSERT INTO MEMBER
 VALUES (SEQ_UNO.NEXTVAL, 'user2', '1234', '콩쥐', '여', '1999-10-31', NULL, 'congcong@cd.or.kr', '2024-10-02', '2024-10-02', 'Y');
 
-/* product */
-CREATE TABLE PRODUCT (
-    PROD_NO      NUMBER         PRIMARY KEY,
-    PROD_ID      VARCHAR2(15)   UNIQUE,
-    PROD_NAME    VARCHAR(30),
-    PRICE        INT,
-    STOCK        INT,
-    BID_PRICE    INT,
-    CATEGORY     VARCHAR2(15),
-    TYPE         VARCHAR(10),
-    SELLER       VARCHAR(15)
+
+/* Board */
+CREATE TABLE BOARD (
+    BOARD_NO      NUMBER         PRIMARY KEY,
+    BOARD_TITLE VARCHAR2(100)    NOT NULL,
+    BOARD_CATEGORY  VARCHAR2(15),
+    PROD_IMG    VARCHAR(300),
+    PRICE   INT NOT NULL,
+    BID_PRICE   INT,
+    STOCK   INT NOT NULL,
+    SELLER  VARCHAR2(15),
+    STATUS  CHAR(1) DEFAULT 'Y' CHECK (STATUS IN('Y', 'N'))
 );
 
-/* address */
+
+/* Address */
 CREATE TABLE ADDRESS (
     USER_NO NUMBER ,
     ADDRESS_NAME    VARCHAR2(30)    NOT NULL    UNIQUE,
