@@ -31,6 +31,7 @@
 		for(Board b : list) {
 	%>
 		<tr>
+			<td><img src="${pageContext.request.contextPath}<%=b.getProdImg() %>" width="50px" height="50px"></td>
 			<td><%=b.getBoardNo()%></td>
 			<td><%=b.getBoardTitle()%></td>
 			<td><%=b.getBoardType()%></td>
