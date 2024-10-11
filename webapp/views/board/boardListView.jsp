@@ -8,6 +8,8 @@
 	int startPage = pi.getStartPage();
 	int endPage = pi.getEndPage();
 	int maxPage = pi.getMaxPage();
+	
+	String ctg = (String)request.getAttribute("ctg");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -23,7 +25,26 @@
 	<!-- 헤더 -->
 	<jsp:include page="/views/common/header.jsp" />
 
-	<%-- 리스트 불러오는중 --%>
+	<%-- 테스트 --%>
+	<table>
+	<%
+		for(Board b : list) {
+	%>
+		<tr>
+			<td><%=b.getBoardNo()%></td>
+			<td><%=b.getBoardTitle()%></td>
+			<td><%=b.getBoardType()%></td>
+			<td><%=b.getBoardCtg()%></td>
+			<td><%=b.getPrice() %></td>
+			<td><%=b.getRegisterDate()%></td>
+		</tr>
+	<%
+		}
+	%>
+	</table>
+	
+	
+	
 	
 	<!-- 푸터 -->
 	<jsp:include page="/views/common/footer.jsp" />

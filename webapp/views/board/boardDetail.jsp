@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="" %>
 <%
-    // 서블릿에서 넘겨 받을 값
+    // 서블릿에서 넘겨받은 데이터
+    
     String type = request.getParameter("type");
 %>
 <!DOCTYPE html>
