@@ -23,7 +23,7 @@
                 <div class="image-upload">
                     <p>등록할 상품의 이미지를 넣어주세요.</p>
                     <!-- 이미지를 클릭하면 파일 선택 창 -->
-                    <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지" id="product-image" style="max-width: 200px; cursor: pointer;" onclick="document.getElementById('image-input').click();">
+                    <img src="" alt="상품 이미지" id="product-image" style="max-width: 200px; cursor: pointer;" onclick="document.getElementById('image-input').click();">
                     <input type="file" id="image-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
                 </div>
         
@@ -65,7 +65,7 @@
         <!-- 팝업 창 -->
         <div class="popup-container" id="popup" style="display: none;">
             <h1>BID SYNC</h1>
-            <h2>상품이 성공적으로 등록되었습니다!</h2>
+            <h2>상품이 성공적으로 등록되었습니다.</h2>
         
             <div class="product-info">
                 <h3>등록된 상품 정보</h3>
@@ -79,7 +79,6 @@
             <br>
             <button class="popup-btn" onclick="closePopup()">확인</button>
         </div>
-        
         
         
         

@@ -16,14 +16,10 @@ function previewImage(event) {
     }
 }
 
-// DOM이 로드되면 실행되는 함수
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.product-form');
-    form.addEventListener('submit', submitForm); // 폼의 submit 이벤트에 submitForm 함수 연결
-});
-
+// 폼 제출을 처리하는 함수
 function submitForm(event) {
     event.preventDefault(); // 폼의 기본 제출 동작을 막음
+    console.log("폼이 제출되었습니다."); // 로그로 확인
 
     // 입력된 값들을 가져오기
     const title = document.getElementById('title').value;
@@ -32,6 +28,18 @@ function submitForm(event) {
     const category = document.getElementById('category').value;
     const description = document.getElementById('description').value;
     const imageSrc = document.getElementById('product-image').src;
+
+    // 유효성 검사: 가격이 숫자인지 확인
+    if (isNaN(price)) {
+        alert("가격은 숫자로 입력해 주세요.");
+        return;
+    }
+
+    // 유효성 검사: 이미지가 업로드되지 않았을 경우
+    if (imageSrc.includes('placeholder') || imageSrc === "") {
+        alert("이미지를 업로드해 주세요.");
+        return;
+    }
 
     // 팝업의 내용 업데이트
     document.getElementById('product-title').textContent = "제목: " + title;
