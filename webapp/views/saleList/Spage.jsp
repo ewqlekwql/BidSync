@@ -41,7 +41,7 @@
                 </nav>
                 
                 <div class="product-list">
-                    <article class="product-card">
+                    <article class="product-card" onclick="window.location.href='../prdinfo/prdinfoBID.jsp'">
                         <img src="image/자전거.PNG" alt="상품 이미지" class="product-image">
                         <h3 class="product-title">삼춘리 자전거</h3>
                         <p class="product-description">오르비스 700C 14단 그레블 로드 사이클</p>

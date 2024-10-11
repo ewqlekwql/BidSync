@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 	<!-- 상품 목록 수 반환 -->
 	<entry key="selectListCount">
@@ -12,17 +13,16 @@
 	<entry key="selectList">
 		SELECT	*
 		  FROM	(SELECT	ROWNUM RNUM, A.*
-		  		   FROR	(SELECT	BOARD_NO,
+		  		   FROM	(SELECT	BOARD_NO,
 				  				BOARD_TITLE,
 				  				BOARD_TYPE,
 				  				BOARD_CATEGORY,
-				  				BOARD_CONTENT,
 				  				PROD_IMG,
 				  				PRICE,
 				  				BID_PRICE,
-				  				STOCK,
 				  				USER_ID,
-				  				TO_CHAR(REGISTER_DATE, 'YYYY/MM/DD') AS "REGISTER_DATE"
+				  				REGISTER_DATE,
+				  				END_DATE
 				  		   FROM	BOARD B
 				  		   JOIN	MEMBER ON (SELLER_NO = USER_NO)
 				  		  WHERE	B.STATUS = 'Y'

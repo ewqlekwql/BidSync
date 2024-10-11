@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/PurchaseCompleted.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/ActionPage.css">
-    
-    
 </head>
 <body>
     <div class="container">
@@ -119,7 +117,7 @@
                             <option>오후</option>
                         </select>
                     </div>
-                    <small>오전 12시에서 오전 6시 사이에 물품을 만드는 것을 권장하지 않습니다. 차떼미 시간에 시작하는 경매가 가장 많은 입찰을 받습니다.</small>
+                    <small>오전 12시에서 오전 6시 사이에 물품을 만드는 것을 권장하지 않습니다. 오후 시간에 시작하는 경매가 가장 많은 입찰을 받습니다.</small>
         
                     <label for="duration">경매 기간</label>
                     <select id="duration">
@@ -150,22 +148,23 @@
         </main>
         
         <!-- 팝업 창 -->
-<div class="popup-container" id="popup" style="display: none;">
-    <h1>BID SYNC</h1>
-    <h2>상품이 성공적으로 등록되었습니다.</h2>
+        <div class="popup-container" id="popup" style="display: none;">
+            <h1>BID SYNC</h1>
+            <h2>상품이 성공적으로 등록되었습니다.</h2>
 
-    <div class="product-info">
-        <h3>등록된 상품 정보</h3>
-        <img src="" alt="등록된 상품 이미지" id="popup-product-image" style="max-width: 200px;">
-        <p id="product-title"></p>
-        <p id="product-price"></p>
-        <p id="product-duration"></p> <!-- 경매 기간 표시 -->
-        <p id="product-category"></p>
-        <p id="product-description"></p>
-    </div>
-    <br>
-    <button class="popup-btn" onclick="closePopup()">확인</button>
-</div>
+            <div class="product-info">
+                <h3>등록된 상품 정보</h3>
+                <img src="" alt="등록된 상품 이미지" id="popup-product-image" style="max-width: 200px;">
+                <p id="product-title"></p>
+                <p id="product-price"></p>
+                <p id="product-start-time"></p> <!-- 경매 시작 시간 표시 -->
+                <p id="product-duration"></p> <!-- 경매 기간 표시 -->
+                <p id="product-category"></p>
+                <p id="product-description"></p>
+            </div>
+            <br>
+            <button class="popup-btn" onclick="window.location.href='../saleList/SalesList.jsp'">확인</button>
+        </div>
         
     </div>
 

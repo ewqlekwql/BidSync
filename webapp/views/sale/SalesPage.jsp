@@ -77,7 +77,7 @@
                 <p id="product-description"></p>
             </div>
             <br>
-            <button class="popup-btn" onclick="closePopup()">확인</button>
+            <button class="popup-btn" onclick="window.location.href='../saleList/SalesList.jsp'"">확인</button>
         </div>
         
         

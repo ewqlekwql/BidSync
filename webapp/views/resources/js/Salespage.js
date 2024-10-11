@@ -55,7 +55,3 @@ function submitForm(event) {
     document.getElementById('popup').style.display = 'block';
 }
 
-// 팝업을 닫는 함수
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}

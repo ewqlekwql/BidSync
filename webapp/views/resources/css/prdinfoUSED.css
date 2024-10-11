@@ -278,12 +278,14 @@
 .seller-details p {
     margin: 5px 0; /* 상하 여백 */
     color: #888; /* 텍스트 색상 설정 */
+    cursor: pointer; /* 손 모양 커서 */
 }
 
 /* 팔로우 하트 이모티콘 */
 .seller-details span {
     font-size: 16px; /* 하트 이모티콘 크기 설정 */
     color: red; /* 하트 이모티콘 색상 */
+    cursor: pointer; /* 손 모양 커서 */
 }
 
 /* 판매자 액션 버튼들 */

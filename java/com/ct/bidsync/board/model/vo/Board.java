@@ -15,6 +15,7 @@ public class Board {
 	private int stock;
 	private String seller;
 	private Date registerDate;
+	private Date endDate;
 	private String status;
 	
 	// 기본 생성자
@@ -23,7 +24,7 @@ public class Board {
 	}
 
 	public Board(int boardNo, String boardTitle, String boardType, String boardCtg, String boardContent, String prodImg,
-			int price, int bidPrice, int stock, String seller, Date registerDate, String status) {
+			int price, int bidPrice, int stock, String seller, Date registerDate, Date endDate, String status) {
 		super();
 		this.boardNo = boardNo;
 		this.boardTitle = boardTitle;
@@ -36,6 +37,7 @@ public class Board {
 		this.stock = stock;
 		this.seller = seller;
 		this.registerDate = registerDate;
+		this.endDate = endDate;
 		this.status = status;
 	}
 
@@ -45,7 +47,7 @@ public class Board {
 		return "Board [boardNo=" + boardNo + ", boardTitle=" + boardTitle + ", boardType=" + boardType + ", boardCtg="
 				+ boardCtg + ", boardContent=" + boardContent + ", prodImg=" + prodImg + ", price=" + price
 				+ ", bidPrice=" + bidPrice + ", stock=" + stock + ", seller=" + seller + ", registerDate="
-				+ registerDate + ", status=" + status + "]";
+				+ registerDate + ", endDate=" + endDate + ", status=" + status + "]";
 	}
 
 	// setter, getter
@@ -135,6 +137,14 @@ public class Board {
 
 	public void setRegisterDate(Date registerDate) {
 		this.registerDate = registerDate;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	public String getStatus() {
