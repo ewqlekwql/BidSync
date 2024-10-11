@@ -27,6 +27,18 @@ function submitForm(event) {
     const description = document.getElementById('description').value;
     const imageSrc = document.getElementById('product-image').src;
 
+    // 유효성 검사: 가격이 숫자인지 확인
+    if (isNaN(price)) {
+        alert("가격은 숫자로 입력해 주세요.");
+        return;
+    }
+
+    // 유효성 검사: 이미지가 업로드되지 않았을 경우
+    if (imageSrc.includes('placeholder') || imageSrc === "") {
+        alert("이미지를 업로드해 주세요.");
+        return;
+    }
+
     // 팝업의 내용 업데이트
     document.getElementById('product-title').textContent = "제목: " + title;
     document.getElementById('product-price').textContent = "입찰 시작가: " + price;
