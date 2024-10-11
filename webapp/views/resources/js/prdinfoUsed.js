@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addToCartButton = document.querySelector('.add-to-cart');
     if (addToCartButton) {
         addToCartButton.addEventListener('click', function() {
-            window.location.href = '장바구니 페이지.html'; //장바구니로 이동
+            window.location.href = '../member/cartList.jsp'; //장바구니로 이동
         });
     }
 
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addToListButton = document.querySelector('.add-to-list');
     if (addToListButton) {
         addToListButton.addEventListener('click', function() {
-            window.location.href = '관심 목록 페이지.html'; // 관심 목록 페이지로 이동
+            window.location.href = '../member/wishList.jsp'; // 관심 목록 페이지로 이동
         });
     }
 
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatSellerButton = document.querySelector('.chat-seller');
     if (chatSellerButton) {
         chatSellerButton.addEventListener('click', function() {
-            window.location.href = '../Chat/Chat.html'; // 1:1 채팅 페이지로 이동
+            window.location.href = '../'; // 1:1 채팅 페이지로 이동
         });
     }
 

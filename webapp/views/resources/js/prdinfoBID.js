@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addToListButton = document.querySelector('.add-to-list');
     if (addToListButton) {
         addToListButton.addEventListener('click', function() {
-            window.location.href = '../Wishlist/Wishlist.html'; // 관심 목록 페이지로 이동
+            window.location.href = '../member/wishList.jsp'; // 관심 목록 페이지로 이동
         });
     }
 
