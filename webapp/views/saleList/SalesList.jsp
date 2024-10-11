@@ -59,8 +59,9 @@
             </table>
 
             <div class="action-buttons">
-                <button onclick="deleteSelected('sales-list', 'sales-checkbox')">삭제하기</button>
-                <button>등록하기</button>
+			    <button onclick="deleteSelected('sales-list', 'sales-checkbox')">삭제하기</button>
+			    <button onclick="window.location.href='../sale/SalesPage.jsp'">등록하기</button>
+			
             </div>
 
             
@@ -110,8 +111,9 @@
 
 <div class="action-buttons">
     <button onclick="deleteSelected('bidding-list', 'bidding-checkbox')">삭제하기</button>
-    <button>등록하기</button>
+    <button onclick="window.location.href='../sale/ActionPage.jsp'">등록하기</button>
 </div>
+
 </main>
 </div>
 
