@@ -8,26 +8,13 @@
     
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/PurchaseCompleted.css">
     <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/SalesPage.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/index.css">
+    
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>BID SYNC</h1>
-            <input type="text" placeholder="검색어를 입력해 주세요..." class="search-bar">
-            <button class="search-btn">검색</button>
-        </header>
 
-        <nav class="menu">
-            <a href="#">패션</a>
-            <a href="#">디지털</a>
-            <a href="#">스포츠</a>
-            <a href="#">친구</a>
-            <a href="#">예술</a>
-            <a href="#">홈</a>
-            <a href="#">건강</a>
-            <a href="#">뷰티</a>
-            <a href="#">기타</a>
-        </nav>
+        <jsp:include page="/views/common/header.jsp" />
 
         <main>
             <h2>판매할 상품을 등록해 주세요.</h2>
