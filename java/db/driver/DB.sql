@@ -85,6 +85,12 @@ COMMENT ON COLUMN BOARD.STATUS IS '판매 상태(Y/N)';
 CREATE SEQUENCE SEQ_BNO
 NOCACHE;
 
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fasion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd_fasion01.jpg', 10000000, 5000000, 1, 3, '2024-10-11', 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fasion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd_fasion02.jpg', 17000000, 0, 1, 3, '2024-10-11', 'Y'); 
+
 /* Address */
 CREATE TABLE ADDRESS (
     USER_NO NUMBER ,

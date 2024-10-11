@@ -84,11 +84,9 @@ public class BoardDao {
 				b.setBoardTitle(rset.getString("BOARD_TITLE"));
 				b.setBoardType(rset.getString("BOARD_TYPE"));
 				b.setBoardCtg(rset.getString("BOARD_CATEGORY"));
-				b.setBoardContent(rset.getString("BOARD_CONTENT"));
 				b.setProdImg(rset.getString("PROD_IMG"));
 				b.setPrice(rset.getInt("PRICE"));
 				b.setBidPrice(rset.getInt("BID_PRICE"));
-				b.setStock(rset.getInt("STOCK"));
 				b.setSeller(rset.getString("USER_ID"));
 				b.setRegisterDate(rset.getDate("REGISTER_DATE"));
 				list.add(b);
