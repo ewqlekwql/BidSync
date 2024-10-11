@@ -6,6 +6,7 @@ public class Board {
 	// 매개변수
 	private int boardNo;
 	private String boardTitle;
+	private String boardType;
 	private String boardCtg;
 	private String boardContent;
 	private String prodImg;
@@ -21,11 +22,12 @@ public class Board {
 		super();
 	}
 
-	public Board(int boardNo, String boardTitle, String boardCtg, String boardContent, String prodImg, int price,
-			int bidPrice, int stock, String seller, Date registerDate, String status) {
+	public Board(int boardNo, String boardTitle, String boardType, String boardCtg, String boardContent, String prodImg,
+			int price, int bidPrice, int stock, String seller, Date registerDate, String status) {
 		super();
 		this.boardNo = boardNo;
 		this.boardTitle = boardTitle;
+		this.boardType = boardType;
 		this.boardCtg = boardCtg;
 		this.boardContent = boardContent;
 		this.prodImg = prodImg;
@@ -40,9 +42,10 @@ public class Board {
 	// toString
 	@Override
 	public String toString() {
-		return "Board [boardNo=" + boardNo + ", boardTitle=" + boardTitle + ", boardCtg=" + boardCtg + ", boardContent="
-				+ boardContent + ", prodImg=" + prodImg + ", price=" + price + ", bidPrice=" + bidPrice + ", stock="
-				+ stock + ", seller=" + seller + ", registerDate=" + registerDate + ", status=" + status + "]";
+		return "Board [boardNo=" + boardNo + ", boardTitle=" + boardTitle + ", boardType=" + boardType + ", boardCtg="
+				+ boardCtg + ", boardContent=" + boardContent + ", prodImg=" + prodImg + ", price=" + price
+				+ ", bidPrice=" + bidPrice + ", stock=" + stock + ", seller=" + seller + ", registerDate="
+				+ registerDate + ", status=" + status + "]";
 	}
 
 	// setter, getter
@@ -60,6 +63,14 @@ public class Board {
 
 	public void setBoardTitle(String boardTitle) {
 		this.boardTitle = boardTitle;
+	}
+
+	public String getBoardType() {
+		return boardType;
+	}
+
+	public void setBoardType(String boardType) {
+		this.boardType = boardType;
 	}
 
 	public String getBoardCtg() {
@@ -132,5 +143,5 @@ public class Board {
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
+	}	
 }

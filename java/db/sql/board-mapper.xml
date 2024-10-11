@@ -14,6 +14,7 @@
 		  FROM	(SELECT	ROWNUM RNUM, A.*
 		  		   FROR	(SELECT	BOARD_NO,
 				  				BOARD_TITLE,
+				  				BOARD_TYPE,
 				  				BOARD_CATEGORY,
 				  				BOARD_CONTENT,
 				  				PROD_IMG,

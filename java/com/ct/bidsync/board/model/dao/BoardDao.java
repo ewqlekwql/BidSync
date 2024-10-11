@@ -82,6 +82,7 @@ public class BoardDao {
 				Board b = new Board();
 				b.setBoardNo(rset.getInt("BOARD_NO"));
 				b.setBoardTitle(rset.getString("BOARD_TITLE"));
+				b.setBoardType(rset.getString("BOARD_TYPE"));
 				b.setBoardCtg(rset.getString("BOARD_CATEGORY"));
 				b.setBoardContent(rset.getString("BOARD_CONTENT"));
 				b.setProdImg(rset.getString("PROD_IMG"));
