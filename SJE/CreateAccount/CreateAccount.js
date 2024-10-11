@@ -11,25 +11,6 @@ function noSpaceForm(obj) {
 }
 
 
-//아이디 input값이 ""와 같을때 알림이 뜸
-function checkInput(id) {
-    const checkValue = document.getElementById(id).value;
-    const hiddenId = document.getElementById(id + "_required");
-    
-    if(checkValue === "") {
-        hiddenId.classList.remove("hidden");
-    } else {
-        hiddenId.classList.add("hidden");
-    }
-}
-
-//중복 체크 버튼 눌렀을 시
-function DuplicateCheck(){
-    const Duplicate = document.querySelector("#id_overlap_check");
-
-
-}
-
 //비밀번호 입력에 문자,숫자,특수문자 만 입력가능하게 변경
 function passwordCheck(password) {
     const regExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+|~\-={}[\]:;<>?,./])[A-Za-z\d!@#$%^&*()_+|~\-={}[\]:;<>?,./]{8,20}$/;
