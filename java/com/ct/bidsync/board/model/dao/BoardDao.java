@@ -89,6 +89,7 @@ public class BoardDao {
 				b.setBidPrice(rset.getInt("BID_PRICE"));
 				b.setSeller(rset.getString("USER_ID"));
 				b.setRegisterDate(rset.getDate("REGISTER_DATE"));
+				b.setEndDate(rset.getDate("END_DATE"));
 				list.add(b);
 			}
 		} catch (SQLException e) {

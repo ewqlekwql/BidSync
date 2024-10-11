@@ -37,6 +37,7 @@
 			<td><%=b.getBoardCtg()%></td>
 			<td><%=b.getPrice() %></td>
 			<td><%=b.getRegisterDate()%></td>
+			<td><%=b.getEndDate() %></td>
 		</tr>
 	<%
 		}

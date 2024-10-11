@@ -21,7 +21,8 @@
 				  				PRICE,
 				  				BID_PRICE,
 				  				USER_ID,
-				  				REGISTER_DATE
+				  				REGISTER_DATE,
+				  				END_DATE
 				  		   FROM	BOARD B
 				  		   JOIN	MEMBER ON (SELLER_NO = USER_NO)
 				  		  WHERE	B.STATUS = 'Y'
