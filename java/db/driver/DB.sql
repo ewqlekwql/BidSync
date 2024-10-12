@@ -3,6 +3,7 @@
 --CREATE USER CODETREE IDENTIFIED BY CODETREE;
 --GRANT CONNECT, RESOURCE TO CODETREE;
 
+
 /* CODETREE 계정으로 실행 */
 
 DROP TABLE MEMBER;
@@ -88,10 +89,74 @@ CREATE SEQUENCE SEQ_BNO
 NOCACHE;
 
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fasion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd_fasion01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
 
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fasion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd_fasion02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion03.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion05.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion06.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
 
 /* Address */
 CREATE TABLE ADDRESS (

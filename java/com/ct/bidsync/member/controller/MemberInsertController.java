@@ -74,7 +74,7 @@ public class MemberInsertController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", loginUser);
 			request.setAttribute("alertMsg", "성공적으로 회원가입이 완료되었습니다. BidSync에 오신 걸 환영합니다!");
-			request.setAttribute("responseURL", request.getContextPath() + "/index.jsp");
+			request.setAttribute("responseURL", request.getContextPath());
 			
 			request.getRequestDispatcher("views/common/alertPage.jsp").forward(request, response);
 		}

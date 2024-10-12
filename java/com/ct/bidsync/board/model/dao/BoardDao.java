@@ -36,11 +36,11 @@ public class BoardDao {
 	}
 	
 	// 리스트 개수 반환
-	public int selectListCount(Connection conn, String ctg) {
+	public int selectListCount(Connection conn, String ctg, String sqlType) {
 		int listCount = 0;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String sql = prop.getProperty("selectListCount");
+		String sql = prop.getProperty(sqlType);
 		
 		try {
 			pstmt = conn.prepareStatement(sql);

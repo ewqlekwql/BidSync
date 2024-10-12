@@ -33,21 +33,23 @@ public class BoardListController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		// 카테고리값
+		// 전달받은 값
 		String ctg = request.getParameter("ctg");
+		String sqlType = (String)request.getAttribute("sqlType");
 		System.out.println("list ctg : " + ctg);
+		System.out.println("sql type : " + sqlType);
 		
 		// 페이징 처리
 		int listCount;
 		int currentPage;
-		int pageLimit = 10;
-		int boardLimit = 10;
+		int pageLimit = 5;
+		int boardLimit = 16;
 		
 		int maxPage;
 		int startPage;
 		int endPage;
 		
-		listCount = new BoardService().selectListCount(ctg);
+		listCount = new BoardService().selectListCount(ctg, sqlType);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		
 		maxPage = (int)Math.ceil((double)listCount/boardLimit);
@@ -59,6 +61,7 @@ public class BoardListController extends HttpServlet {
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
 		ArrayList<Board> list = new BoardService().selectList(pi, ctg);
 		
+		// BoardListView 전달
 		request.setAttribute("pi", pi);
 		request.setAttribute("list", list);
 		request.setAttribute("ctg", ctg);

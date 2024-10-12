@@ -57,11 +57,11 @@
       <!-- 카테고리 대분류 -->
       <nav id="header-bottom">
          <ul>
-            <li>
-               <a href="#"><img src="${pageContext.request.contextPath}/views/resources/images/btn_hambuger.png"></a>
+         	<li>
+               <a href="#">#추천</a>
             </li>
             <li>
-               <a href="${pageContext.request.contextPath}/list.bo?ctg=fasion&cpage=1">패션</a>
+               <a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">패션</a>
             </li>
             <li>
                <a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">디지털·가전</a>
@@ -80,6 +80,9 @@
             </li>
             <li>
                <a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">쥬얼리</a>
+            </li>
+            <li>
+               <a href="#">이벤트</a>
             </li>
          </ul>
       </nav>

@@ -82,7 +82,7 @@ header > nav > ul {
    width: 100%;
    height: 100%;
    display: flex;
-   padding: 0 3%;
+   padding: 0 5%;
 }
 
 #header-top {
@@ -100,6 +100,7 @@ header > nav > ul {
 
 #header-top-logo img {
    height: 100%;
+   padding: 3% 0;
 }
 
 #header-top-searchBar {
@@ -116,7 +117,7 @@ header > nav > ul {
    width: 80%;
    padding: 0 5px;
    background-color: #F8F8F8;
-   border: 1px solid #F8F8F8;
+   border: 0.1vw solid #F8F8F8;
    border-radius: 0.2vw 0 0 0.2vw;
 }
 
@@ -142,7 +143,7 @@ header > nav > ul {
 }
 
 #header-top-user > button > img {
-   height: 100%;
+   height: 70%;
 }
 
 #header-bottom {
@@ -152,15 +153,16 @@ header > nav > ul {
 }
 
 #header-bottom > ul > li {
-   width: 10%;
    height: 100%;
+   margin-right: 5%;
 }
 
 #header-bottom > ul > li > a {
    display: flex;
    height: 100%;
    align-items: center;
-   font-size: 1.5vw;
+   text-align: center;
+   font-size: 1.2vw;
 }
 
 #header-bottom > ul > li > a:hover {

@@ -12,10 +12,10 @@ import com.ct.bidsync.common.PageInfo;
 
 public class BoardService {
 	// BoardListController
-	public int selectListCount(String ctg) {
+	public int selectListCount(String ctg, String sqlType) {
 		Connection conn = getConnection();
 		
-		int listCount = new BoardDao().selectListCount(conn, ctg);
+		int listCount = new BoardDao().selectListCount(conn, ctg, sqlType);
 		
 		close(conn);
 		return listCount;

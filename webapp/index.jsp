@@ -21,7 +21,7 @@
 		<section id="index-menu">
 			<ul>
 				<li>
-					<a href="${pageContext.request.contextPath}/list.bo?ctg=fasion&cpage=1">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">
 						<img src="views/resources/images/btn_indexMenu01.png">
 						<h3>패션</h3>
 					</a>

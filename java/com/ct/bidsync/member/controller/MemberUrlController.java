@@ -49,7 +49,7 @@ public class MemberUrlController extends HttpServlet {
 			break;
 		default :
 			request.setAttribute("errorMsg", "잘못된 접근입니다.");
-			request.setAttribute("responseURL", request.getContextPath() + "/index.jsp");
+			request.setAttribute("responseURL", request.getContextPath());
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 			break;
 		}

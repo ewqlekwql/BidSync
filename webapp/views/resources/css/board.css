@@ -1,6 +1,258 @@
 @charset "UTF-8";
 
 /* boardList css */
+#boardList-main {
+	width: 100%;
+	min-width: 900px;
+	max-width: 1920px;
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0 10%;
+	margin-top: 0;
+}
+
+#boardList-main > * {
+	padding: 1% 3%;
+}
+
+#boardList-sidebar {
+	width: 25%;
+	height: 40vh;
+	min-height: 300px;
+	position: sticky;
+	top: 3%;
+}
+
+#boardList-sidebar > h3 {
+	margin-top: 15%;
+	font-size: 1.3vw;
+}
+
+#boardList-sidebar > ul > li {
+	min-height: 2vw;
+	
+}
+
+#boardList-sidebar > ul > li > a {
+	vertical-align: center;
+	font-size: 1.2vw;
+	color: gray;
+}
+
+#boardList-sidebar > ul > li > a:hover {
+	color: #0051FF;
+}
+
+#boardList-sidebar > ul > li.On > a, #boardList-sidebar > ul > li.On > a:hover {
+	color: #000000;
+}
+
+#boardList-sidebar > hr {
+	width: 100%;
+	margin: 1vw 0;
+}
+
+#boardList-sidebar > table {
+	width: 100%;
+}
+
+#boardList-sidebar > table td {
+	vertical-align: top;
+}
+
+.table-label {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.table-label > input[type="checkbox"] {
+	display: none;
+}
+
+.table-label > span {
+	vertical-align: middle;
+	white-space: nowrap;
+	font-size: 1vw;
+}
+
+.table-label > span.span-box {
+	width: 0.9vw;
+	height: 0.9vw;
+	display: inline-block;
+	position: relative;
+	margin-right: 1%;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0.1vw solid #000000;
+	border-radius: 0.1vw;
+	transition: background-color 0.1s, border 0.1s;
+}
+
+.table-label input:checked + .span-box {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+}
+
+.table-label input:checked + .span-box::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background: url('../images/btn_checked.png') no-repeat center center;
+	background-size: contain;
+	transform: translate(-50%, -50%);
+}
+
+#boardList-section {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#boardList-section > * {
+	width: 100%;
+}
+
+#boardList-section > h1 {
+	margin-bottom: 5%;
+	text-align: center;
+	font-size: 2vw;
+}
+
+#boardList-section-nav > ul {
+	width: 100%;
+	min-height: 2vw;
+	display: flex;
+	justify-content: center;
+	gap: 5%;
+	align-items: flex-end;
+	border-bottom: 0.1vw solid #ccc;
+}
+
+#boardList-section-nav > ul > li {
+	height: 100%;
+	margin-bottom: -0.1vw;
+	border-bottom: 0.1vw solid rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+#boardList-section-nav > ul > li > a {
+	display: block;
+	height: 100%;
+	line-height: 300%;
+	color: #000000;
+}
+
+#boardList-section-nav > ul > li:hover {
+	border-bottom: 0.15vw solid #000000;
+}
+
+#boardList-section-nav > ul > li.On, #boardList-section-nav > ul > li.On:hover {
+	border-bottom: 0.15vw solid #0051FF;
+	a {
+		color: #0051FF;
+	}
+}
+
+#boardList-article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 5%;
+	padding: 3% 0;
+}
+
+.board-card {
+	width: 20%;
+	min-width: 10vw;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+
+.board-card:last-child {
+	flex: 0.95;
+}
+
+.board-card .PrdImg {
+	width: 100%;
+	max-width: 12vw;
+	height: 15vw;
+	padding: 3%;
+	overflow: hidden;
+}
+
+.board-card .PrdImg > img {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.board-card > h3 {
+	width: 100%;
+	margin-bottom: 3.5%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	font-size: 1.2vw;
+}
+
+.board-card > p {
+	margin: 1% 0;
+}
+
+.board-card .Rating {
+	text-indent: 1%;
+	font-size: 0.8vw;
+	color: orange;
+}
+
+.board-card .Rating > a {
+	font-size: 0.8vw;
+}
+
+.board-card .Rating > a:hover {
+	text-decoration: underline 0.1vw solid #000000;
+}
+
+#boardList-section > span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3%;
+}
+
+#boardList-section > span > button {
+	width: 2vw;
+	height: 2vw;
+	background-color: #FFFFFF;
+	border: 0.1vw solid #1462FA;
+	border-radius: 0.3vw;
+	text-align: center;
+	vertical-align: middle;
+	color: #1462FA;
+}
+
+#boardList-section > span > button:hover {
+	scale: 1;
+	background-color: #A0BFFD;
+	border-color: #1462FA;
+}
+
+#boardList-section > span > button:disabled {
+	background-color: #1462FA;
+	color: #FFFFFF;
+}
+
+#boardList-section > span > button.MoveArrow:disabled {
+	background-color: #E7EFFE;
+	border-color: #E7EFFE;
+	color: #b2caff;
+}
 
 
 /* boardDetail css */
