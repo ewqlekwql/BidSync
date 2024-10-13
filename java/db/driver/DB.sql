@@ -8,10 +8,12 @@
 
 DROP TABLE MEMBER;
 DROP TABLE BOARD;
+DROP TABLE CART;
 DROP TABLE ADDRESS;
 
 DROP SEQUENCE SEQ_UNO;
 DROP SEQUENCE SEQ_BNO;
+DROP SEQUENCE SEQ_CNO;
 
 
 /* Member */
@@ -66,7 +68,7 @@ CREATE TABLE BOARD (
     BID_PRICE   INT,
     AUCTIONNER  INT DEFAULT 0,
     STOCK   INT NOT NULL,
-    SELLER_NO  int,
+    SELLER_NO  NUMBER,
     REGISTER_DATE DATE    DEFAULT SYSDATE,
     END_DATE    DATE,
     STATUS  CHAR(1) DEFAULT 'Y' CHECK (STATUS IN('Y', 'N'))
@@ -363,7 +365,7 @@ INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
 
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 0, 10, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
 
 INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 0,  1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
@@ -511,6 +513,38 @@ VALUES (SEQ_BNO.NEXTVAL, '다이아몬드링 H사 T시리즈 2캐럿 12호', '�
 INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, '다이아몬드링 H사 A시리즈 2캐럿 12호', '경매', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry06.jpg', 470000000, 23489000, 9, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
 
+
+/* Cart */
+CREATE TABLE CART (
+    CART_NO NUMBER  PRIMARY KEY,
+    USER_NO NUMBER,
+    BOARD_NO    NUMBER,
+    STOCK   INT,
+    PUT_DATE    DATE DEFAULT SYSDATE,
+    STATUS CHAR(1)  DEFAULT 'Y' CHECK (STATUS IN('Y', 'N'))
+);
+
+COMMENT ON COLUMN CART.CART_NO IS '장바구니 번호';
+COMMENT ON COLUMN CART.USER_NO IS '회원번호';
+COMMENT ON COLUMN CART.BOARD_NO IS '상품 게시글 번호';
+COMMENT ON COLUMN CART.STOCK IS '수량';
+COMMENT ON COLUMN CART.PUT_DATE IS '카트에 담은 날짜';
+COMMENT ON COLUMN CART.STATUS IS '상태(Y/N)';
+
+CREATE SEQUENCE SEQ_CNO
+NOCACHE;
+
+INSERT INTO CART
+VALUES (SEQ_CNO.NEXTVAL, 1, 2, 1, SYSDATE, 'Y');
+
+INSERT INTO CART
+VALUES (SEQ_CNO.NEXTVAL, 1, 25, 1, SYSDATE, 'Y');
+
+INSERT INTO CART
+VALUES (SEQ_CNO.NEXTVAL, 1, 114, 2, SYSDATE, 'Y');
+
+INSERT INTO CART
+VALUES (SEQ_CNO.NEXTVAL, 1, 134, 1, SYSDATE, 'Y');
 
 /* Address */
 CREATE TABLE ADDRESS (

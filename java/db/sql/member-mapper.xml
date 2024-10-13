@@ -45,4 +45,15 @@
 			?
 		)
 	</entry>
+	
+	<!-- 장바구니 목록 불러오기 -->
+	<entry key="selectCartList">
+		SELECT	C.*, M.USER_ID, B.BOARD_TITLE, B.PROD_IMG, B.PRICE
+		  FROM	CART C
+		  JOIN	MEMBER M ON (C.USER_NO = M.USER_NO)
+		  JOIN	BOARD B ON (C.BOARD_NO = B.BOARD_NO)
+		 WHERE	USER_ID = ?
+		   AND	C.STATUS = 'Y'
+		 ORDER	BY PUT_DATE DESC
+	</entry>
 </properties>

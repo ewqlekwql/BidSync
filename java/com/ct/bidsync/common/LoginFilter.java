@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  * Servlet Filter implementation class LoginFilter
  */
 @SuppressWarnings("serial")
-@WebFilter({ "/logout.me" })
+@WebFilter({ "/logout.me", "/cart.me" })
 public class LoginFilter extends HttpFilter implements Filter {
        
     /**
@@ -43,9 +43,11 @@ public class LoginFilter extends HttpFilter implements Filter {
 		
 		// 로그인 여부 판별
 		if(httpRequest.getSession().getAttribute("loginUser") == null) {
+			// 로그인 X -> 메인으로 이동
 			httpResponse.sendRedirect(httpRequest.getContextPath());
 		}
 		else {
+			// 로그인 O -> 원래 가려던 페이지로 이동
 			chain.doFilter(request, response);
 		}
 	}
