@@ -461,14 +461,14 @@
 }
 
 /* 버튼 섹션 */
-.action-buttons {
+.action-buttons, .used-buttons {
     display: flex; /* 가로 정렬 */
     flex-direction: column; /* 세로 정렬 */
     gap: 25px; /* 버튼 간의 간격 */
     margin-top: 20px; /* 상단 여백 */
 }
 
-.action-buttons button {
+.action-buttons button, .used-buttons button {
     padding: 20px 0; /* 버튼 상하 여백 */
     font-size: 18px; /* 버튼 텍스트 크기 */
     border: none; /* 테두리 없음 */

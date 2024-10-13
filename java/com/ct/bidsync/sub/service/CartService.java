@@ -1,4 +1,4 @@
-package com.ct.bidsync.member.service;
+package com.ct.bidsync.sub.service;
 
 import static com.ct.bidsync.common.JDBCTemplate.close;
 import static com.ct.bidsync.common.JDBCTemplate.commit;
@@ -8,8 +8,8 @@ import static com.ct.bidsync.common.JDBCTemplate.rollback;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-import com.ct.bidsync.member.model.dao.CartDao;
-import com.ct.bidsync.member.model.vo.Cart;
+import com.ct.bidsync.sub.model.dao.CartDao;
+import com.ct.bidsync.sub.model.vo.Cart;
 
 public class CartService {
 	// CartListContoller

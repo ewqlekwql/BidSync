@@ -1,4 +1,4 @@
-package com.ct.bidsync.member.model.vo;
+package com.ct.bidsync.sub.model.vo;
 
 import java.sql.Date;
 

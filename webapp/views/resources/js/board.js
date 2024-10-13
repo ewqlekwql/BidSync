@@ -22,14 +22,24 @@ function checkedFilter(ctg, type, status) {
 }
 
 /* boardDetail js */
-// 장바구니에 추가
+// 경매 - 입찰하기
+function bidding() {
+	
+}
+
+// 중고 - 장바구니에 추가
 function addCart(ctg, boardNo) {
 	const stock = document.getElementById("quantity").value;
 	window.location.href="insert.cart.me?ctg=" + ctg + "&no=" + boardNo + "&stock=" + stock;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// 증고 - 바로 구매하기
+function buyNow(ctg, type, boardNo) {
+	const stock = document.getElementById("quantity").value;
+	window.location.href="order.me?ctg=" + ctg + "&type=" + type + "&no=" + boardNo + "&stock=" + stock;
+}
 
+document.addEventListener('DOMContentLoaded', function() {
     // 썸네일을 클릭하면 메인 이미지를 바꾸는 함수
     const thumbnails = document.querySelectorAll('.thumbnail');
     thumbnails.forEach(function(thumbnail) {
@@ -127,15 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 loadMoreBtn.style.display = 'none';
             }
         });
-    }
-
-    // "구매 하기" 버튼 클릭 시 NowBuy 페이지로 이동
-    const buyNowButton = document.querySelector('.buy-now');
-    if (buyNowButton) {
-        buyNowButton.addEventListener('click', function() {
-            window.location.href = '../nowbuy/NowBuy.jsp'; // NowBuy 페이지로 이동
-        });
-
     }
 
     // "관심 목록에 추가" 버튼 클릭 시 관심 목록 페이지로 이동

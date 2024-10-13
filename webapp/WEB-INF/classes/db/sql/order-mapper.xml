@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 주문 추가 -->
+	<entry key="insertOrder">
+		INSERT	INTO BS_ORDER
+		(
+			ORDER_NO,
+			USER_NO,
+			BOARD_NO,
+			BOARD_TYPE,
+			PROD_IMG,
+			PRICE,
+			STOCK,
+			TOTAL,
+			SELLER_NO,
+			ORDER_DATE,
+			STATUS,
+			STATUS_DETAIL
+		)
+		VALUES
+		(
+			SEQ_ONO.NEXTVAL,
+			?,
+			?,
+			?,
+			?,
+			?,
+			?,
+			?,
+			?,
+			SYSDATE,
+			'Y',
+			?
+		)
+	</entry>
+</properties>

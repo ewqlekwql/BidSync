@@ -30,7 +30,7 @@ public class BoardService {
 		return list;
 	}
 	
-	// BoardDetailController
+	// BoardDetailController, OrderContoller
 	public Board selectBoard(int boardNo) {
 		Connection conn = getConnection();
 		

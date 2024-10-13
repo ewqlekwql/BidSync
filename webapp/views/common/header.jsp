@@ -38,6 +38,7 @@
             		<%-- 로그인 전 --%>
             		<li id="header-top-user">
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_wish.png"></button>
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=login'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_login.png"></button>
 		            </li>
@@ -46,6 +47,7 @@
             		<%-- 로그인 후 --%>
             		<li id="header-top-user">
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/cart.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_cart.png"></button>
+		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/wish.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_wish.png"></button>
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/url.me?call=myPage'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_mypage.png"></button>
 		               <button type="button" onclick="location.href='${pageContext.request.contextPath}/logout.me'"><img src="${pageContext.request.contextPath}/views/resources/images/btn_logout.png"></button>
 		            </li>

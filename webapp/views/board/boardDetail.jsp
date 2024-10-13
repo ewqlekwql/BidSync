@@ -14,7 +14,6 @@
     <!-- 외부 css/js 연결 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/board.css">
     <script src="${pageContext.request.contextPath}/views/resources/js/board.js"></script>
-    <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoBID.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -81,7 +80,7 @@
 						
 						<!-- 버튼 섹션 -->
 	                    <div class="action-buttons">
-	                        <button class="buy-now">즉시 구매</button>
+	                        <button class="buy-now" onclick="buyNow('<%=b.getBoardCtg()%>', '<%=b.getBoardType()%>', <%=b.getBoardNo()%>)">즉시 구매</button>
 	                        <button class="place-bid">입찰하기</button>
 	                        <button class="add-to-list">관심 목록에 추가</button>
 	                    </div>
@@ -107,8 +106,8 @@
 	                    </div>
 	                    
 	                    <!-- 버튼 섹션 -->
-	                    <div class="action-buttons">
-	                        <button class="buy-now">구매하기</button>
+	                    <div class="used-buttons">
+	                        <button class="buy-now" onclick="buyNow('<%=b.getBoardCtg()%>', '<%=b.getBoardType()%>', <%=b.getBoardNo()%>)">구매하기</button>
 	                        <button class="add-to-cart" onclick="addCart('<%=b.getBoardCtg()%>', <%=b.getBoardNo()%>)">장바구니에 담기</button>
 	                        <button class="add-to-list">관심 목록에 추가</button>
 	                    </div>

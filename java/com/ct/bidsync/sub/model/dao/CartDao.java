@@ -1,4 +1,4 @@
-package com.ct.bidsync.member.model.dao;
+package com.ct.bidsync.sub.model.dao;
 
 import static com.ct.bidsync.common.JDBCTemplate.close;
 
@@ -11,14 +11,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import com.ct.bidsync.member.model.vo.Cart;
+import com.ct.bidsync.member.model.dao.MemberDao;
+import com.ct.bidsync.sub.model.vo.Cart;
 
 public class CartDao {
 	private Properties prop = new Properties();
 	
 	// 기본 생성자
 	public CartDao() {
-		String filePath = MemberDao.class.getResource("/db/sql/member-mapper.xml").getPath();
+		String filePath = MemberDao.class.getResource("/db/sql/sub-mapper.xml").getPath();
 		
 		try {
 			prop.loadFromXML(new FileInputStream(filePath));
