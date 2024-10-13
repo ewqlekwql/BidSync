@@ -1,180 +1,229 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="" %>
+<%@ page import="com.ct.bidsync.board.model.vo.Board" %>
 <%
-    // 서블릿에서 넘겨받은 데이터
-    
-    String type = request.getParameter("type");
+    String ctgName = (String)request.getAttribute("ctgName");
+	Board b = (Board)request.getAttribute("board");
 %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BidSync</title>
+    <title>BidSync ㅣ<%=ctgName%> - <%=b.getBoardTitle()%> </title>
 
     <!-- 외부 css/js 연결 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/board.css">
+    <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoBID.js"></script>
+    <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoUsed.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
     <jsp:include page="/views/common/header.jsp" />
 
-    <!-- 메인 컨테이너 -->
     <div class="container">
-        <!-- Header (header.jsp 포함) -->
-        <jsp:include page="/views/common/header.jsp" />
-
-
-        <!-- 구매 입찰 중 섹션 -->
-        <section class="bid-section">
-            <h2>구매 입찰 중</h2>
-            <!-- 상품 정보 섹션 -->
-            <section class="product-info">
-                <!-- 상품 이미지 -->
-                <img class="product-image" src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지">
-                
-                <!-- 상품 세부 정보 -->
-                <div class="product-details">
-                    <p class="product-name">상품명</p>
-                    <p class="product-price">100,000,000원</p>
-                    <p class="product-shipping">배송비 100원</p>
-                    <p class="product-delivery">X~X일 내 도착 예정</p>
-                </div>
-            </section>
-        </section>
-
-        <!-- 구매 입찰 내역 섹션 -->
-        <section class="bid-detail-section">
-            <h3>구매 입찰 내역</h3>
-            <ul class="bid-detail-list">
-                <li>
-                    <span class="label">입찰 희망가</span>
-                    <span class="value">100,000,000 원</span>
-                </li>
-                <li>
-                    <span class="label">배송비</span>
-                    <span class="value">100 원</span>
-                </li>
-                <li>
-                    <span class="label">입찰일</span>
-                    <span class="value">XX/XX/XX</span>
-                </li>
-                <li>
-                    <span class="label">입찰 마감기한</span>
-                    <span class="value">XX일 X시간 XX분 후 종료</span>
-                </li>
-                <hr>
-                <li>
-                    <span class="label">총 결제 금액</span>
-                    <span class="value" >100,000,100 원</span>
-                </li>
-            </ul>
-            </section>
-          
-            
-            
-
-
-        <!-- 배송 정보 섹션 -->
-        <section class="shipping-section">
-            <h3>배송</h3>
-            <ul class="shipping-detail-list">
-                <!-- 배송 상세 항목 값 스타일 -->
-				<li>
-				    <span class="label">받는 분</span>
-				    <span class="value receiver-value">홍길동</span>
-				</li>
-				<li>
-				    <span class="label">연락처</span>
-				    <span class="value phone-value">010-XXXX-XXXX</span>
-				</li>
-				<li>
-				    <span class="label">주소</span>
-				    <span class="value address-value">[000000] XX XX시 XX구 XX로 00-0 XXX아파트 X동 X호</span>
-				</li>
-				<li>
-				    <span class="label">요청사항</span>
-				    <span class="value request-value">요청사항 없음</span>
-				</li>
-			</ul>
-
-             <!-- 평점 매기기 버튼 -->
-        <button id="openPopupBtn">판매자 평점 매기기</button>
-
-        <!-- 평점 팝업 -->
-        <div class="rating-popup" id="ratingPopup" style="display: none;">
-            <div class="popup-content">
-                <div class="popup-header">
-                    <h2>평점 매기기</h2>
-                    <span class="close-btn">&times;</span>
-                </div>
-
-                <!-- 신뢰도 평점 -->
-                <div class="rating-section">
-                    <h2>신뢰도</h2>
-                    <div class="star-rating" id="trustRating">
-                        <span class="star" data-rating="1">★</span>
-                        <span class="star" data-rating="2">★</span>
-                        <span class="star" data-rating="3">★</span>
-                        <span class="star" data-rating="4">★</span>
-                        <span class="star" data-rating="5">★</span>
-                    </div>
-                </div>
-
-                <!-- 품질 평점 -->
-                <div class="rating-section">
-                    <h2>품질</h2>
-                    <div class="star-rating" id="qualityRating">
-                        <span class="star" data-rating="1">★</span>
-                        <span class="star" data-rating="2">★</span>
-                        <span class="star" data-rating="3">★</span>
-                        <span class="star" data-rating="4">★</span>
-                        <span class="star" data-rating="5">★</span>
-                    </div>
-                </div>
-
-                <!-- 소통 평점 -->
-                <div class="rating-section">
-                    <h2>소통</h2>
-                    <div class="star-rating" id="communicationRating">
-                        <span class="star" data-rating="1">★</span>
-                        <span class="star" data-rating="2">★</span>
-                        <span class="star" data-rating="3">★</span>
-                        <span class="star" data-rating="4">★</span>
-                        <span class="star" data-rating="5">★</span>
-                    </div>
-                </div>
-
-                <!-- 배송 평점 -->
-                <div class="rating-section">
-                    <h2>배송</h2>
-                    <div class="star-rating" id="shippingRating">
-                        <span class="star" data-rating="1">★</span>
-                        <span class="star" data-rating="2">★</span>
-                        <span class="star" data-rating="3">★</span>
-                        <span class="star" data-rating="4">★</span>
-                        <span class="star" data-rating="5">★</span>
-                    </div>
-                </div>
-
-                <!-- 평균 평점 출력 -->
-                <p class="average-rating">평균 평점: <span id="averageRating">0</span> 점</p>
-
-                <!-- 평점 제출 버튼 -->
-                <button class="submit-rating">제출</button>
+        <!-- Product Information -->
+        <section class="product-info">
+            <!-- Product Name -->
+            <div class="product-name">
+                <h1><%=b.getBoardTitle()%></h1>
             </div>
-        </div>
-            
-        
 
+            <div class="product-main">
+                <!-- 상품 이미지 레이아웃 -->
+                <div class="product-image-layout">
+                    <div class="main-image">
+                        <img id="mainImage" src="${pageContext.request.contextPath}<%=b.getProdImg()%>" alt="상품 이미지" class="large-image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="${pageContext.request.contextPath}<%=b.getProdImg()%>" alt="썸네일 이미지" class="thumbnail">
+                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/images/170356470743469741.jpg?gif=1&w=480&h=480&c=c&webp=1" alt="썸네일 이미지" class="thumbnail">
+                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/images/170356471029738068.jpg?gif=1&w=480&h=480&c=c&webp=1" alt="썸네일 이미지" class="thumbnail">
+                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/images/170356470522098920.jpg?gif=1&w=480&h=480&c=c&webp=1" alt="썸네일 이미지" class="thumbnail">
+                        <img src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/images/162304222182490490.jpg?gif=1&w=480&h=480&c=c&webp=1" alt="썸네일 이미지" class="thumbnail">
+                    </div>
+                </div>
+
+                <!-- 상품 상세 정보 -->
+                <div class="product-details">
+                    <!-- 카테고리 -->
+                    <div class="category-info">
+					    <p>					         
+					        <a href="${pageContext.request.contextPath}/list.bo?ctg=<%=b.getBoardCtg()%>&cpage=1">카테고리 &gt; <%=ctgName%></a> 
+					    </p>
+					</div>
+
+                    <!-- 판매자 정보 -->
+                    <div class="seller-info">
+                        <div class="seller-profile">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필">
+                            <span><a href="판매자_페이지_URL"><%=b.getSeller()%></a></span>
+                        </div>
+                        <div class="seller-rating">
+                            ★★★☆☆
+                        </div>
+                    </div>
+
+					<%-- 경매/중고 분할 --%>
+					<% if("경매".equals(b.getBoardType())) { %>
+	                    <!-- 입찰 정보 및 가격 -->
+	                    <div class="auction-info">
+						    <h3>현재 입찰가</h3>
+	    					<h1><a href="#current-bid" class="current-bid-link"><%=b.getBidPrice()%> 원</a></h1>
+						    <div class="auction-details">
+						        <p><a href="#bid-details"><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</a></p>
+						    </div>
+						    <ul>
+						        <li>시작가: <a href="#start-price"><span>10,000 원</span></a></li>
+						        <li>즉시 구매가: <a href="#buy-now-price"><span><%=b.getPrice()%> 원</span></a></li>
+						        <li>배송비: <a href="#shipping-cost"><span>50,000 원</span></a></li>
+						    </ul>
+						</div>
+						
+						<!-- 버튼 섹션 -->
+	                    <div class="action-buttons">
+	                        <button class="buy-now">즉시 구매</button>
+	                        <button class="place-bid">입찰하기</button>
+	                        <button class="add-to-list">관심 목록에 추가</button>
+	                    </div>
+					<% } else { %>
+						<!-- 거래 정보 및 가격 -->
+						<div class="used-price">
+	                        <h3>중고 거래가</h3>
+	                        <h1><a href="#used-price" class="used-price-link"><%=b.getPrice()%> 원</a></h1>
+	                    </div>
+	                    <div class="trade-options">
+	                        <button class="btn-exchange">에누리</button>
+	                        <button class="btn-direct">직거래</button>
+	                    </div>
+	                    <p>배송방법: 직거래, 편의점 택배</p>
+						<p>배송비: <a href="#shipping-cost" class="shipping-cost-link">3,000원</a></p>
+	
+	                    <!-- 수량 선택 -->
+	                    <div class="quantity-selector">
+	                        <label for="quantity">수량</label>
+	                        <button class="btn-decrease">-</button>
+	                        <input type="text" id="quantity" value="1">
+	                        <button class="btn-increase">+</button>
+	                    </div>
+	                    
+	                    <!-- 버튼 섹션 -->
+	                    <div class="action-buttons">
+	                        <button class="buy-now">구매하기</button>
+	                        <button class="add-to-cart">장바구니에 담기</button>
+	                        <button class="add-to-list">관심 목록에 추가</button>
+	                    </div>
+					<% } %>
+                </div>
+            </div>
         </section>
 
+        <!-- Product Description -->
+        <section class="product-description">
+            <h2>상품 상세 설명</h2>
+            <p><%=b.getBoardContent()%></p>
+        </section>
 
+        <!-- Seller Information Section -->
+        <section class="seller-info-section">
+            <div class="seller-profile-info">
+                <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" alt="판매자 프로필" class="seller-profile-image">
+                <div class="seller-details">
+                    <h3><a href="판매자_페이지_URL"><%=b.getSeller()%></a></h3>
+                    <p><span>🤍</span> 
+                </div>
+            </div>
+            <div class="seller-actions">
+                <button class="visit-store">스토어 방문</button>
+                <button class="chat-seller">1:1 채팅</button>
+            </div>
+        </section>
 
+        <!-- Review Summary Section -->
+        <section class="review-summary">
+            <div class="rating-summary">
+                <h3>3.4</h3>
+                <div class="rating-stars">★★★☆☆</div>
+            </div>
+            <div class="rating-categories">
+                <div class="category">
+                    <span>신뢰도</span>   
+                    <div class="rating-bar">
+                        <div class="fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="category">
+                    <span>품질</span>
+                    <div class="rating-bar">
+                        <div class="fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="category">
+                    <span>소통</span>
+                    <div class="rating-bar"> 
+                        <div class="fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="category">
+                    <span>배송</span>
+                    <div class="rating-bar">
+                        <div class="fill" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <h4>리뷰 (5)</h4>
+            <div id="reviewContainer" class="review-container">
+                <!-- 리뷰 항목들이 동적으로 추가됩니다. -->
+            </div>
+            <button id="loadMoreBtn" class="view-more-reviews">모든 리뷰 보기</button>
+        </section>
     </div>
 
-    <!-- JavaScript 파일 경로 JSP 처리 -->
-    <script src="<%= request.getContextPath() %>/views/resources/js/BidDetail.js"></script>
-    <script src="<%= request.getContextPath() %>/views/resources/js/ratingPopup.js"></script>
+    <!-- 팝업 컨테이너 -->
+    <div class="popup-container" id="prdinfoBID" style="display:none;">
+        <div class="popup">
+            <!-- 팝업 헤더 -->
+            <div class="popup-header">
+                <h2>입찰 하기</h2>
+                <span class="close-btn">&times;</span> <!-- 닫기 버튼 -->
+            </div>
+
+            <!-- 타이머 -->
+            <div class="popup-timer">
+                <p>⏰ 12일 3시간 18분 후 종료</p>
+            </div>
+
+            <!-- 현재 입찰가 -->
+            <div class="popup-current-bid">
+                <h3>현재 입찰가</h3>
+                <h1>100,000,000 원</h1>
+                <p>BID 입찰 8건</p>
+            </div>
+
+            <!-- 구매 희망가 입력 -->
+            <div class="popup-bid-input">
+                <label for="bidAmount">구매 희망가</label>
+                <div class="bid-amount-container">
+                    <input type="number" id="bidAmount" name="bidAmount" class="bid-amount-input" min="100000000" step="1000" value="100000000" />
+                    <span class="currency">원</span>
+                </div>
+                <p class="bid-info">최종 결제금액은 다음 화면에서 계산됩니다.</p>
+            </div>
+
+            <!-- 입찰 버튼 -->
+            <button class="bid-btn">입찰하기</button>
+
+            <!-- 경고 메시지 -->
+            <p class="popup-warning">입금확인이 되지 않아 미입금 2건이 누적되는 경우, <br>
+                사이트 이용이 자동으로 일시제한됩니다. <br>
+                상품의 이미지를 상세히 확인하여 신중한 입찰 부탁드립니다.</p>
+        </div>
+    </div>
+    
+    <!-- 푸터 -->
+	<jsp:include page="/views/common/footer.jsp" />
 </body>
 </html>

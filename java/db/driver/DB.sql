@@ -88,6 +88,7 @@ COMMENT ON COLUMN BOARD.STATUS IS '판매 상태(Y/N)';
 CREATE SEQUENCE SEQ_BNO
 NOCACHE;
 
+/* fashion */
 INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
 
@@ -137,7 +138,7 @@ INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
 
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
 
 INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
@@ -151,11 +152,362 @@ VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion',
 INSERT INTO BOARD
 VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion07.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
 
+/* digitall */
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'fashion', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_fashion08.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+VALUES (SEQ_BNO.NEXTVAL, 'M사 남성용 시계 STMM-293  모델 블랙', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
 
 INSERT INTO BOARD
-VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'fashion', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_fashion09.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+VALUES (SEQ_BNO.NEXTVAL, '소니 헤드폰', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital02.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '자전거', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital03.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '핸드믹서기', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital04.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '카메라', '경매', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital05.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M사 남성용 시계 STMM-293  모델 블랙', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '소니 헤드폰', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital02.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '자전거', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital03.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '핸드믹서기', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital04.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '카메라', '경매', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital05.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M사 남성용 시계 STMM-293  모델 블랙', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '소니 헤드폰', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital02.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '자전거', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital03.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '핸드믹서기', '중고', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital04.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '카메라', '경매', 'digital', 'M사에서 나온 남성용 손목 시계입니다. 액정에 미약하게 흠집이 있습니다. 시계는 잘 돌아갑니다.', '/views/resources/images/prd/prd_digital05.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+/* sport */
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '실리콘 요가 매트', '중고', 'sport', '실리콘 재질 요가용 매트 4개입니다. 3개월 정도 사용했습니다. 깨끗하게 소독했지만 민감하신 분들은 주의해주세요.', '/views/resources/images/prd/prd_sport01.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Y');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'sport', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_sport02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'sport', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_sport03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'L 브랜드 크로스백 MOLRA-505 화이트 색상', '중고', 'sport', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_sport04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'M 브랜드 가방 신상', '경매', 'sport', 'M 브랜드에서 이번에 나온 신상입니다. 실착 횟수 1회. 사진만 찍고 넣어놨어요.', '/views/resources/images/prd/prd_sport05.jpg', 10000000, 5000000, 1, 3, TO_DATE('2024-10-11 16:09:40', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-20 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'N');
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'S 브랜드 백 핑크베이지', '중고', 'sport', '예전에 샀던 가방인데 안 써서 팔아요. 바닥에 기스가 조금 있긴한데 깨끗해요.', '/views/resources/images/prd/prd_sport06.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+/* deco */
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '인센스 세트', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '디자이너 M 리미티드 에디션 778 시리즈 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco02.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '분위기 좋은 조명', '경매', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco03.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미니 화병', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco04.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '거실용 의자 S사 Y2 시리즈', '중고', 'deco', '인센스 세트.', '/views/resources/images/prd/prd_deco05.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+/* toy */
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '영유아용 부엌놀이 미니어처 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy01.jpg', 17000000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[나눔] 무지개 미니 클립', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy02.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '무지개 뽁뽁이 대형', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy03.jpg', 1000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '형광펜 6개', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy04.jpg', 2000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '토끼 인형(D 브랜드 이벤트 한정 상품)', '경매', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy05.jpg', 30000, 15000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'N'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '미술용품 세트', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy06.jpg', 10000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy07.jpg', 13000, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '[직거래/나눔] 만년필', '중고', 'toy', '아기들이 갖고 놀기 좋은 부엌놀이 미니어처 장난감입니다. 깨끗하게 소독했지만 혹시 모르니 애기가 가지고 놀기 전엔 한 번 더 소독하고 사용하시는 걸 추천드려요^^.', '/views/resources/images/prd/prd_toy08.jpg', 0, 0, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+/* art */
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '아티스트 S 낙엽 액자', '경매', 'art', '명화.', '/views/resources/images/prd/prd_art01.jpg', 10000000, 13000000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '아티스트 S 압화 액자', '경매', 'art', '명화.', '/views/resources/images/prd/prd_art02.jpg', 2000000, 1240000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '아기 천사 석조상', '경매', 'art', '명화.', '/views/resources/images/prd/prd_art03.jpg', 500000, 219000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'T 화가 2001년 경매출품작', '경매', 'art', '명화.', '/views/resources/images/prd/prd_art04.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+/* jewelry */
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'E 브랜드 귀걸이 티파니 920', '경매', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry01.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '새와 화살 이어링 실버 20', '중고', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry02.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, 'G사 블루 토파즈 목걸이', '경매', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry03.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '하트 목걸이', '중고', 'jewelyr', '명화.', '/views/resources/images/prd/prd_jewelry04.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '다이아몬드링 H사 T시리즈 2캐럿 12호', '경매', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry05.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
+
+INSERT INTO BOARD
+VALUES (SEQ_BNO.NEXTVAL, '다이아몬드링 H사 A시리즈 2캐럿 12호', '경매', 'jewelry', '명화.', '/views/resources/images/prd/prd_jewelry06.jpg', 470000000, 23489000, 1, 3, TO_DATE('2024-10-11 17:07:48', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-10-31 23:59:59', 'YYYY-MM-DD HH24:MI:SS'), 'Y'); 
 
 
 /* Address */

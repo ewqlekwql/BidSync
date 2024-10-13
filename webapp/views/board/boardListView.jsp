@@ -9,8 +9,10 @@
 	int endPage = pi.getEndPage();
 	int maxPage = pi.getMaxPage();
 	
-	String ctg = (String)request.getAttribute("ctg");
+	String ctg = request.getParameter("ctg");
 	String ctgName = (String)request.getAttribute("ctgName");
+	String type = (String)request.getAttribute("type");
+	String status = (String)request.getAttribute("status");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -21,8 +23,9 @@
 
     <!-- 외부 css/js 연결 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/board.css">
+    <script src="${pageContext.request.contextPath}/views/resources/js/board.js"></script>
 </head>
-<body>
+<body onload="checkedFilter('<%=ctg%>', '<%=type%>', '<%=status%>')">
 	<!-- 헤더 -->
 	<jsp:include page="/views/common/header.jsp" />
 	
@@ -33,52 +36,59 @@
 			<!-- 내비게이션 -->
 			<h3>카테고리</h3>
             <ul>
-                <li class="On"><a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">패션</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">디지털·가전</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=sport&cpage=1">스포츠</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=deco&cpage=1">홈·데코</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=toy&cpage=1">완구</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=art&cpage=1">미술</a></li>
-                <li><a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">쥬얼리</a></li>
+                <li id="fashion"><a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">패션</a></li>
+                <li id="digital"><a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">디지털·가전</a></li>
+                <li id="sport"><a href="${pageContext.request.contextPath}/list.bo?ctg=sport&cpage=1">스포츠</a></li>
+                <li id="deco"><a href="${pageContext.request.contextPath}/list.bo?ctg=deco&cpage=1">홈·데코</a></li>
+                <li id="toy"><a href="${pageContext.request.contextPath}/list.bo?ctg=toy&cpage=1">완구</a></li>
+                <li id="art"><a href="${pageContext.request.contextPath}/list.bo?ctg=art&cpage=1">미술</a></li>
+                <li id="jewelry"><a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">쥬얼리</a></li>
             </ul>
             
             <hr>
             
             <!-- 검색 필터 -->
-            <table>
-            	<tr>
-            		<td rowspan="2">
-            			<label for="allCheck" class="table-label">
-            				<input type="checkbox" id="allCheck" checked>
-            				<span class="span-box"></span>
-            				<span class="span-text">전체선택</span>
-            			</label>
-            		</td>
-            		<td>
-            			<label for="bid" class="table-label">
-	            			<input type="checkbox" id="bid" value="경매" checked>
-	            			<span class="span-box"></span>
-            				<span class="span-text">경매</span>
-	            		</label>
-            		</td>
-            		<td>
-            			<label for="used" class="table-label">
-            				<input type="checkbox" id="used" value="중고거래" checked>
-            				<span class="span-box"></span>
-            				<span class="span-text">중고거래</span>
-            			</label>
-            		</td>
-            	</tr>
-            	<tr>
-            		<td>
-            			<label for="notSoldout" class="table-label">
-            				<input type="checkbox" id="notSoldout" value="Y" checked>
-            				<span class="span-box"></span>
-            				<span class="span-text">품절 제외</span>
-            			</label>
-            		</td>
-            	</tr>
-            </table>
+            <form id="boardList-form" action="${pageContext.request.contextPath}/list.bo?ctg=<%=ctg%>&cpage=1" method="post">
+            	<table>
+	            	<tr>
+	            		<td rowspan="2">
+	            			<label for="allCheck" class="table-label">
+	            				<input type="checkbox" id="allCheck">
+	            				<span class="span-box"></span>
+	            				<span class="span-text">전체선택</span>
+	            			</label>
+	            		</td>
+	            		<td>
+	            			<label for="bid" class="table-label">
+		            			<input type="checkbox" id="bid" name="type" value="경매" checked>
+		            			<span class="span-box"></span>
+	            				<span class="span-text">경매</span>
+		            		</label>
+	            		</td>
+	            		<td>
+	            			<label for="used" class="table-label">
+	            				<input type="checkbox" id="used" name="type" value="중고거래" checked>
+	            				<span class="span-box"></span>
+	            				<span class="span-text">중고거래</span>
+	            			</label>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td>
+	            			<label for="notSoldout" class="table-label">
+	            				<input type="checkbox" id="notSoldout" name="status" value="N">
+	            				<span class="span-box"></span>
+	            				<span class="span-text">품절 보기</span>
+	            			</label>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td colspan="3" align="center">
+	            			<button type="submit">검색</button>
+	            		</td>
+	            	</tr>
+	            </table>
+            </form>
        </aside>
 	
 		<!-- 상품 리스트 -->
@@ -97,7 +107,7 @@
 			<!-- 상품 목록 -->
 			<article id="boardList-article">
 				<% for(Board b : list) { %>
-					<div class="board-card" onclick="location.href='${pageContext.request.contextPath}/detail.bo?=<%=b.getBoardNo()%>'">
+					<div class="board-card" onclick="location.href='${pageContext.request.contextPath}/detail.bo?ctg=<%=ctg%>&no=<%=b.getBoardNo()%>'">
 						<div class="PrdImg"><img src="${pageContext.request.contextPath}<%=b.getProdImg()%>"></div>
                         <h3 title="<%=b.getBoardTitle()%>"><%=b.getBoardTitle()%></h3>
                         <p class="Price"><%=b.getPrice()%> 원</p>

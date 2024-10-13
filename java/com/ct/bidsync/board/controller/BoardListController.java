@@ -35,9 +35,9 @@ public class BoardListController extends HttpServlet {
 		
 		// 전달받은 값
 		String ctg = request.getParameter("ctg");
-		String sqlType = (String)request.getAttribute("sqlType");
-		System.out.println("list ctg : " + ctg);
-		System.out.println("sql type : " + sqlType);
+		String type = (String)request.getAttribute("type");
+		String status = (String)request.getAttribute("status");
+		System.out.println("list : " + ctg + ", " + type + ", " + status);
 		
 		// 페이징 처리
 		int listCount;
@@ -49,7 +49,7 @@ public class BoardListController extends HttpServlet {
 		int startPage;
 		int endPage;
 		
-		listCount = new BoardService().selectListCount(ctg, sqlType);
+		listCount = new BoardService().selectListCount(ctg, type, status);
 		currentPage = Integer.parseInt(request.getParameter("cpage"));
 		
 		maxPage = (int)Math.ceil((double)listCount/boardLimit);
@@ -59,12 +59,11 @@ public class BoardListController extends HttpServlet {
 		endPage = endPage > maxPage ? maxPage : endPage;
 		
 		PageInfo pi = new PageInfo(listCount, currentPage, pageLimit, boardLimit, maxPage, startPage, endPage);
-		ArrayList<Board> list = new BoardService().selectList(pi, ctg);
+		ArrayList<Board> list = new BoardService().selectList(pi, ctg, type, status);
 		
-		// BoardListView 전달
+		// boardListView 전달, 이동
 		request.setAttribute("pi", pi);
 		request.setAttribute("list", list);
-		request.setAttribute("ctg", ctg);
 		request.getRequestDispatcher("/views/board/boardListView.jsp").forward(request, response);
 	}
 

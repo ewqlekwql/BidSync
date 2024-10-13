@@ -166,11 +166,11 @@ header > nav > ul {
 }
 
 #header-bottom > ul > li > a:hover {
-   color: #0051FF;
+   color: orange;
 }
 
-#header-bottom > ul > li > a > img {
-   height: 100%;
+#header-bottom > ul > li.On > a {
+	color: #0051FF;
 }
 
 

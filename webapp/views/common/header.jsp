@@ -26,7 +26,7 @@
       <nav id="header-top">
          <ul>
             <li id="header-top-logo">
-            <a href="${pageContext.request.contextPath}/index.jsp" target="_self"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png" alt="비드싱크 로고"></a>
+            <a href="${pageContext.request.contextPath}" target="_self"><img src="${pageContext.request.contextPath}/views/resources/images/logo.png" alt="비드싱크 로고"></a>
             </li>
             <li id="header-top-searchBar">
                   <input type="text" name="keyword" placeholder="검색어를 입력하세요">
@@ -60,25 +60,25 @@
          	<li>
                <a href="#">#추천</a>
             </li>
-            <li>
+            <li id="fashion">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">패션</a>
             </li>
-            <li>
+            <li id="digital">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">디지털·가전</a>
             </li>
-            <li>
+            <li id="sport">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=sport&cpage=1">스포츠</a>
             </li>
-            <li> 
+            <li id="deco"> 
                <a href="${pageContext.request.contextPath}/list.bo?ctg=deco&cpage=1">홈·데코</a>
             </li>
-            <li>
+            <li id="toy">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=toy&cpage=1">완구</a>
             </li>
-            <li>
+            <li id="art">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=art&cpage=1">미술</a>
             </li>
-            <li>
+            <li id="jewelry">
                <a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">쥬얼리</a>
             </li>
             <li>

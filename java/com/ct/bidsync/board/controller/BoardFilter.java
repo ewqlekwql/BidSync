@@ -16,13 +16,18 @@ import java.io.IOException;
 /**
  * Servlet Filter implementation class BoardListFilter
  */
-@WebFilter("/list.bo")
-public class BoardListFilter extends HttpFilter implements Filter {
+@WebFilter({"/list.bo", "/detail.bo"})
+public class BoardFilter extends HttpFilter implements Filter {
        
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * @see HttpFilter#HttpFilter()
      */
-    public BoardListFilter() {
+    public BoardFilter() {
         super();
     }
 
@@ -34,6 +39,7 @@ public class BoardListFilter extends HttpFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
+	@SuppressWarnings("null")
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		request.setCharacterEncoding("UTF-8");
 		System.out.println("리스트 필터 통과");
@@ -45,7 +51,7 @@ public class BoardListFilter extends HttpFilter implements Filter {
 		String ctg = request.getParameter("ctg");
 		String ctgName = "";
 		
-		switch(ctg ) {
+		switch(ctg) {
 		case "fashion" :
 			ctgName = "패션";
 			break;
@@ -68,22 +74,35 @@ public class BoardListFilter extends HttpFilter implements Filter {
 			ctgName = "쥬얼리";
 			break;
 		default :
+			// ctg값이 없거나 잘못된 URL로 접근하면 errorPage로 이동
 			request.setAttribute("errorMsg", "잘못된 접근입니다.");
 			request.setAttribute("responseURL", httpRequest.getContextPath());
-			
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		
-		// 핕터값 (테스트중)
-		String sqlType = "";
-		sqlType = request.getParameter("sql");
-		if(sqlType == null) {
-			sqlType = "selectListCount";
+		// 핕터값
+		// 넘겨받은 값에 따라 판별 -> Controller로 전달 -> Dao에서 사용
+		String type = "%";
+		String typeArr[] = request.getParameterValues("type");
+		if(typeArr != null && typeArr.length == 1) {
+			if("경매".equals(String.valueOf(typeArr[0]))) {
+				type = "경매";
+			}
+			else {
+				type = "중고";
+			}
 		}
 		
+		String status = "Y";
+		if("N".equals(request.getParameter("status"))) {
+			System.out.println(request.getParameter(status));
+			status = "%";
+		}
 		
-		request.setAttribute("sqlType", sqlType);
+		// 전달 -> 이동
 		request.setAttribute("ctgName", ctgName);
+		request.setAttribute("type", type);
+		request.setAttribute("status", status);
 		chain.doFilter(request, response);
 	}
 

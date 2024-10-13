@@ -6,7 +6,8 @@
 		SELECT	COUNT(*) AS COUNT
 		  FROM	BOARD
 		 WHERE	BOARD_CATEGORY = ?
-		   AND	STATUS = 'Y'
+		   AND	BOARD_TYPE LIKE ?
+		   AND	STATUS LIKE ?
 	</entry>
 	
 	<!-- 상품 목록 반환 -->
@@ -25,9 +26,18 @@
 				  				END_DATE
 				  		   FROM	BOARD B
 				  		   JOIN	MEMBER ON (SELLER_NO = USER_NO)
-				  		  WHERE	B.STATUS = 'Y'
+				  		  WHERE	B.STATUS LIKE ?
 				  		    AND	BOARD_CATEGORY = ?
+				  		    AND BOARD_TYPE LIKE ?
 				  		  ORDER	BY BOARD_NO DESC) A)
 		  WHERE	RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<!-- 상품 정보 반환 -->
+	<entry key="selectBoard">
+		SELECT	*
+		  FROM	BOARD
+		  JOIN	MEMBER ON (SELLER_NO = USER_NO)
+		 WHERE	BOARD_NO = ?
 	</entry>
 </properties>
