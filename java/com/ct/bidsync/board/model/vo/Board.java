@@ -12,6 +12,7 @@ public class Board {
 	private String prodImg;
 	private int price;
 	private int bidPrice;
+	private int auctioneer;
 	private int stock;
 	private String seller;
 	private Date registerDate;
@@ -24,7 +25,8 @@ public class Board {
 	}
 
 	public Board(int boardNo, String boardTitle, String boardType, String boardCtg, String boardContent, String prodImg,
-			int price, int bidPrice, int stock, String seller, Date registerDate, Date endDate, String status) {
+			int price, int bidPrice, int auctioneer, int stock, String seller, Date registerDate, Date endDate,
+			String status) {
 		super();
 		this.boardNo = boardNo;
 		this.boardTitle = boardTitle;
@@ -34,6 +36,7 @@ public class Board {
 		this.prodImg = prodImg;
 		this.price = price;
 		this.bidPrice = bidPrice;
+		this.auctioneer = auctioneer;
 		this.stock = stock;
 		this.seller = seller;
 		this.registerDate = registerDate;
@@ -46,15 +49,15 @@ public class Board {
 	public String toString() {
 		return "Board [boardNo=" + boardNo + ", boardTitle=" + boardTitle + ", boardType=" + boardType + ", boardCtg="
 				+ boardCtg + ", boardContent=" + boardContent + ", prodImg=" + prodImg + ", price=" + price
-				+ ", bidPrice=" + bidPrice + ", stock=" + stock + ", seller=" + seller + ", registerDate="
-				+ registerDate + ", endDate=" + endDate + ", status=" + status + "]";
+				+ ", bidPrice=" + bidPrice + ", auctioneer=" + auctioneer + ", stock=" + stock + ", seller=" + seller
+				+ ", registerDate=" + registerDate + ", endDate=" + endDate + ", status=" + status + "]";
 	}
 
 	// setter, getter
 	public int getBoardNo() {
 		return boardNo;
 	}
-
+	
 	public void setBoardNo(int boardNo) {
 		this.boardNo = boardNo;
 	}
@@ -113,6 +116,14 @@ public class Board {
 
 	public void setBidPrice(int bidPrice) {
 		this.bidPrice = bidPrice;
+	}
+	
+	public int getAuctioneer() {
+		return auctioneer;
+	}
+
+	public void setAuctioneer(int auctioneer) {
+		this.auctioneer = auctioneer;
 	}
 
 	public int getStock() {

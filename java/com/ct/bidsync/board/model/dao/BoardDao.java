@@ -130,6 +130,7 @@ public class BoardDao {
 							rset.getString("PROD_IMG"),
 							rset.getInt("PRICE"),
 							rset.getInt("BID_PRICE"),
+							rset.getInt("AUCTIONNER"),
 							rset.getInt("STOCK"),
 							rset.getString("USER_ID"),
 							rset.getDate("REGISTER_DATE"),

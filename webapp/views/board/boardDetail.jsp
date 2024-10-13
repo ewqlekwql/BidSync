@@ -70,7 +70,7 @@
 						    <h3>현재 입찰가</h3>
 	    					<h1><a href="#current-bid" class="current-bid-link"><%=b.getBidPrice()%> 원</a></h1>
 						    <div class="auction-details">
-						        <p><a href="#bid-details"><span>BID</span> 입찰 8건 | 12일 3시간 18분 후 종료</a></p>
+						        <p><a href="#bid-details"><span>BID</span> 입찰 <%=b.getAuctioneer()%>건 | 12일 3시간 18분 후 종료</a></p>
 						    </div>
 						    <ul>
 						        <li>시작가: <a href="#start-price"><span>10,000 원</span></a></li>
