@@ -365,6 +365,10 @@
 	transform: translate(-50%, -50%);
 }
 
+.cart-card-label input:disabled + .span-box {
+	background-color: #A5B1C1;
+}
+
 .cart-card > img {
 	width: 5vw;
 	height: 5vw;
@@ -378,7 +382,14 @@
 
 .cart-card > ul h2 {
 	margin: 1% 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
 	font-size: 1.5vw;
+}
+
+.cart-card > ul h2.SoldOut {
+	color: red;
 }
 
 .cart-card > .span-stock {

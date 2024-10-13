@@ -39,3 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+// 품절, 판매종료인 상품 전체 삭제
+function delectSoldOut() {
+	if(confirm("정말 삭제하시겠습니까?")) {
+		window.location.href = "deleteSO.cart.me";
+	}
+}

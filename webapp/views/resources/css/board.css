@@ -224,6 +224,10 @@
 	font-size: 1.2vw;
 }
 
+.board-card > h3.SoldOut {
+	color: red;
+}
+
 .board-card > p {
 	margin: 1% 0;
 }

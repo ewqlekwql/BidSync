@@ -13,8 +13,8 @@
 
     <!-- 외부 css/js 연결 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/board.css">
+    <script src="${pageContext.request.contextPath}/views/resources/js/board.js"></script>
     <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoBID.js"></script>
-    <script src="<%= request.getContextPath() %>/views/resources/js/prdinfoUsed.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -109,7 +109,7 @@
 	                    <!-- 버튼 섹션 -->
 	                    <div class="action-buttons">
 	                        <button class="buy-now">구매하기</button>
-	                        <button class="add-to-cart">장바구니에 담기</button>
+	                        <button class="add-to-cart" onclick="addCart('<%=b.getBoardCtg()%>', <%=b.getBoardNo()%>)">장바구니에 담기</button>
 	                        <button class="add-to-list">관심 목록에 추가</button>
 	                    </div>
 					<% } %>

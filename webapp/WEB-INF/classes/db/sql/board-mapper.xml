@@ -22,8 +22,7 @@
 				  				PRICE,
 				  				BID_PRICE,
 				  				USER_ID,
-				  				REGISTER_DATE,
-				  				END_DATE
+				  				B.STATUS
 				  		   FROM	BOARD B
 				  		   JOIN	MEMBER ON (SELLER_NO = USER_NO)
 				  		  WHERE	B.STATUS LIKE ?

@@ -48,6 +48,7 @@ public class CartDao {
 			    c.setProdImg(rset.getString("PROD_IMG"));
 			    c.setPrice(rset.getInt("PRICE"));
 			    c.setStock(rset.getInt("STOCK"));
+			    c.setStatus(rset.getString("BOARD_STATUS"));
 			    list.add(c);
 			}
 		} catch (SQLException e) {
@@ -58,5 +59,47 @@ public class CartDao {
 		}
 		
 		return list;
+	}
+	
+	// 장바구니 추가
+	public int insertCart(Connection conn, int userNo, int boardNo, int stock) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertCart");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, boardNo);
+			pstmt.setInt(3, stock);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
+	}
+	
+	// 장바구니에서 판매종료 상품을 전체 삭제
+	public int deleteSoldOut(Connection conn, String userId) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("deleteSoldOut");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
 	}
 }

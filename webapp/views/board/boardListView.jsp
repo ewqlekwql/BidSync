@@ -109,7 +109,11 @@
 				<% for(Board b : list) { %>
 					<div class="board-card" onclick="location.href='${pageContext.request.contextPath}/detail.bo?ctg=<%=ctg%>&no=<%=b.getBoardNo()%>'">
 						<div class="PrdImg"><img src="${pageContext.request.contextPath}<%=b.getProdImg()%>"></div>
-                        <h3 title="<%=b.getBoardTitle()%>"><%=b.getBoardTitle()%></h3>
+						<% if("N".equals(b.getStatus())) { %>
+							<h3 class="SoldOut" title="<%=b.getBoardTitle()%>">【판매종료】 <%=b.getBoardTitle()%></h3>
+						<% } else { %>
+							<h3 title="<%=b.getBoardTitle()%>"><%=b.getBoardTitle()%></h3>
+						<% } %>
                         <p class="Price"><%=b.getPrice()%> 원</p>
                         <p class="Rating"><a href="${pageContext.request.contextPath}/" onclick="event.stopPropagation();"><%=b.getSeller()%></a> ★★★★ (4.0)</p>
 					</div>

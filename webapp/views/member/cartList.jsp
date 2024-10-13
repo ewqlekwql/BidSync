@@ -32,7 +32,7 @@
 				</div>
 				<div>
 					<input type="button" id="checkreset" value="&ensp;선택삭제&ensp;">
-           			<input type="button" id="soldoutcheck" value="&ensp;품절 / 판매종료 상품 전체삭제&ensp;">
+           			<input type="button" id="soldoutcheck" value="&ensp;품절 / 판매종료 상품 전체삭제&ensp;" onclick="delectSoldOut()">
 				</div>
 			</aside>
 			
@@ -44,12 +44,20 @@
 					<% for(Cart c : cartList) { %>
 						<div class="cart-card">
 						    <label for="<%=c.getCartNo()%>" class="cart-card-label">
-						        <input type="checkbox" id="<%=c.getCartNo()%>" class="cart-card-checkbox" value="<%=c.getCartNo()%>">
+						    	<% if("N".equals(c.getStatus())) { %>
+						    		<input type="checkbox" id="<%=c.getCartNo()%>" class="cart-card-checkbox" value="<%=c.getCartNo()%>" disabled>
+						    	<% } else { %>
+						        	<input type="checkbox" id="<%=c.getCartNo()%>" class="cart-card-checkbox" value="<%=c.getCartNo()%>">
+						        <% } %>
 						        <span class="span-box"></span>
 						    </label>
 						    <img src="${pageContext.request.contextPath}<%=c.getProdImg()%>">
 						    <ul>
-						        <li><h2><%=c.getBoardTitle()%></h2></li>
+						    	<% if("N".equals(c.getStatus())) { %>
+						    		<li><h2 class="SoldOut" title="【판매종료】 <%=c.getBoardTitle()%>">【판매종료】 <%=c.getBoardTitle()%></h2></li>
+								<% } else { %>
+						        	<li><h2 title="<%=c.getBoardTitle()%>"><%=c.getBoardTitle()%></h2></li>
+						        <% } %>
 						        <li><%=c.getPrice()%> 원</li>
 						        <li>배송비 5,000원</li>
 						    </ul>

@@ -42,7 +42,7 @@ public class BoardFilter extends HttpFilter implements Filter {
 	@SuppressWarnings("null")
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		request.setCharacterEncoding("UTF-8");
-		System.out.println("리스트 필터 통과");
+		System.out.println("보드 필터 통과");
 		
 		HttpServletRequest httpRequest = (HttpServletRequest)request;
 		HttpServletResponse httpResponse = (HttpServletResponse)response;
@@ -95,7 +95,6 @@ public class BoardFilter extends HttpFilter implements Filter {
 		
 		String status = "Y";
 		if("N".equals(request.getParameter("status"))) {
-			System.out.println(request.getParameter(status));
 			status = "%";
 		}
 		
