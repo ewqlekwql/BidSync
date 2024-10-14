@@ -8,7 +8,7 @@
 	
 	<!-- 외부 css/js 연결 -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/member.css">
-	<script src="${pageContext.request.contextPath}/views/resources/member.js" defer></script>
+	<script src="${pageContext.request.contextPath}/views/resources/js/member.js" defer></script>
 </head>
 <body>
 	<!-- 헤더 -->
@@ -20,8 +20,8 @@
 			<article id="login-article-member">
 				<h1>LOGIN</h1>
 				<form action="${pageContext.request.contextPath}/login.me" method="post">
-					<input type="text" id="inputid" name="userId" placeholder="아이디를 입력하세요." required>
-		            <input type="password" id="inputpassword" name="userPwd" placeholder="비밀번호를 입력하세요." required>
+					<input type="text" id="inputid" name="userId" placeholder="아이디를 입력하세요." onblur="validateId(this);" onkeyup="noSpaceForm(this);" required>
+		            <input type="password" id="inputpassword" name="userPwd" placeholder="비밀번호를 입력하세요." onblur="validatePassword(this);" onkeyup="noSpaceForm(this);" required>
 		            <label for="saveId">
 		            	<input type="checkbox" id="saveId"> 아이디 저장
 		            </label>
