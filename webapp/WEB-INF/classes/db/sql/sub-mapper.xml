@@ -73,6 +73,21 @@
 	
 	<!-- 관심목록에 상품 추가 -->
 	<entry key="insertWish">
-		
+		INSERT	INTO WISH
+		(
+			WISH_NO,
+			USER_NO,
+			BOARD_NO,
+			WISH_DATE,
+			STATUS
+		)
+		VALUES
+		(
+			SEQ_WNO.NEXTVAL,
+			?,
+			?,
+			SYSDATE,
+			'Y'
+		)
 	</entry>
 </properties>

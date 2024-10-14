@@ -40,8 +40,8 @@ function addCart(ctg, boardNo) {
 }
 
 // 중고 - 관심상품 추가
-function addWish(boardNo) {
-	window.location.href="insert.wish.me?no=" + boardNo;
+function addWish(ctg, boardNo) {
+	window.location.href="insert.wish.me?ctg=" + ctg + "&no=" + boardNo;
 }
 
 document.addEventListener('DOMContentLoaded', function() {

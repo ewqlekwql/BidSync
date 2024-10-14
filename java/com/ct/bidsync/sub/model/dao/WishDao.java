@@ -106,14 +106,15 @@ private Properties prop = new Properties();
 	}
 	
 	// 관심목록에 추가
-	public int insertWish(Connection conn, int boardNo) {
+	public int insertWish(Connection conn, int userNo, int boardNo) {
 		int result = 0;
 		PreparedStatement pstmt = null;
 		String sql = prop.getProperty("insertWish");
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, boardNo);
+			pstmt.setInt(1, userNo);
+			pstmt.setInt(2, boardNo);
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {

@@ -60,10 +60,10 @@ public class WishService {
 	}
 	
 	// WishInsertContoller
-	public int insertWish(int boradNo) {
+	public int insertWish(int userNo, int boradNo) {
 		Connection conn = getConnection();
 		
-		int result = new WishDao().insertWish(conn, boradNo);
+		int result = new WishDao().insertWish(conn, userNo, boradNo);
 		
 		close(conn);
 		return result;
