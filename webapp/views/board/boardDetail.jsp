@@ -14,6 +14,9 @@
     <!-- 외부 css/js 연결 -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/resources/css/board.css">
     <script src="${pageContext.request.contextPath}/views/resources/js/board.js"></script>
+    
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/resources/css/BidPopUp.css">
+    
 </head>
 <body>
     <!-- 헤더 -->
