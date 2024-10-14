@@ -46,3 +46,46 @@ function delectSoldOut() {
 		window.location.href = "deleteSO.cart.me";
 	}
 }
+
+
+/* wishList js */
+// 전체선택을 눌렀을때 상품 전체선택
+function allCheckWish(_allCheckBox) {
+    // 전체선택 체크박스의 값
+    const checked = _allCheckBox.checked;
+
+    // class가 cart-card-checkbox인 모든 체크박스를 checked로 변경
+    const wishCheckBoxList = document.getElementsByClassName("wish-card-checkbox");
+
+    // HTMLCollection을 배열로 변환하여 forEach 사용
+    Array.from(wishCheckBoxList).forEach(box => {
+        box.checked = checked;
+    });
+
+    // 선택된 체크박스 수 업데이트
+    updateAllCheckBox();
+}
+
+// 체크가 하나라도 해제되면 전체선택 박스도 체크 해제
+function updateAllCheckBox() {
+    const wishCheckBoxList = document.getElementsByClassName("wish-card-checkbox");
+    const allCheckBox = document.getElementById("wishAll-Check");
+    
+    // 전체 선택 체크박스의 상태를 업데이트
+    allCheckBox.checked = Array.from(wishCheckBoxList).every(box => box.checked);
+}
+
+// 개별 체크박스에 change 이벤트 리스너 추가
+document.addEventListener("DOMContentLoaded", function() {
+    const wishCheckBoxList = document.getElementsByClassName("wish-card-checkbox");
+    for (let box of wishCheckBoxList) {
+        box.addEventListener("change", function() {
+            updateAllCheckBox(); // 전체 선택 체크박스 상태 업데이트
+        });
+    }
+});
+
+// 관심상품 -> 장바구니 이동
+function wishToCart(wishNo) {
+	window.href="update.wish.me?no=" + wishNo;
+}
