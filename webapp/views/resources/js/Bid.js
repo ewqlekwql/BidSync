@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('bid_request', request);
 
                 // BidDetail 페이지로 이동
-                window.location.href = '../BidSync/views/bid/BidDetail.jsp';
+                window.location.href = '../BidSync/views//bid/BidDetail.jsp';
             }
         });
     }

@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (selectedPaymentOption && selectedPaymentOption.value === 'kakao') {
                 // 카카오페이 결제 요청
-                fetch('/BidSync/KakaoPayServlet', {
+                fetch('/KakaoPayServlet', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
