@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const visitStoreButton = document.querySelector('.visit-store');
     if (visitStoreButton) {
         visitStoreButton.addEventListener('click', function() {
-            window.location.href = '../saleList/SalesList.jsp'; // 스토어 페이지로 이동
+            window.location.href = '../BidSync/views/saleList/SalesList.jsp'; // 스토어 페이지로 이동
         });
     }
 
