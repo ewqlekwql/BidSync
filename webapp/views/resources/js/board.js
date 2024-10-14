@@ -27,16 +27,21 @@ function bidding() {
 	
 }
 
+// 증고 - 바로 구매하기
+function buyNow(ctg, type, boardNo) {
+	const stock = document.getElementById("quantity").value;
+	window.location.href="order.me?ctg=" + ctg + "&type=" + type + "&no=" + boardNo + "&stock=" + stock;
+}
+
 // 중고 - 장바구니에 추가
 function addCart(ctg, boardNo) {
 	const stock = document.getElementById("quantity").value;
 	window.location.href="insert.cart.me?ctg=" + ctg + "&no=" + boardNo + "&stock=" + stock;
 }
 
-// 증고 - 바로 구매하기
-function buyNow(ctg, type, boardNo) {
-	const stock = document.getElementById("quantity").value;
-	window.location.href="order.me?ctg=" + ctg + "&type=" + type + "&no=" + boardNo + "&stock=" + stock;
+// 중고 - 관심상품 추가
+function addWish(boardNo) {
+	window.location.href="insert.wish.me?no=" + boardNo;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -177,6 +182,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     */
-
-
 });
