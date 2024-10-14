@@ -82,9 +82,8 @@
         
         
         
-
+	<script src="<%= request.getContextPath() %>/views/resources/js/PurchaseCompleted.js"></script>
     <script src="<%= request.getContextPath() %>/views/resources/js/SalesPage.js"></script>
-    <script src="<%= request.getContextPath() %>/views/resources/js/PurchaseCompleted.js"></script>
 
 </body>
 </html>

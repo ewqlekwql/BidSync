@@ -49,6 +49,9 @@
 						</tr>
 					</tfoot>
 				</table>
+				<br>
+				<button type="button" onclick="window.location.href='${pageContext.request.contextPath}/views/sale/SalesPage.jsp'">일반상품 등록하기</button>
+				<button type="button" onclick="window.location.href='${pageContext.request.contextPath}/views/sale/ActionPage.jsp'">경매상품 등록하기</button>
 				</form>
 		</section>
 	</main>
