@@ -104,4 +104,24 @@ private Properties prop = new Properties();
 		
 		return result;
 	}
+	
+	// 관심목록에 추가
+	public int insertWish(Connection conn, int boardNo) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("insertWish");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, boardNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+			
+		return result;
+	}
 }

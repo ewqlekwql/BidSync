@@ -70,4 +70,9 @@
 		   SET	STATUS = 'N'
 		 WHERE	WISH_NO = ?
 	</entry>
+	
+	<!-- 관심목록에 상품 추가 -->
+	<entry key="insertWish">
+		
+	</entry>
 </properties>

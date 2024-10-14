@@ -49,11 +49,21 @@ public class WishService {
 		return result1 * result2;
 	}
 	
-	// WishDelteController
+	// WishUpdateController
 	public int deleteWish(int wishNo) {
 		Connection conn = getConnection();
 		
 		int result = new WishDao().updateWish(conn, wishNo);
+		
+		close(conn);
+		return result;
+	}
+	
+	// WishInsertContoller
+	public int insertWish(int boradNo) {
+		Connection conn = getConnection();
+		
+		int result = new WishDao().insertWish(conn, boradNo);
 		
 		close(conn);
 		return result;

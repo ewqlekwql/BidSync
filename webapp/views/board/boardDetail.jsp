@@ -109,7 +109,7 @@
 	                    <div class="used-buttons">
 	                        <button class="buy-now" onclick="buyNow('<%=b.getBoardCtg()%>', '<%=b.getBoardType()%>', <%=b.getBoardNo()%>)">구매하기</button>
 	                        <button class="add-to-cart" onclick="addCart('<%=b.getBoardCtg()%>', <%=b.getBoardNo()%>)">장바구니에 담기</button>
-	                        <button class="add-to-list">관심 목록에 추가</button>
+	                        <button class="add-to-list" onclick="addWish(<%=b.getBoardNo()%>)">관심 목록에 추가</button>
 	                    </div>
 					<% } %>
                 </div>

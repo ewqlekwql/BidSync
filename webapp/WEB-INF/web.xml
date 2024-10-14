@@ -158,4 +158,14 @@
     <servlet-name>delete.wish.me</servlet-name>
     <url-pattern>/delete.wish.me</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>WishInsertContoller</description>
+    <display-name>wish.insert.me</display-name>
+    <servlet-name>wish.insert.me</servlet-name>
+    <servlet-class>com.ct.bidsync.sub.controller.WishInsertContoller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wish.insert.me</servlet-name>
+    <url-pattern>/wish.insert.me</url-pattern>
+  </servlet-mapping>
 </web-app>
