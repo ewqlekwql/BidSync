@@ -31,4 +31,21 @@ public class WishService {
 		close(conn);
 		return no;
 	}
+	
+	public int updateWish(int wishNo, int userNo, int boardNo, int stock) {
+		Connection conn = getConnection();
+		
+		int result1 = new CartService().insertCart(userNo, boardNo, 1);
+		int result2 = new WishDao().updateWish(conn, wishNo);
+		
+		if((result1 * result2) > 0) {
+			commit(conn);
+		}
+		else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		return result1 * result2;
+	}
 }

@@ -65,6 +65,43 @@ private Properties prop = new Properties();
 	public int selectBoardNo(Connection conn, int wishNo) {
 		int no = 0;
 		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String sql = prop.getProperty("selectBoardNo");
 		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, wishNo);
+			
+			rset = pstmt.executeQuery();
+			rset.next();
+			no = rset.getInt("BOARD_NO");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		
+		return no;
+	}
+	
+	// 관심목록에서 삭제(status -> 'N')
+	public int updateWish(Connection conn, int wishNo) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		String sql = prop.getProperty("updateWish");
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, wishNo);
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return result;
 	}
 }

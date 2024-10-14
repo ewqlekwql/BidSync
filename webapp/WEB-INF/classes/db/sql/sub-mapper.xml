@@ -56,4 +56,18 @@
 		   AND	W.STATUS = 'Y'
 		 ORDER	BY WISH_DATE DESC
 	</entry>
+	
+	<!-- boardNo 반환 -->
+	<entry key="selectBoardNo">
+		SELECT	BOARD_NO
+		  FROM	WISH
+		 WHERE	WISH_NO = ?
+	</entry>
+	
+	<!-- 관심 목록 업데이트 (status -> 'N') -->
+	<entry key="updateWish">
+		UPDATE	WISH
+		   SET	STATUS = 'N'
+		 WHERE	WISH_NO = ?
+	</entry>
 </properties>

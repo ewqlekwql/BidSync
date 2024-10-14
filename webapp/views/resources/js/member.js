@@ -87,5 +87,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // 관심상품 -> 장바구니 이동
 function wishToCart(wishNo) {
-	window.href="update.wish.me?no=" + wishNo;
+	window.location.href="update.wish.me?no=" + wishNo;
 }
