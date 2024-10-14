@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Login js */
 // 아이디 유효성 검사
 function validateId(input) {
@@ -12,6 +13,39 @@ function validateId(input) {
 
 
 /* EnrollForm js */
+=======
+/**
+ * member js
+ */
+
+/* 로그인.js */
+
+//데이터 베이스에 있는 값과 아이디/비밀번호 값이 다를때 메세지 추출
+function loginbutton() {
+    const inputId = document.querySelector("#inputid").value;
+    const inputPassword = document.querySelector("#inputpassword").value;
+
+    const hiddenMsg = document.getElementById("join_required");
+
+    //입력한 아이디 값과 데이터 베이스의 값이 같고
+    // 비밀번호에 입력한 값과 데이터 베이스의 저장된 값이 같을때
+    if(inputId === "" && inputPassword === "") {
+        hiddenMsg.classList.remove("hidden");
+    } else {
+        hiddenMsg.classList.add("hidden");
+    }
+}
+
+//아이디 저장 버튼
+function saveid() {
+    const saveidButton = document.querySelector("check");
+
+
+}
+
+/* 회원가입.js */
+
+>>>>>>> dd444da30f6edca4095cbabfcbdf9b2a62e988dc
 //공백이 있을시 공백제거
 function noSpaceForm(obj) {
     var str_space = /\s/; // 공백 체크
@@ -24,6 +58,7 @@ function noSpaceForm(obj) {
     }
 }
 
+<<<<<<< HEAD
 //아이디 입력에 문자,숫자 만 입력가능하게 변경
 function checkInput(input) {
     const regExp = /^(?=.*[a-zA-Z])(?=.*\d)[A-Za-z\d]{4,20}$/; // 수정된 정규식
@@ -40,6 +75,11 @@ function checkInput(input) {
 //비밀번호 입력에 문자,숫자,특수문자 만 입력가능하게 변경
 function passwordCheck(password) {
     const regExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+|~\-={}[\]:;<>?,./])[A-Za-z\d!@#$%^&*()_+|~\-={}[\]:;<>?,./]{4,20}$/;
+=======
+//비밀번호 입력에 문자,숫자,특수문자 만 입력가능하게 변경
+function passwordCheck(password) {
+    const regExp = /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[!@#$%^&*()_+|~\-={}[\]:;<>?,./])[A-Za-z\d!@#$%^&*()_+|~\-={}[\]:;<>?,./]{8,20}$/;
+>>>>>>> dd444da30f6edca4095cbabfcbdf9b2a62e988dc
     const hiddenArea = document.getElementById("user_password_required");
 
     if (!regExp.test(password)) {
@@ -64,6 +104,7 @@ function passwordReCheck(){
     }
 }
 
+<<<<<<< HEAD
 //이름이 영문자,숫자만 입력가능하게 변경
 function validateName(input) {
     // 영문자와 숫자만 허용하고 나머지는 제거
@@ -102,6 +143,8 @@ function validateDay(input) {
 	}
 }
 
+=======
+>>>>>>> dd444da30f6edca4095cbabfcbdf9b2a62e988dc
 //전화번호 input에 숫자,'-'만 입력할수있게 변경
 function checkNumber(event) {
     const regExp = /[^0-9-]/g;
@@ -109,6 +152,7 @@ function checkNumber(event) {
     if (regExp.test(ele.value)) {
       ele.value = ele.value.replace(regExp, '');
     }
+<<<<<<< HEAD
 	
 	//최대 13자까지만 허용
 	if (ele.value.length > 13) {
@@ -212,3 +256,12 @@ function wishToCart(wishNo) {
 function deleteWish(wishNo) {
 	window.location.href="delete.wish.me?no=" + wishNo;
 }
+=======
+  };
+
+  //가입 하기 버튼을 눌렀을 때
+function createButton(){
+    const clickbutton = querySelector("#createButton");
+
+  }
+>>>>>>> dd444da30f6edca4095cbabfcbdf9b2a62e988dc
