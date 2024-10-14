@@ -24,7 +24,8 @@
             <!-- 상품 정보 섹션 -->
             <section class="product-info">
                 <!-- 상품 이미지 -->
-                <img class="product-image" src="http://localhost:5555/BidSync/views/resources/images/prd/prd_fashion07.jpg" alt="상품 이미지">
+                <img src="${b.prodImg}" alt="상품 이미지">
+
                 
                 <!-- 상품 세부 정보 -->
                 <div class="product-details">
