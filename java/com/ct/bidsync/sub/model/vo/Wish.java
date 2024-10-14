@@ -7,6 +7,7 @@ public class Wish {
 	private int boardNo;
 	private String boardTitle;
 	private String prodImg;
+	private int price;
 	private String status;
 	
 	// 기본 생성자
@@ -14,13 +15,14 @@ public class Wish {
 		super();
 	}
 
-	public Wish(int wishNo, String userId, int boardNo, String boardTitle, String prodImg, String status) {
+	public Wish(int wishNo, String userId, int boardNo, String boardTitle, String prodImg, int price, String status) {
 		super();
 		this.wishNo = wishNo;
 		this.userId = userId;
 		this.boardNo = boardNo;
 		this.boardTitle = boardTitle;
 		this.prodImg = prodImg;
+		this.price = price;
 		this.status = status;
 	}
 
@@ -28,7 +30,7 @@ public class Wish {
 	@Override
 	public String toString() {
 		return "Wish [wishNo=" + wishNo + ", userId=" + userId + ", boardNo=" + boardNo + ", boardTitle=" + boardTitle
-				+ ", prodImg=" + prodImg + ", status=" + status + "]";
+				+ ", prodImg=" + prodImg + ", price=" + price + ", status=" + status + "]";
 	}
 
 	// setter, getter
@@ -70,6 +72,14 @@ public class Wish {
 
 	public void setProdImg(String prodImg) {
 		this.prodImg = prodImg;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
 	public String getStatus() {

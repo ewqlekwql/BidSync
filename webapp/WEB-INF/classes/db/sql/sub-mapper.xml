@@ -45,4 +45,15 @@
 		   						 FROM	BOARD B
 		   						WHERE	B.STATUS = 'N')
 	</entry>
+	
+	<!-- 관심 목록 불러오기 -->
+	<entry key="selectWishList">
+		SELECT	W.*, M.USER_ID, B.BOARD_TITLE, B.PROD_IMG, B.PRICE, B.STATUS AS BOARD_STATUS
+		  FROM	WISH W
+		  JOIN	MEMBER M ON (W.USER_NO = M.USER_NO)
+		  JOIN	BOARD B ON (W.BOARD_NO = B.BOARD_NO)
+		 WHERE	W.USER_NO = ?
+		   AND	W.STATUS = 'Y'
+		 ORDER	BY WISH_DATE DESC
+	</entry>
 </properties>
