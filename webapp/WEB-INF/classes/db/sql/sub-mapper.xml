@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 장바구니 목록 불러오기 -->
+	<entry key="selectCartList">
+		SELECT	C.*, M.USER_ID, B.BOARD_TITLE, B.PROD_IMG, B.PRICE, B.STATUS AS BOARD_STATUS
+		  FROM	CART C
+		  JOIN	MEMBER M ON (C.USER_NO = M.USER_NO)
+		  JOIN	BOARD B ON (C.BOARD_NO = B.BOARD_NO)
+		 WHERE	USER_ID = ?
+		   AND	C.STATUS = 'Y'
+		 ORDER	BY PUT_DATE DESC
+	</entry>
+	
+	<!-- 장바구니에 상품 추가 -->
+	<entry key="insertCart">
+		INSERT INTO CART
+		(
+			CART_NO,
+			USER_NO,
+			BOARD_NO,
+			STOCK,
+			PUT_DATE,
+			STATUS
+		)
+		VALUES
+		(
+			SEQ_CNO.NEXTVAL,
+			?,
+			?,
+			?,
+			SYSDATE,
+			'Y'
+		)
+	</entry>
+	
+	<!-- 장바구니에서 판매 종료 상품 전체 삭제(status -> N로 변경) -->
+	<entry key="deleteSoldOut">
+		UPDATE	CART C
+		   SET	C.STATUS = 'N'
+		 WHERE	USER_NO IN (SELECT	M.USER_NO
+		 					  FROM	MEMBER M
+		 					 WHERE	M.USER_ID = ?)
+		   AND	C.BOARD_NO IN (SELECT	B.BOARD_NO
+		   						 FROM	BOARD B
+		   						WHERE	B.STATUS = 'N')
+	</entry>
+	
+	<!-- 관심 목록 불러오기 -->
+	<entry key="selectWishList">
+		SELECT	W.*, M.USER_ID, B.BOARD_TITLE, B.PROD_IMG, B.PRICE, B.STATUS AS BOARD_STATUS
+		  FROM	WISH W
+		  JOIN	MEMBER M ON (W.USER_NO = M.USER_NO)
+		  JOIN	BOARD B ON (W.BOARD_NO = B.BOARD_NO)
+		 WHERE	W.USER_NO = ?
+		   AND	W.STATUS = 'Y'
+		 ORDER	BY WISH_DATE DESC
+	</entry>
+	
+	<!-- boardNo 반환 -->
+	<entry key="selectBoardNo">
+		SELECT	BOARD_NO
+		  FROM	WISH
+		 WHERE	WISH_NO = ?
+	</entry>
+	
+	<!-- 관심 목록 업데이트 (status -> 'N') -->
+	<entry key="updateWish">
+		UPDATE	WISH
+		   SET	STATUS = 'N'
+		 WHERE	WISH_NO = ?
+	</entry>
+	
+	<!-- 관심목록에 상품 추가 -->
+	<entry key="insertWish">
+		INSERT	INTO WISH
+		(
+			WISH_NO,
+			USER_NO,
+			BOARD_NO,
+			WISH_DATE,
+			STATUS
+		)
+		VALUES
+		(
+			SEQ_WNO.NEXTVAL,
+			?,
+			?,
+			SYSDATE,
+			'Y'
+		)
+	</entry>
+</properties>

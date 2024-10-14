@@ -42,14 +42,13 @@ public class LoginController extends HttpServlet {
 		if(loginUser == null) {
 			// 로그인 실패 -> errorPage 이동
 			request.setAttribute("errorMsg", "아이디 혹은 비밀번호가 틀렸습니다.");
-			request.setAttribute("responseURL", request.getContextPath() + "/views/member/memberLoginForm.jsp");
+			request.setAttribute("responseURL", request.getContextPath() + "/url.me?call=login");
 			
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
 		else {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", loginUser);
-			
 			response.sendRedirect(request.getContextPath());
 		}
 	}

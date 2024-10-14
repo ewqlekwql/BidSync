@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addToListButton = document.querySelector('.add-to-list');
     if (addToListButton) {
         addToListButton.addEventListener('click', function() {
-            window.location.href = '../Wishlist/Wishlist.html'; // 관심 목록 페이지로 이동
+            window.location.href = '../member/wishList.jsp'; // 관심 목록 페이지로 이동
         });
     }
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const visitStoreButton = document.querySelector('.visit-store');
     if (visitStoreButton) {
         visitStoreButton.addEventListener('click', function() {
-            window.location.href = '../Store/Store.html'; // 스토어 페이지로 이동
+            window.location.href = '../saleList/SalesList.jsp'; // 스토어 페이지로 이동
         });
     }
 
@@ -156,27 +156,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     */
-
-	document.addEventListener('DOMContentLoaded', function() {
-	    // 별점을 클릭하면 selected 클래스를 추가하고 데이터 저장
-	    document.querySelectorAll('.star-rating .star').forEach(function(star) {
-	        star.addEventListener('click', function() {
-	            const ratingSection = this.parentElement;
-	            const ratingType = ratingSection.id; // 신뢰도, 품질 등 항목의 ID
-	            const ratingValue = parseInt(this.dataset.rating);
-
-	            // 별점 초기화 후 선택된 별점 적용
-	            ratingSection.querySelectorAll('.star').forEach(function(s) {
-	                s.classList.remove('selected');
-	            });
-	            for (let i = 1; i <= ratingValue; i++) {
-	                ratingSection.querySelector(`.star[data-rating="${i}"]`).classList.add('selected');
-	            }
-
-	            // 선택한 평점을 localStorage에 저장
-	            localStorage.setItem(ratingType, ratingValue);
-	        });
-	    });
-	});
-
 });

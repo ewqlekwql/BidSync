@@ -21,52 +21,42 @@
 		<section id="index-menu">
 			<ul>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=fashion&cpage=1">
 						<img src="views/resources/images/btn_indexMenu01.png">
 						<h3>패션</h3>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=digital&cpage=1">
 						<img src="views/resources/images/btn_indexMenu02.png">
 						<h3>디지털 · 가전</h3>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=sport&cpage=1">
 						<img src="views/resources/images/btn_indexMenu03.png">
 						<h3>스포츠</h3>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=deco&cpage=1">
 						<img src="views/resources/images/btn_indexMenu04.png">
-						<h3>홈 · 데코션</h3>
+						<h3>홈 · 데코</h3>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=toy&cpage=1">
 						<img src="views/resources/images/btn_indexMenu05.png">
 						<h3>완구</h3>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="${pageContext.request.contextPath}/list.bo?ctg=jewelry&cpage=1">
 						<img src="views/resources/images/btn_indexMenu06.png">
 						<h3>쥬얼리</h3>
 					</a>
 				</li>
 			</ul>
-		</section>
-
-		<!-- 상품 -->
-		<section>
-			<%--
-				코드 수정 중
-				- 최근 등록된 상품 우선 노출
-				- 무한 페이지 로딩x 최대 100개 노출
-				- 경매/중고 분할
-			--%>
 		</section>
 	</main>
 	

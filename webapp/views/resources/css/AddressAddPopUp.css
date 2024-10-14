@@ -69,3 +69,21 @@
     cursor: pointer; /* 클릭 가능한 손 모양 커서 */
     font-size: 18px; /* 버튼 텍스트 크기 */
 }
+
+/* 우편번호 찾기 버튼 스타일 */
+.zipcode-btn {
+    padding: 10px; 
+    background-color: white; 
+    color: black; 
+    border: 2px solid black; 
+    border-radius: 5px;
+    cursor: pointer; /* 마우스 커서를 손 모양으로 변경 */
+    font-size: 15px; 
+    margin: 15px 0; 
+    width: 100%; 
+}
+
+.zipcode-btn:hover {
+    background-color: #333333; /* 마우스 오버 시 약간 밝은 검정색으로 변경 */
+}
+

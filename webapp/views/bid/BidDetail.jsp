@@ -24,7 +24,9 @@
             <!-- 상품 정보 섹션 -->
             <section class="product-info">
                 <!-- 상품 이미지 -->
-                <img class="product-image" src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지">
+                <img src="${pageContext.request.contextPath}/resources/images/${board.prodImg}" alt="상품 이미지">
+
+
                 
                 <!-- 상품 세부 정보 -->
                 <div class="product-details">
@@ -153,6 +155,11 @@
                 <!-- 평균 평점 출력 -->
                 <p class="average-rating">평균 평점: <span id="averageRating">0</span> 점</p>
 
+				<div class="review-section">
+		            <h5>리뷰 남기기</h5>
+		            <textarea id="reviewText" rows="4" placeholder="리뷰 내용을 작성하세요"></textarea>
+		        </div>
+		        
                 <!-- 평점 제출 버튼 -->
                 <button class="submit-rating">제출</button>
             </div>

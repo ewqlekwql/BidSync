@@ -1,1 +1,796 @@
 @charset "UTF-8";
+
+/* boardList css */
+#boardList-main {
+	width: 100%;
+	min-width: 900px;
+	max-width: 1920px;
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0 10%;
+	margin-top: 0;
+}
+
+#boardList-main > * {
+	padding: 1% 3%;
+}
+
+#boardList-sidebar {
+	width: 25%;
+	height: 40vh;
+	min-height: 300px;
+	position: sticky;
+	top: 3%;
+}
+
+#boardList-sidebar > h3 {
+	margin-top: 15%;
+	font-size: 1.3vw;
+}
+
+#boardList-sidebar > ul > li {
+	min-height: 2vw;
+	
+}
+
+#boardList-sidebar > ul > li > a {
+	vertical-align: center;
+	font-size: 1.2vw;
+	color: gray;
+}
+
+#boardList-sidebar > ul > li > a:hover {
+	color: #0051FF;
+}
+
+#boardList-sidebar > ul > li.On > a, #boardList-sidebar > ul > li.On > a:hover {
+	color: #000000;
+}
+
+#boardList-sidebar > hr {
+	width: 100%;
+	margin: 1vw 0;
+}
+
+#boardList-form {
+	width: 100%;
+}
+
+#boardList-form > table {
+	width: 100%;
+}
+
+#boardList-form > table td {
+	vertical-align: top;
+}
+
+.table-label {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.table-label > input[type="checkbox"] {
+	display: none;
+}
+
+.table-label > span {
+	vertical-align: middle;
+	white-space: nowrap;
+	font-size: 1vw;
+}
+
+.table-label > span.span-box {
+	width: 0.9vw;
+	height: 0.9vw;
+	display: inline-block;
+	position: relative;
+	margin-right: 1%;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0.1vw solid #000000;
+	border-radius: 0.1vw;
+	transition: background-color 0.1s, border 0.1s;
+}
+
+.table-label input:checked + .span-box {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+}
+
+.table-label input:checked + .span-box::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background: url('../images/btn_checked.png') no-repeat center center;
+	background-size: contain;
+	transform: translate(-50%, -50%);
+}
+
+#boardList-form > table td button {
+	width: 100%;
+	height: 1.5vw;
+	margin: 5% 0;
+	background-color: #000000;
+	border: 0.1vw solid #000000;
+	border-radius: 0.1vw;
+	color: #FFFFFF;
+}
+
+#boardList-section {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#boardList-section > * {
+	width: 100%;
+}
+
+#boardList-section > h1 {
+	margin-bottom: 5%;
+	text-align: center;
+	font-size: 2vw;
+}
+
+#boardList-section-nav > ul {
+	width: 100%;
+	min-height: 2vw;
+	display: flex;
+	justify-content: center;
+	gap: 5%;
+	align-items: flex-end;
+	border-bottom: 0.1vw solid #ccc;
+}
+
+#boardList-section-nav > ul > li {
+	height: 100%;
+	margin-bottom: -0.1vw;
+	border-bottom: 0.1vw solid rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+#boardList-section-nav > ul > li > a {
+	display: block;
+	height: 100%;
+	line-height: 300%;
+	color: #000000;
+}
+
+#boardList-section-nav > ul > li:hover {
+	border-bottom: 0.15vw solid #000000;
+}
+
+#boardList-section-nav > ul > li.On, #boardList-section-nav > ul > li.On:hover {
+	border-bottom: 0.15vw solid #0051FF;
+	a {
+		color: #0051FF;
+	}
+}
+
+#boardList-article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 5%;
+	padding: 3%;
+}
+
+.board-card {
+	width: 20%;
+	min-width: 10vw;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+
+/* 마지막 줄의 카드가 4개 미만일 때 왼쪽 정렬 */
+#boardList-article .board-card:nth-last-child(-n+4) {
+    flex-basis: auto;
+    margin-left: 0;
+}
+
+/* 마지막 카드의 경우 */
+#boardList-article .board-card:last-child {
+	flex-basis: auto;
+    margin-left: 0;
+}
+
+.board-card .PrdImg {
+	width: 100%;
+	max-width: 12vw;
+	height: 12vw;
+	display: flex;
+	align-items: center;
+	padding: 3%;
+	overflow: hidden;
+}
+
+.board-card .PrdImg > img {
+	width: 100%;
+	height: 100%;
+}
+
+.board-card > h3 {
+	width: 100%;
+	margin-bottom: 3.5%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	font-size: 1.2vw;
+}
+
+.board-card > h3.SoldOut {
+	color: red;
+}
+
+.board-card > p {
+	margin: 1% 0;
+}
+
+.board-card .Rating {
+	text-indent: 1%;
+	font-size: 0.8vw;
+	color: orange;
+}
+
+.board-card .Rating > a {
+	font-size: 0.8vw;
+}
+
+.board-card .Rating > a:hover {
+	text-decoration: underline 0.1vw solid #000000;
+}
+
+#boardList-section > span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3%;
+}
+
+#boardList-section > span > button {
+	width: 2vw;
+	height: 2vw;
+	background-color: #FFFFFF;
+	border: 0.1vw solid #1462FA;
+	border-radius: 0.3vw;
+	text-align: center;
+	vertical-align: middle;
+	color: #1462FA;
+}
+
+#boardList-section > span > button:hover {
+	scale: 1;
+	background-color: #A0BFFD;
+	border-color: #1462FA;
+}
+
+#boardList-section > span > button:disabled {
+	background-color: #1462FA;
+	color: #FFFFFF;
+}
+
+#boardList-section > span > button.MoveArrow:disabled {
+	background-color: #E7EFFE;
+	border-color: #E7EFFE;
+	color: #b2caff;
+}
+
+
+/* boardDetail css */
+.container {
+    width: 100%;
+    margin: 0 auto; /* 중앙 정렬 */
+    background-color: white; /* 배경색 흰색 */
+    padding: 20px; /* 컨테이너 내부 여백 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    flex-direction: column; /* 세로로 정렬 */
+}
+ 
+/* 상품 정보 섹션 */
+.product-info {
+    padding: 20px; /* 내부 여백 */
+}
+
+.product-details {
+    width: 50%;  /* 상세 정보가 나머지 절반을 차지하도록 설정 */
+    padding: 40px;  /* 양쪽 여백 */
+}
+
+/* 상품 이름 섹션 */
+.product-name {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    border-bottom: 1px solid black; /* 하단 테두리 */
+    margin-bottom: 20px; /* 아래쪽 간격 */
+}
+
+
+.product-name h1 {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 40px; /* 제목 글자 크기 */
+    font-weight: bold; /* 굵은 글씨체 */
+}
+
+/* 상품 메인 섹션 */
+.product-main {
+    display: flex; /* 가로 정렬 */
+    gap: 20px; /* 내부 간격 */
+}
+
+.current-bid-link {
+    font-size: inherit;       /* 부모 요소의 폰트 크기를 상속받음 */
+    font-weight: inherit;     /* 부모 요소의 폰트 두께를 상속받음 */
+    text-decoration: none;    /* 기본 밑줄 제거 */
+    color: inherit;           /* 부모 요소의 색상을 상속받음 */
+    line-height: inherit;     /* 부모 요소의 라인 높이도 상속받도록 설정 */
+}
+
+/* 상품 이미지 레이아웃 */
+.product-image-layout {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 10px; /* 이미지와 썸네일 사이의 간격 */
+    margin-left: 10px;
+    margin-right: 100px;
+}
+
+
+.main-image {
+    width: 600px; /* 이미지 영역 너비 */
+    height: 600px; /* 이미지 영역 높이 */
+    background-color: #eee; /* 배경색 (이미지 없을 때 표시) */
+    display: flex;
+    justify-content: center; /* 이미지 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    
+}
+
+.main-image img {
+    width: 100%; /* 이미지가 부모 요소의 너비에 맞게 설정 */
+    height: 100%; /* 이미지가 부모 요소의 높이에 맞게 설정 */
+    object-fit: cover; /* 이미지가 영역에 맞춰 잘림 */
+}
+
+.thumbnail-images {
+    display: flex; /* 썸네일을 가로로 정렬 */
+    gap: 10px; /* 썸네일 간의 간격 */
+    
+}
+
+.thumbnail {
+    width: 110px; /* 썸네일 너비 */
+    height: 110px; /* 썸네일 높이 */
+    border: 1px solid #ccc; /* 썸네일 테두리 */
+    object-fit: cover; /* 썸네일 이미지 잘림 */
+    border-radius: 5px; /* 썸네일에 둥근 테두리 적용 */
+}
+
+.product-main {
+    display: flex;
+    gap: 30px; /* 이미지와 상세 정보 간의 간격 */
+}
+
+/* 카테고리 정보 */
+.category-info {
+    font-size: 14px; /* 카테고리 텍스트 크기 */
+    color: #888; /* 텍스트 색상 */
+    margin-bottom: 10px; /* 아래쪽 간격 추가 */
+}
+
+/* 상품 상세 정보 */
+.product-details {
+    padding: 20px; /* 내부 여백 */
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    gap: 0px; /* 내부 요소 간의 간격 */
+}
+
+/* 판매자 정보 */
+.seller-info {
+    display: flex; /* 가로 정렬 */
+    justify-content: space-between; /* 좌우로 간격 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+.seller-profile {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.seller-profile img {
+    width: 40px; /* 이미지 너비 */
+    height: 40px; /* 이미지 높이 */
+    border-radius: 50%; /* 원형 이미지 */
+    object-fit: cover; /* 이미지가 부모 영역에 맞게 잘림 */
+    margin-right: 10px; /* 오른쪽 여백 */
+}
+
+/* 별점 및 판매자명 스타일 */
+.seller-rating {
+    color: orange; /* 별점 색상 설정 */
+    font-size: 14px; /* 폰트 크기 설정 */
+}
+
+.seller-rating span {
+    font-size: 14px; /* 별점 텍스트 크기 */
+    color: orange; /* 별점 색상 */
+}
+
+/* 입찰 정보 및 가격 */
+.auction-info {
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+.auction-info h3 {
+    font-size: 16px; /* 소제목 폰트 크기 */
+    color: #666; /* 소제목 텍스트 색상 */
+}
+
+.auction-info h1 {
+    font-size: 36px; /* 큰 제목 폰트 크기 */
+    margin: 20px 0; /* 상하 여백 */
+}
+
+.auction-info ul {
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 리스트 패딩 제거 */
+    margin: 0; /* 리스트 마진 제거 */
+    font-size: 20px; /* 리스트 텍스트 크기 */
+}
+
+.auction-info ul li {
+    margin: 20px 0; /* 각 리스트 항목의 상하 여백 */
+    color: #333; /* 텍스트 색상 */
+}
+
+.auction-info ul li span {
+    font-weight: bold; /* 굵은 텍스트 */
+}
+
+.auction-details p {
+    font-size: px; /* 설명 텍스트 크기 */
+    color: #555; /* 설명 텍스트 색상 */
+    margin: 10px 0; /* 상하 여백 */
+}
+
+/* 버튼 섹션 */
+.action-buttons, .used-buttons {
+    display: flex; /* 가로 정렬 */
+    flex-direction: column; /* 세로 정렬 */
+    gap: 25px; /* 버튼 간의 간격 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.action-buttons button, .used-buttons button {
+    padding: 20px 0; /* 버튼 상하 여백 */
+    font-size: 18px; /* 버튼 텍스트 크기 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 모양 변경 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 즉시 구매 버튼 스타일 */
+.buy-now {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 텍스트 색상 */
+}
+
+/* 입찰하기 버튼 스타일 */
+.place-bid {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 텍스트 색상 */
+}
+
+/* 중고 가격 정보 */
+.used-price-info {
+    padding: 0px; /* 내부 여백 */
+    background-color: none; /* 배경색 */
+    border: none; /* 테두리 */
+}
+
+/* 중고 가격 및 버튼 섹션 */
+.used-price h3 {
+    font-size: 16px; /* 가격 섹션 소제목 크기 */
+    color: #666; /* 글자 색상 */
+}
+
+.used-price h1 {
+    font-size: 36px; /* 가격 큰 텍스트 */
+    margin: 30px 0; /* 상하 여백 */
+}
+
+.used-price-link {
+    font-size: inherit;       /* 부모 요소의 폰트 크기를 상속받음 */
+    font-weight: inherit;     /* 부모 요소의 폰트 두께를 상속받음 */
+    text-decoration: none;    /* 기본 밑줄 제거 */
+    color: inherit;           /* 부모 요소의 색상을 상속받음 */
+    line-height: inherit;     /* 부모 요소의 라인 높이도 상속받도록 설정 */
+}
+
+/* 거래 옵션 버튼 */
+.trade-options {
+    flex-wrap: nowrap;
+    display: flex; /* 가로 정렬 */
+    gap: 50px; /* 버튼 간 간격 */
+    margin: 40px 0; /* 상하 여백 */
+}
+
+.btn-exchange, .btn-direct {
+    padding: 10px 100px; /* 버튼 패딩 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.btn-exchange {
+    background-color: #007bff; /* 에누리 버튼 배경색 */
+    color: white; /* 텍스트 흰색 */
+}
+
+.btn-direct {
+    background-color: #ff9800; /* 직거래 버튼 배경색 */
+    color: white; /* 텍스트 흰색 */
+}
+
+/* 수량 선택 섹션 */
+.quantity-selector {
+    display: flex; /* 가로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+/* 수량 입력 및 버튼 */
+.quantity-selector button {
+    padding: 5px 10px; /* 버튼 패딩 */
+    background-color: #070707; /* 버튼 배경색 */
+    color: white;
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+}
+
+.quantity-selector input {
+    width: 50px; /* 입력창 너비 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 0 10px; /* 좌우 여백 */
+}
+
+/* 수정된 버튼 섹션 */
+.action-buttons {
+    display: flex; /* 세로 정렬 */
+    flex-direction: column; /* 버튼을 세로로 나열 */
+    gap: 25px; /* 버튼 간 간격 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.action-buttons button {
+    padding: 20px 0; /* 버튼 상하 여백 */
+    font-size: 18px; /* 텍스트 크기 */
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 클릭 가능한 커서 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* 구매 버튼 */
+.buy-now {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 텍스트 */
+}
+
+/* 장바구니 담기 버튼 */
+.add-to-cart {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 흰색 텍스트 */
+}
+
+/* 구매 버튼 */
+.buy-now {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 텍스트 */
+}
+
+/* 장바구니 담기 버튼 */
+.add-to-cart {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 흰색 텍스트 */
+}
+
+/* 관심 목록 추가 버튼 */
+.add-to-list {
+    background-color: white; /* 흰색 배경 */
+    color: black; /* 검은색 텍스트 */
+    border: 1px solid black !important;  /* 검은색 테두리 */
+}
+
+/* 상품 설명 섹션 스타일 */
+.product-description {
+    padding: 20px; /* 내부 여백 설정 */
+    background-color: #f9f9f9; /* 배경색 설정 */
+    border: 1px solid #ddd; /* 회색 테두리 추가 */
+    margin: 20px 0; /* 위아래 외부 여백 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.product-description h2 {
+    font-size: 20px; /* 제목 폰트 크기 */
+    margin-bottom: 10px; /* 제목 아래쪽 여백 */
+}
+
+.product-description p {
+    font-size: 16px; /* 본문 폰트 크기 */
+    color: #333; /* 본문 텍스트 색상 */
+}
+
+/* 판매자 정보 섹션 */
+.seller-info-section {
+    display: flex; /* 내부 요소들을 가로로 배치 */
+    justify-content: space-between; /* 좌우로 공간을 나누어 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    border-bottom: 1px solid #ddd; /* 아래쪽 테두리 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 판매자 프로필 정보 */
+.seller-profile-info {
+    display: flex; /* 프로필 이미지와 텍스트를 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 판매자 프로필 이미지 */
+.seller-profile-image {
+    width: 80px; /* 이미지 크기 설정 */
+    height: 80px;
+    border-radius: 50%; /* 원형 이미지 */
+    margin-right: 20px; /* 텍스트와 이미지 사이 여백 */
+}
+
+/* 판매자 이름 */
+.seller-details h3 {
+    margin: 0; /* 기본 마진 제거 */
+    font-size: 18px; /* 폰트 크기 설정 */
+}
+
+/* 팔로우 정보 */
+.seller-details p {
+    margin: 5px 0; /* 상하 여백 */
+    color: #888; /* 텍스트 색상 설정 */
+    cursor: pointer; /* 손 모양 커서 */
+}
+
+/* 팔로우 하트 이모티콘 */
+.seller-details span {
+    font-size: 16px; /* 하트 이모티콘 크기 설정 */
+    color: red; /* 하트 이모티콘 색상 */
+    cursor: pointer; /* 손 모양 커서 */
+}
+
+/* 판매자 액션 버튼들 */
+.seller-actions {
+    display: flex; /* 버튼들을 가로로 배치 */
+    flex-direction: column; /* 버튼을 세로로 정렬 */
+    gap: 10px; /* 버튼 간의 간격 */
+}
+
+/* "스토어 방문" 버튼 스타일 */
+.visit-store {
+    background-color: black; /* 검은색 배경 */
+    color: white; /* 흰색 텍스트 */
+    padding: 10px 80px; /* 버튼 내부 여백 */
+    border-radius: 20px; /* 버튼 모서리를 둥글게 */
+    border: none; /* 테두리 없음 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    cursor: pointer; /* 손 모양 커서 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* "1:1 채팅" 버튼 스타일 */
+.chat-seller {
+    background-color: white; /* 흰색 배경 */
+    color: black; /* 검은색 텍스트 */
+    padding: 10px 80px; /* 버튼 내부 여백 */
+    border-radius: 20px; /* 둥근 모서리 */
+    border: 1px solid black; /* 검은색 테두리 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    cursor: pointer; /* 손 모양 커서 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+
+/* 리뷰 요약 섹션 스타일 */
+.review-summary {
+    padding: 20px 0; /* 상하 내부 여백 설정 */
+    justify-content: space-between; /* 별점과 평점 설명을 양 끝에 배치 */
+    display: flex; /* 별점과 평점 설명을 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 100px; /* 별점과 평점 설명 사이의 간격 */
+}
+
+/* 별점 및 점수 정렬 */
+.rating-summary {
+    text-align: left; /* 왼쪽 정렬 */
+    margin-left: 20px; /* 왼쪽으로 20px 여백 추가 */
+}
+
+/* 평점 숫자 스타일 */
+.rating-summary h3 {
+    font-size: 36px; /* 폰트 크기 설정 */
+    color: black; /* 평점 텍스트 색상 설정 (검정) */
+    margin: 0; /* 기본 마진 제거 */
+    
+}
+
+/* 별점 스타일 */
+.rating-stars {
+    font-size: 24px; /* 별점 크기 설정 */
+    color: orange; /* 별점 색상 설정 */
+    
+}
+
+/* 리뷰 카테고리별 막대 스타일 */
+.rating-categories {
+    flex: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 카테고리 사이 간격 */
+    margin-right: 70px; /* 오른쪽으로 70px 여백 추가 */
+}
+
+/* 각 카테고리(신뢰도, 품질 등)의 라벨과 막대 스타일 */
+.rating-categories .category {
+    display: flex; /* 라벨과 막대를 가로로 배치 */
+    justify-content: space-between; /* 라벨과 막대를 좌우로 나누어 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-top: 10px; /* 각 카테고리 간의 간격 */
+}
+
+/* 리뷰 카테고리 막대 배경 스타일 */
+.rating-bar {
+    width: 70%; /* 막대 너비 설정 */
+    background-color: #ddd; /* 막대 배경색 설정 */
+    height: 10px; /* 막대 높이 설정 */
+    border-radius: 5px; /* 막대의 모서리를 둥글게 설정 */
+    overflow: hidden; /* 막대 내부 내용이 넘치지 않도록 설정 */
+}
+
+/* 카테고리 막대 채우기 부분 스타일 */
+.rating-bar .fill {
+    height: 100%; /* 채워진 막대의 높이 설정 */
+    background-color: orange; /* 채워진 부분의 색상 설정 */
+}
+
+/* 리뷰 섹션 스타일 */
+.reviews h4 {
+    font-size: 20px; /* 제목의 폰트 크기 */
+    margin-bottom: 10px; /* 제목 아래쪽 여백 */
+}
+
+/* 리뷰 항목 스타일 */
+.review-item {
+    padding: 10px 0; /* 상하 패딩 설정 */
+}
+
+/* 리뷰 항목을 구분하는 점선 */
+.dotted-line {
+    border: none; /* 테두리 제거 */
+    border-top: 1px dashed #ddd; /* 점선 테두리 추가 */
+    margin: 10px 0; /* 상하 여백 설정 */
+}
+
+/* "모든 리뷰 보기" 버튼 스타일 */
+.view-more-reviews {
+    background-color: #ffffff; /* 하얀색 배경 */
+    color: rgb(33, 207, 255); /* 버튼 텍스트 색상 설정 */
+    border: 2px solid rgb(33, 207, 255);
+    padding: 10px 80px; /* 버튼 내부 여백 설정 */
+    cursor: pointer; /* 마우스 커서를 손 모양으로 변경 */
+    display: block; /* 버튼을 블록 요소로 설정 */
+    margin: 20px auto; /* 상하 여백 및 중앙 정렬 */
+    border-radius: 10px; /* 버튼 모서리를 둥글게 설정 */
+}

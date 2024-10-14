@@ -140,10 +140,17 @@
                         <span class="star" data-rating="5">★</span>
                     </div>
                 </div>
+                
+                
 
                 <!-- 평균 평점 출력 -->
                 <p class="average-rating">평균 평점: <span id="averageRating">0</span> 점</p>
 
+				<div class="review-section">
+		            <h5>리뷰 남기기</h5>
+		            <textarea id="reviewText" rows="4" placeholder="리뷰 내용을 작성하세요"></textarea>
+		        </div>
+        
                 <!-- 평점 제출 버튼 -->
                 <button class="submit-rating">제출</button>
             </div>

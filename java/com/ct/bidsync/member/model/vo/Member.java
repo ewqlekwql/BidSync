@@ -48,6 +48,11 @@ public class Member {
 		this.email = email;
 		this.phone = phone;
 	}
+	
+	// MemberUpdateController
+	public Member(String userId, String userName, String gender, Date birthday, String email, String phone) {
+		
+	}
 
 	// toString
 	@Override
