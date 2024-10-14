@@ -24,7 +24,8 @@
             <!-- 상품 정보 섹션 -->
             <section class="product-info">
                 <!-- 상품 이미지 -->
-                <img src="${b.prodImg}" alt="상품 이미지">
+                <img src="${pageContext.request.contextPath}/resources/images/${board.prodImg}" alt="상품 이미지">
+
 
                 
                 <!-- 상품 세부 정보 -->
