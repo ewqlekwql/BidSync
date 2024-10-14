@@ -148,4 +148,14 @@
     <url-pattern>/cart.me</url-pattern>
     <url-pattern>/wish.me</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description>WishDeleteContoller</description>
+    <display-name>delete.wish.me</display-name>
+    <servlet-name>delete.wish.me</servlet-name>
+    <servlet-class>com.ct.bidsync.sub.controller.WishDeleteContoller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delete.wish.me</servlet-name>
+    <url-pattern>/delete.wish.me</url-pattern>
+  </servlet-mapping>
 </web-app>

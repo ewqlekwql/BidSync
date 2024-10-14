@@ -89,3 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
 function wishToCart(wishNo) {
 	window.location.href="update.wish.me?no=" + wishNo;
 }
+
+// 관심상품에서 삭제
+function deleteWish(wishNo) {
+	window.location.href="delete.wish.me?no=" + wishNo;
+}

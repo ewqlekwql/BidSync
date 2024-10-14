@@ -48,4 +48,14 @@ public class WishService {
 		close(conn);
 		return result1 * result2;
 	}
+	
+	// WishDelteController
+	public int deleteWish(int wishNo) {
+		Connection conn = getConnection();
+		
+		int result = new WishDao().updateWish(conn, wishNo);
+		
+		close(conn);
+		return result;
+	}
 }
