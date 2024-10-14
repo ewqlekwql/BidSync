@@ -24,7 +24,7 @@
             <!-- 상품 정보 섹션 -->
             <section class="product-info">
                 <!-- 상품 이미지 -->
-                <img class="product-image" src="https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/170356472022385905.jpg?gif=1&w=640&h=640&c=c&webp=1" alt="상품 이미지">
+                <img class="product-image" src="http://localhost:5555/BidSync/views/resources/images/prd/prd_fashion07.jpg" alt="상품 이미지">
                 
                 <!-- 상품 세부 정보 -->
                 <div class="product-details">
