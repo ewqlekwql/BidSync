@@ -16,6 +16,7 @@ import com.ct.bidsync.sub.service.WishService;
 /**
  * Servlet implementation class WishUpdateContoller
  */
+@WebServlet(name = "update.wish.me", description = "WishUpdateContoller", urlPatterns = { "/update.wish.me" })
 public class WishUpdateContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

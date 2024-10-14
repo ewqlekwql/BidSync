@@ -85,7 +85,7 @@
 	                    <div class="action-buttons">
 	                        <button class="buy-now" onclick="buyNow('<%=b.getBoardCtg()%>', '<%=b.getBoardType()%>', <%=b.getBoardNo()%>)">즉시 구매</button>
 	                        <button class="place-bid">입찰하기</button>
-	                        <button class="add-to-list">관심 목록에 추가</button>
+	                        <button class="add-to-list" onclick="addWish('<%=b.getBoardCtg()%>', <%=b.getBoardNo()%>)">관심 목록에 추가</button>
 	                    </div>
 					<% } else { %>
 						<!-- 거래 정보 및 가격 -->

@@ -144,14 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // "관심 목록에 추가" 버튼 클릭 시 관심 목록 페이지로 이동
-    const addToListButton = document.querySelector('.add-to-list');
-    if (addToListButton) {
-        addToListButton.addEventListener('click', function() {
-            window.location.href = '../member/wishList.jsp'; // 관심 목록 페이지로 이동
-        });
-    }
-
     // "스토어 방문" 버튼 클릭 시 스토어 페이지로 이동
     const visitStoreButton = document.querySelector('.visit-store');
     if (visitStoreButton) {

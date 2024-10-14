@@ -15,6 +15,7 @@ import com.ct.bidsync.sub.service.WishService;
 /**
  * Servlet implementation class WishInsertContoller
  */
+@WebServlet(name = "insert.wish.me", description = "WishInsertContoller", urlPatterns = { "/insert.wish.me" })
 public class WishInsertContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,7 +38,7 @@ public class WishInsertContoller extends HttpServlet {
 		
 		// ctg, boardNo
 		String ctg = request.getParameter("ctg");
-		int boardNo = Integer.parseInt(request.getParameter("boardNo"));
+		int boardNo = Integer.parseInt(request.getParameter("no"));
 		System.out.println("wishInsert : " + loginUser.getUserId() + ", " + boardNo);
 		
 		// insert

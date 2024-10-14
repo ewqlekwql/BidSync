@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.ct.bidsync.sub.service.WishService;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,6 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class WishDeleteContoller
  */
+@WebServlet(name = "delete.wish.me", description = "WishDeleteContoller", urlPatterns = { "/delete.wish.me" })
 public class WishDeleteContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
