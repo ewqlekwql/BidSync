@@ -54,6 +54,12 @@ public class WishService {
 		Connection conn = getConnection();
 		
 		int result = new WishDao().updateWish(conn, wishNo);
+		if(result > 0) {
+			commit(conn);
+		}
+		else {
+			rollback(conn);
+		}
 		
 		close(conn);
 		return result;
@@ -64,6 +70,12 @@ public class WishService {
 		Connection conn = getConnection();
 		
 		int result = new WishDao().insertWish(conn, userNo, boradNo);
+		if(result > 0) {
+			commit(conn);
+		}
+		else {
+			rollback(conn);
+		}
 		
 		close(conn);
 		return result;

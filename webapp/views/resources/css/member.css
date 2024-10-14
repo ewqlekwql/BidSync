@@ -580,6 +580,7 @@
 #wish-article {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	padding: 3% 1%;
 }
